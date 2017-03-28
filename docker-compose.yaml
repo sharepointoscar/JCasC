@@ -1,0 +1,18 @@
+# alternatively run this command:
+# docker run -d -u root --name jenkins -p 8080:8080 -p 50000:50000  -v ./JenkinsHome:/var/jenkins_home jenkins:1.651.1-alpine
+
+version: "3"
+services:
+  jenkins:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sharepointoscar/jenkins:latest
+    container_name: JENKINS_DA_PIMP
+    restart: always
+    ports:
+      - 8080:8080
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      #- /usr/bin/docker:/usr/bin/docker
+      - ./JenkinsHome:/var/jenkins_home

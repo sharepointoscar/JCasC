@@ -1,0 +1,14 @@
+scm-api:latest
+git-client:latest
+git:latest
+github-oauth
+github-issues
+greenballs:latest
+nodejs
+workflow-aggregator
+pipeline-githubnotify-step
+chef-identity
+build-monitor-plugin
+seleniumhtmlreport
+github-pullrequest
+terraform

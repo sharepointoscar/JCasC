@@ -14,7 +14,7 @@ Like many other nerds out there, I wanted to enhance my  CI/CD configuration and
 I am running Docker on my Macbook Pro, I've chosen to install it using the homebrew vs. downloading the dmg.  This allows me to keep things updated and neat.
 
 ![alt text](JenkinsDockerImagesHost.png "List all host machine images")
-##Build the Docker Image
+## Build the Docker Image
 ``$ docker build -t sharepointoscar/jenkins .``
 
 ## Create Docker Container

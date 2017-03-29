@@ -4,15 +4,17 @@
 version: "3"
 services:
   jenkins:
+    tty: true
+    stdin_open: true 
     build:
       context: .
       dockerfile: Dockerfile
     image: sharepointoscar/jenkins:latest
-    container_name: JENKINS_DA_PIMP
+    container_name: EL_JENKINS_LOCO
     restart: always
     ports:
       - 8080:8080
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      #- /usr/bin/docker:/usr/bin/docker
+      - /usr/bin/docker:/usr/bin/docker
       - ./JenkinsHome:/var/jenkins_home

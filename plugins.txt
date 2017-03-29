@@ -12,4 +12,4 @@ build-monitor-plugin
 seleniumhtmlreport
 github-pullrequest
 terraform
-docker-build-publish
+docker-plugin

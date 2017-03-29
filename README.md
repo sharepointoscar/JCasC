@@ -8,21 +8,101 @@ Concept from Adrian Mouat's [article](http://container-solutions.com/running-doc
 ***
 
 ## Overview
-Like many other nerds out there, I wanted to enhance my  CI/CD configuration and have the ability to build Docker images on successful app build and testing.  In order to do that, Jenkins needs the ability to execute Docker CLI commands.  Enter this approach, otherwise knowwn as DooD ()
+Like many other nerds out there, I wanted to enhance my CI/CD configuration and have the ability to build Docker images on successful app build and testing.  In order to do that, Jenkins needs the ability to execute Docker CLI commands.  Enter this approach, otherwise known as DooD ()
 
 ## My Setup
-I am running Docker on my Macbook Pro, I've chosen to install it using the homebrew vs. downloading the dmg.  This allows me to keep things updated and neat.
+I am running Docker for Mac on my Macbook Pro, I've chosen to install it using the homebrew vs. downloading the dmg.  This approach gets me the Docker for Mac, here is a blurb
+from Docker describing it:
 
-![alt text](JenkinsDockerImagesHost.png "List all host machine images")
-## Build the Docker Image
-``$ docker build -t sharepointoscar/jenkins .``
+>Docker for Mac is a Mac native application, that you install in /Applications. At installation time, it creates symlinks in /usr/local/bin for docker and docker-compose, to the version of the commands inside the Mac application bundle, in /Applications/Docker.app/Contents/Resources/bin.
 
-## Create Docker Container
+Prior to installing **Docker for Mac**, I was running Docker Toolbox, which does not use the native [Hyperkit](https://github.com/docker/HyperKit/) but rather Virtual Box.  My environment looked like this:
+
+![Docker Toolbox](https://docs.docker.com/docker-for-mac/images/toolbox-install.png)
+
+### So what is Docker for Mac?
+Docker for Mac is a native App which has docker compose, docker and docker-image built-in.  It also does not require VirtualBox as it uses Hyperkit, and you don't manage the box as this is handled by the app itself.
+
+>At installation time, Docker for Mac provisions an HyperKit VM based on Alpine Linux, running Docker Engine. It exposes the docker API on a socket in /var/run/docker.sock. Since this is the default location where docker will look if no environment variables are set, you can start using docker and docker-compose without setting any environment variables.
+
+This is what I end up with.
+
+![Docker for Mac diagram](https://docs.docker.com/docker-for-mac/images/docker-for-mac-install.png)
+
+You can run both Docker Toolbox and Docker for Mac, but it is damn confusing and a pain to track which environment you are using, so your setup would look like this.
+
+![Docker for Mac and Docker Toolbox coexistence](https://docs.docker.com/docker-for-mac/images/docker-for-mac-and-toolbox.png)
+
+### Setup Jenkins to execute Docker CLI Commands
+Now that you have an idea of the setup required, let's dive into setting up Jenkins to allow for executing Docker CLI commands.
+
+
+  #### Using Docker Compose and Dockerfile
+  We could use CLI commands, but why go through that if we can create a nice configuration to repeatedly build this image?
+
+##### The docker-compose.yaml file.
+In this file, we specify the configuration of our Jenkins image when it needs to be spun up.
+
+``` yaml
+version: "3"
+services:
+  jenkins:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sharepointoscar/jenkins:latest
+    container_name: EL_JENKINS_LOCO
+    restart: always
+    ports:
+      - 8080:8080
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/bin/docker:/usr/bin/docker
+      - ./JenkinsHome:/var/jenkins_home
+```
+
+A few things to note:
+
+  - Use the Dockerfile at build time, as it contains specific tasks we want to run.  In my case, I want to have a list of Jenkins plugins to quickly install at build time.
+  - Specify the image the service Jenkins will use
+  - Map 3 volumes
+    - JENKINS_HOME - I override this to use the JenkinsHome folder in this git repo to save configuration changes, this means every time I spin up Jenkins, it will have all my plugins and UI configuration
+    - Docker Socket - Listens to commands
+    - Docker executable (/usr/bin/docker) - This is the Docker CLI.  
+
+
+NOTE: One thing to note, is that my configuration had, as I am using Docker for Mac (remember?)
+``` bash
+    /usr/local/bin/docker
+```
+and so when I tried executing
+``` bash  
+  docker-compose up
+```
+it gave me an error message.  What I did, was to create a symlink by executing this command
+see more details on this [Github](https://github.com/marcelbirkner/docker-ci-tool-stack/issues/24) thread
+``` bash
+  sudo ln /usr/local/bin/docker /usr/bin/docker
+```
+and the image spins up with no problems.
+
+
+To bring up or build Jenkins image, all you do is execute this command to have it running in the background.
+``` bash
+   docker-compose up -d
+```
+### Using Docker CLI To Build and Run Jenkins
+If for some reason, you need to use the CLI, this is how you would build and run the Jenkins image.
+``` bash
+   docker build -t sharepointoscar/jenkins .
+```
+
+#### Create Docker Container
 This command ensures that the host machine docker installation is accessible to the container we are about to run.
 ``$ docker -it run -d -v /var/run/docker.sock:/var/run/docker.sock \``
-        ``-v $(which docker):/usr/bin/docker -v $PWD/JenkinsHome:/var/jenkins_home -p 8080:666 jenkins``
+        ``-v /usr/bin/docker:/usr/bin/docker -v $PWD/JenkinsHome:/var/jenkins_home -p 8080:666 jenkins``
 
 
 
 
-(twitter: sharepointoscar)
+(twitter: SharePointOscar)

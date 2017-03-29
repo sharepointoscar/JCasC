@@ -47,7 +47,8 @@ node --version
 grunt --version</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
-      <command>sudo docker-compose --skip-hostname-check -f docker-compose.test.yml -p AppDevEnvironment up -d</command>
+      <command>sudo docker-compose -f docker-compose.test.yml -p AppDevEnvironment up -d
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

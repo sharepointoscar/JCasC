@@ -1,6 +1,6 @@
 
 
-## A DOCKERFILE TO SPIN UP A JENKINS CONTAINER CONFIGURED TO USE HOST MACHINE CLI (Docker-outside-of-Docker)  
+## A DOCKERFILE TO SPIN UP A JENKINS CONTAINER CONFIGURED TO USE DOCKER CLI (Docker-outside-of-Docker)  
 Concept from Adrian Mouat's [article](http://container-solutions.com/running-docker-in-jenkins-in-docker)
 
 ![alt text](http://www.focusedsupport.com/blog/content/images/2015/06/docker_jenkins_page-2.png "Cute Docker Whale In Action")
@@ -33,6 +33,7 @@ You can run both Docker Toolbox and Docker for Mac, but it is damn confusing and
 
 ![Docker for Mac and Docker Toolbox coexistence](https://docs.docker.com/docker-for-mac/images/docker-for-mac-and-toolbox.png)
 
+
 ### Setup Jenkins to execute Docker CLI Commands
 Now that you have an idea of the setup required, let's dive into setting up Jenkins to allow for executing Docker CLI commands.
 
@@ -63,46 +64,40 @@ services:
 
 A few things to note:
 
-  - Use the Dockerfile at build time, as it contains specific tasks we want to run.  In my case, I want to have a list of Jenkins plugins to quickly install at build time.
+  - Use the Dockerfile at build time, as it contains specific tasks we want to run.  In my case, I want to have a list of Jenkins plugins to quickly install at build time and install additional software.
   - Specify the image the service Jenkins will use
-  - Map 3 volumes
+  - Volumes
     - JENKINS_HOME - I override this to use the JenkinsHome folder in this git repo to save configuration changes, this means every time I spin up Jenkins, it will have all my plugins and UI configuration
-    - Docker Socket - Listens to commands
-    - Docker executable (/usr/bin/docker) - This is the Docker CLI.  
+    - Docker Socket - This is the socket the docker client uses to communicate with the daemon within the Jenkins container
+    - Docker executable (/usr/bin/docker) - The docker binary.
 
 
-NOTE: One thing to note, is that my configuration had, as I am using Docker for Mac (remember?)
-``` bash
-    /usr/local/bin/docker
-```
-and so when I tried executing
-``` bash  
-  docker-compose up
-```
-it gave me an error message.  What I did, was to create a symlink by executing this command
+NOTE: One thing to note, is that my configuration had ` /usr/local/bin/docker` as I am using Docker for Mac and so when I tried executing
+` docker-compose up` it gave me an error message.  
+
+What I did, was to create a symlink by executing this command
 see more details on this [Github](https://github.com/marcelbirkner/docker-ci-tool-stack/issues/24) thread
-``` bash
-  sudo ln /usr/local/bin/docker /usr/bin/docker
-```
+`sudo ln /usr/local/bin/docker /usr/bin/docker`
 and the image spins up with no problems.
 
 
 To bring up or build Jenkins image, all you do is execute this command to have it running in the background.
-``` bash
-   docker-compose up -d
-```
+` docker-compose up -d`
 ### Using Docker CLI To Build and Run Jenkins
-If for some reason, you need to use the CLI, this is how you would build and run the Jenkins image.
+If you need to use the CLI, this is how you would build and run the Jenkins image.  We use the -rm=true flag to remove intermediate containers.
 ``` bash
-   docker build -t sharepointoscar/jenkins .
+   docker build -t=sharepointoscar/jenkins -rm=true .
 ```
 
 #### Create Docker Container
 This command ensures that the host machine docker installation is accessible to the container we are about to run.
-``$ docker -it run -d -v /var/run/docker.sock:/var/run/docker.sock \``
-        ``-v /usr/bin/docker:/usr/bin/docker -v $PWD/JenkinsHome:/var/jenkins_home -p 8080:666 jenkins``
 
+``` bash
+  docker run -d -v /var/run/docker.sock:/var/run/docker.sock \
+        -v /usr/bin/docker:/usr/bin/docker -v $PWD/JenkinsHome:/var/jenkins_home -p 8080:8080 sharepointoscar/jenkins
+```
 
+** NOTE **: This is a quick way for getting Jenkins to build containers.  I will be working on what I believe is the proper way - using Jenkins master and slaves to perform tests and build of my images as described  on [Building Continuous Integration Pipeline with Docker](https://www.docker.com/sites/default/files/UseCase/RA_CI%20with%20Docker_08.25.2015.pdf)
 
 
 (twitter: SharePointOscar)

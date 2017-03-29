@@ -1,0 +1,38 @@
+Started by user [8mha:////4NeM5VrPhZ2mvEMQnI4UXVZiEouTpYegkYpYKMCB3A4HAAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZR/dLi1CL94ozEotSC/My8kvzi5MQiAAJwQiPKAAAA[0mOscar Medina
+Building in workspace /var/jenkins_home/workspace/LiteratureNodeJSApp
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git # timeout=10
+Fetching upstream changes from https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials Docker Hub Credentials
+ > git fetch --tags --progress https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 4f115c5ab7b7835aee5d22642ecce3f04c8691bd (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 4f115c5ab7b7835aee5d22642ecce3f04c8691bd
+ > git rev-list 4f115c5ab7b7835aee5d22642ecce3f04c8691bd # timeout=10
+[LiteratureNodeJSApp] $ /bin/sh -xe /tmp/hudson3869490141783540384.sh
++ echo /usr/lib/jvm/java-8-openjdk-amd64/bin:/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.4/bin:/usr/lib/jvm/java-8-openjdk-amd64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+/usr/lib/jvm/java-8-openjdk-amd64/bin:/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.4/bin:/usr/lib/jvm/java-8-openjdk-amd64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++ node --version
+v7.7.4
++ grunt --version
+grunt-cli v1.2.0
+grunt v0.4.2
+[LiteratureNodeJSApp] $ /bin/sh -xe /tmp/hudson8890751904499602373.sh
++ sudo docker images
+REPOSITORY                TAG                 IMAGE ID            CREATED             SIZE
+sharepointoscar/jenkins   latest              4d0b2e2804ec        50 minutes ago      1.05 GB
+mongo                     3.2.12              8e3c6d0ee8f2        4 days ago          301 MB
+jenkins                   2.32.3              a2029036bbe3        6 days ago          714 MB
+jenkins                   latest              a2029036bbe3        6 days ago          714 MB
+jenkins                   2.32.3-alpine       bf98efaba71c        3 weeks ago         222 MB
+alpine                    latest              4a415e366388        3 weeks ago         3.99 MB
+ubuntu                    latest              0ef2e08ed3fa        4 weeks ago         130 MB
+appcontainers/jenkins     centos              931edbf895ad        8 months ago        515 MB
+appcontainers/jenkins     latest              c76f0a88a244        8 months ago        515 MB
+node                      4.1.2               9c36e4b6bb9a        18 months ago       641 MB
+jfroche/elasticsearch     latest              43eca97d04b0        2 years ago         516 MB
+Finished: SUCCESS

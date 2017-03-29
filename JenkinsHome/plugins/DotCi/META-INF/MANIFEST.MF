@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: sgaddipati
+Build-Jdk: 1.8.0_60
+Extension-Name: DotCi
+Specification-Title: Github integration, build management through .ci.
+ yml,
+         environment management though docker.
+Implementation-Title: DotCi
+Implementation-Version: 2.39.9
+Group-Id: com.groupon.jenkins-ci.plugins
+Short-Name: DotCi
+Long-Name: DotCi
+Url: https://wiki.jenkins-ci.org/display/JENKINS/DotCi+Plugin
+Plugin-Version: 2.39.9
+Hudson-Version: 2.26
+Jenkins-Version: 2.26
+Plugin-Dependencies: workflow-basic-steps:2.2,github-api:1.84,rebuild:
+ 1.25,matrix-project:1.6
+Plugin-Developers: Surya Gaddipati:sgaddipati:surya.gaddipati@gmail.com
+

@@ -1,0 +1,24 @@
+commit 058feec21f04fa3bd62c49f36665b2f52bfe95e6
+tree 3f27ce2ef67248ea550f48eee9d8ba36211c7568
+parent a51fa9bcade2593cfd37d48e6043038827cb5382
+author Oscar medina <me@sharepointoscar.com> 2017-03-06 22:59:13 -0800
+committer Oscar medina <me@sharepointoscar.com> 2017-03-06 22:59:13 -0800
+
+    added protractor e2e testing
+
+
+
+:000000 100644 0000000000000000000000000000000000000000 65286f5a201f7090581df87a32c364921cbd7e88 A	tests/e2e/controllers/demo.spec.js
+commit a51fa9bcade2593cfd37d48e6043038827cb5382
+tree f9fc0c90a5b884e9c4a2ed9d593eb0df507d475b
+parent 32afa0febd7715b1b76cb554bda6ad1d869e7a46
+author Oscar medina <me@sharepointoscar.com> 2017-03-05 19:52:48 -0800
+committer Oscar medina <me@sharepointoscar.com> 2017-03-05 19:52:48 -0800
+
+    fully working docker-compose test enviornment build
+
+
+
+:100644 100644 10ecadb6ad1688248fe230f56ff88031078b4860 07341249247255a4daffa9a8f1c7b199dde4a21b M	Dockerfile
+:100644 100644 bb7756f1587e529ad7475066d6fad52591fc0cb0 dfbe81a81296abd7baa02952f9b65d11689d9949 M	docker-compose.test.yml
+:100644 100644 6083f0a882a45ce5be60c9fb19ae07da8fe563cf 6b6beb9bbcf413f1170325b2b61669cf4911ac4b M	docker-compose.yml

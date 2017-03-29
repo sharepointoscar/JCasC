@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.jenkins-ci.plugins</groupId>
+    <artifactId>plugin</artifactId>
+    <version>1.499</version><!-- which version of Jenkins is this plugin built against? -->
+  </parent>
+
+  <groupId>org.codefirst.jenkins.wsnotifier</groupId>
+  <artifactId>websocket</artifactId>
+  <version>1.0.6</version>
+  <name>Jenkins Websocket Notifier</name>
+  <packaging>hpi</packaging>
+
+  <!-- get every artifact through maven.glassfish.org, which proxies all the artifacts that we need -->
+  <repositories>
+    <repository>
+      <id>repo.jenkins-ci.org</id>
+      <url>http://repo.jenkins-ci.org/public/</url>
+    </repository>
+  </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>repo.jenkins-ci.org</id>
+      <url>http://repo.jenkins-ci.org/public/</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.webbitserver</groupId>
+      <artifactId>webbit</artifactId>
+      <version>0.4.15</version>
+    </dependency>
+  </dependencies>
+
+  <scm>
+    <connection>scm:git:ssh://github.com/jenkinsci/websocket-plugin.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/jenkinsci/websocket-plugin.git</developerConnection>
+    <url>https://github.com/jenkinsci/websocket-plugin</url>
+  </scm>
+
+  <url>https://wiki.jenkins-ci.org/display/JENKINS/Websocket+Plugin</url>
+
+  <developers>
+    <developer>
+      <id>mzp</id>
+      <name>MIZUNO Hiroki</name>
+      <email>mzp@ocaml.jp</email>
+    </developer>
+ </developers>
+
+  <distributionManagement>
+    <repository>
+      <id>maven.jenkins-ci.org</id>
+      <url>http://maven.jenkins-ci.org:8081/content/repositories/releases/</url>
+    </repository>
+  </distributionManagement>
+</project>

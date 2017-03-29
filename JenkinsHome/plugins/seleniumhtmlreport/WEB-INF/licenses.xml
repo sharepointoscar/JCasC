@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<l:dependencies xmlns:l='licenses' groupId='org.jenkins-ci.plugins' artifactId='seleniumhtmlreport' version='1.0'><l:dependency name='Selenium HTML report' groupId='org.jenkins-ci.plugins' artifactId='seleniumhtmlreport' version='1.0' url='https://wiki.jenkins-ci.org/display/JENKINS/seleniumhtmlreport+Plugin'><l:description>This is an jenkins plugin to visualize the results of selenium tests</l:description></l:dependency></l:dependencies>

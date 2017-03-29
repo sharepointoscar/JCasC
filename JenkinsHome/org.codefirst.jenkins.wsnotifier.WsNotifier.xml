@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.codefirst.jenkins.wsnotifier.WsNotifier_-DescriptorImpl plugin="websocket@1.0.6">
+  <port>8081</port>
+  <useStatusFormat>false</useStatusFormat>
+  <pingInterval>20</pingInterval>
+</org.codefirst.jenkins.wsnotifier.WsNotifier_-DescriptorImpl>

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.plugins.twitter.TwitterPublisher_-DescriptorImpl plugin="twitter@0.7">
+  <token>admin</token>
+  <tokenSecret>c572f163f20b41bb99cbf517e0a31afa</tokenSecret>
+  <hudsonUrl>http://192.168.99.101:32777/</hudsonUrl>
+  <onlyOnFailureOrRecovery>false</onlyOnFailureOrRecovery>
+  <includeUrl>false</includeUrl>
+</hudson.plugins.twitter.TwitterPublisher_-DescriptorImpl>

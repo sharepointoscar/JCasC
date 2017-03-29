@@ -1,0 +1,34 @@
+Started by user [8mha:////4LUpBPEMWyDWtdtHvvWHlbpAlRv6IgzcrMHryjVwgjhUAAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZR/dLi1CL94IzEotSA/My8Ev/i5MQiAEhiGyXKAAAA[0mOscar Medina
+Building in workspace /var/jenkins_home/workspace/LiteratureNodeJSApp
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git # timeout=10
+Fetching upstream changes from https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials Docker Hub Credentials
+ > git fetch --tags --progress https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 932be2def07636e72026a1d3bc0974ea7ea9888a (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 932be2def07636e72026a1d3bc0974ea7ea9888a
+ > git rev-list 932be2def07636e72026a1d3bc0974ea7ea9888a # timeout=10
+[LiteratureNodeJSApp] $ /bin/sh -xe /tmp/hudson8967531823918566596.sh
++ echo /usr/lib/jvm/java-8-openjdk-amd64/bin:/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.4/bin:/usr/lib/jvm/java-8-openjdk-amd64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+/usr/lib/jvm/java-8-openjdk-amd64/bin:/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.4/bin:/usr/lib/jvm/java-8-openjdk-amd64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++ node --version
+v7.7.4
++ grunt --version
+grunt-cli v1.2.0
+grunt v0.4.2
++ echo /var/jenkins_home/workspace/LiteratureNodeJSApp
+/var/jenkins_home/workspace/LiteratureNodeJSApp
++ npm cache clear
++ npm install
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.0.0 (node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.1: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+[LiteratureNodeJSApp] $ /bin/sh -xe /tmp/hudson4278581657666069914.sh
++ ./node_modules/.bin/bower install
+/tmp/hudson4278581657666069914.sh: 2: /tmp/hudson4278581657666069914.sh: ./node_modules/.bin/bower: not found
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

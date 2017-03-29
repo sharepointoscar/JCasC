@@ -1,0 +1,353 @@
+Started by user [8mha:////4LUpBPEMWyDWtdtHvvWHlbpAlRv6IgzcrMHryjVwgjhUAAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZR/dLi1CL94IzEotSA/My8Ev/i5MQiAEhiGyXKAAAA[0mOscar Medina
+Building in workspace /var/jenkins_home/workspace/LiteratureNodeJSApp
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git # timeout=10
+Fetching upstream changes from https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials Docker Hub Credentials
+ > git fetch --tags --progress https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 328d1a6d0c1ce71062606e245f8b3b53ab591a67 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 328d1a6d0c1ce71062606e245f8b3b53ab591a67
+ > git rev-list 328d1a6d0c1ce71062606e245f8b3b53ab591a67 # timeout=10
+[LiteratureNodeJSApp] $ /bin/sh -xe /tmp/hudson1177682795651089786.sh
++ echo /usr/lib/jvm/java-8-openjdk-amd64/bin:/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/bin:/usr/lib/jvm/java-8-openjdk-amd64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+/usr/lib/jvm/java-8-openjdk-amd64/bin:/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/bin:/usr/lib/jvm/java-8-openjdk-amd64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++ node --version
+v7.7.1
++ grunt --version
+grunt-cli v1.2.0
+grunt v0.4.2
++ echo /var/jenkins_home/workspace/LiteratureNodeJSApp
+/var/jenkins_home/workspace/LiteratureNodeJSApp
++ npm install
+npm WARN deprecated minimatch@2.0.10: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+npm WARN deprecated mongodb@2.1.20: Please upgrade to 2.2.19 or higher
+
+> sails@0.12.13 preinstall /var/jenkins_home/workspace/LiteratureNodeJSApp/node_modules/.staging/sails-bb95af8a
+> node ./lib/preinstall_npmcheck.js
+
+Sails.js Installation: Checking npm-version successful
+
+> chromedriver@2.28.0 install /var/jenkins_home/workspace/LiteratureNodeJSApp/node_modules/chromedriver
+> node install.js
+
+Downloading https://chromedriver.storage.googleapis.com/2.28/chromedriver_linux64.zip
+Saving to /tmp/chromedriver/chromedriver_linux64.zip
+Receiving...
+Received 781K...
+Received 1568K...
+Received 2352K...
+Received 3136K...
+Received 3377K total.
+Extracting zip contents
+Copying to target path /var/jenkins_home/workspace/LiteratureNodeJSApp/node_modules/chromedriver/lib/chromedriver
+Fixing file permissions
+Done. ChromeDriver binary available at /var/jenkins_home/workspace/LiteratureNodeJSApp/node_modules/chromedriver/lib/chromedriver/chromedriver
+
+> bcrypt@0.8.7 install /var/jenkins_home/workspace/LiteratureNodeJSApp/node_modules/bcrypt
+> node-gyp rebuild
+
+gyp ERR! build error 
+gyp ERR! stack Error: not found: make
+gyp ERR! stack     at getNotFoundError (/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/lib/node_modules/npm/node_modules/which/which.js:13:12)
+gyp ERR! stack     at F (/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/lib/node_modules/npm/node_modules/which/which.js:68:19)
+gyp ERR! stack     at E (/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/lib/node_modules/npm/node_modules/which/which.js:80:29)
+gyp ERR! stack     at /var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/lib/node_modules/npm/node_modules/which/which.js:89:16
+gyp ERR! stack     at /var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/lib/node_modules/npm/node_modules/which/node_modules/isexe/index.js:44:5
+gyp ERR! stack     at /var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/lib/node_modules/npm/node_modules/which/node_modules/isexe/access.js:8:5
+gyp ERR! stack     at FSReqWrap.oncomplete (fs.js:114:15)
+gyp ERR! System Linux 4.9.12-moby
+gyp ERR! command "/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/bin/node" "/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js" "rebuild"
+gyp ERR! cwd /var/jenkins_home/workspace/LiteratureNodeJSApp/node_modules/bcrypt
+gyp ERR! node -v v7.7.1
+gyp ERR! node-gyp -v v3.5.0
+gyp ERR! not ok 
+- aproba@1.1.1 node_modules/aproba
+- block-stream@0.0.9 node_modules/block-stream
+- nan@1.8.4 node_modules/bson/node_modules/nan
+- code-point-at@1.1.0 node_modules/code-point-at
+- console-control-strings@1.1.0 node_modules/console-control-strings
+- delegates@1.0.0 node_modules/delegates
+- are-we-there-yet@1.1.2 node_modules/are-we-there-yet
+- fstream@1.0.10 node_modules/fstream
+- fstream-ignore@1.0.5 node_modules/fstream-ignore
+- has-unicode@2.0.1 node_modules/has-unicode
+- pkginfo@0.3.1 node_modules/http-proxy/node_modules/pkginfo
+- is-fullwidth-code-point@1.0.0 node_modules/is-fullwidth-code-point
+- base64-url@1.2.1 node_modules/karma/node_modules/base64-url
+- base64id@0.1.0 node_modules/karma/node_modules/base64id
+- commander@2.1.0 node_modules/karma/node_modules/commander
+- csurf@1.8.3 node_modules/karma/node_modules/csurf
+- nan@1.0.0 node_modules/karma/node_modules/nan
+- negotiator@0.5.3 node_modules/karma/node_modules/negotiator
+- accepts@1.2.13 node_modules/karma/node_modules/accepts
+- compression@1.5.2 node_modules/karma/node_modules/compression
+- pause@0.1.0 node_modules/karma/node_modules/pause
+- uglify-js@1.2.5 node_modules/karma/node_modules/uglify-js
+- uid-safe@2.0.0 node_modules/karma/node_modules/uid-safe
+- express-session@1.11.3 node_modules/karma/node_modules/express-session
+- nan@1.3.0 node_modules/kerberos/node_modules/nan
+- kerberos@0.0.7 node_modules/kerberos
+- graceful-fs@2.0.3 node_modules/mocha/node_modules/graceful-fs
+- minimatch@0.2.14 node_modules/mocha/node_modules/minimatch
+- ms@0.6.2 node_modules/mocha/node_modules/ms
+- minimist@1.2.0 node_modules/node-pre-gyp/node_modules/minimist
+- rc@1.1.7 node_modules/node-pre-gyp/node_modules/rc
+- policyfile@0.0.4 node_modules/policyfile
+- redis@0.7.3 node_modules/redis
+escape-html@1.0.2 node_modules/karma/node_modules/escape-html -> node_modules/sails/node_modules/escape-html
+glob@5.0.15 node_modules/karma/node_modules/glob -> node_modules/sails/node_modules/glob
+minimatch@2.0.10 node_modules/karma/node_modules/minimatch -> node_modules/sails/node_modules/grunt-sync/node_modules/minimatch
+vary@1.0.1 node_modules/karma/node_modules/vary -> node_modules/sails/node_modules/vary
+- set-blocking@2.0.0 node_modules/set-blocking
+- string-width@1.0.2 node_modules/string-width
+- tar@2.2.1 node_modules/tar
+- once@1.3.3 node_modules/tar-pack/node_modules/once
+- readable-stream@2.1.5 node_modules/tar-pack/node_modules/readable-stream
+- tinycolor@0.0.1 node_modules/tinycolor
+- uid-number@0.0.6 node_modules/uid-number
+- tar-pack@3.3.0 node_modules/tar-pack
+- wide-align@1.1.0 node_modules/wide-align
+- gauge@2.7.3 node_modules/gauge
+- npmlog@4.0.2 node_modules/npmlog
+- xmlhttprequest@1.4.2 node_modules/xmlhttprequest
+- zeparser@0.0.5 node_modules/zeparser
+- active-x-obfuscator@0.0.1 node_modules/active-x-obfuscator
+- graceful-fs@3.0.11 node_modules/karma/node_modules/graceful-fs
+- q@1.4.1 node_modules/karma/node_modules/q
+- commander@2.3.0 node_modules/mocha/node_modules/commander
+- debug@2.0.0 node_modules/mocha/node_modules/debug
+- escape-string-regexp@1.0.2 node_modules/mocha/node_modules/escape-string-regexp
+- mkdirp@0.5.0 node_modules/mocha/node_modules/mkdirp
+- node-pre-gyp@0.6.32 node_modules/node-pre-gyp
+zspharmaliteratureapp@0.2.1 /var/jenkins_home/workspace/LiteratureNodeJSApp
+├─┬ chromedriver@2.28.0 
+│ └── adm-zip@0.4.7 
+├── dotenv@4.0.0 
+├─┬ grunt-karma@2.0.0 
+│ └── lodash@3.10.1 
+├── jasmine-reporters@2.2.1 
+├─┬ karma@1.5.0 
+│ ├─┬ body-parser@1.17.1 
+│ │ ├── bytes@2.4.0 
+│ │ ├─┬ debug@2.6.1 
+│ │ │ └── ms@0.7.2 
+│ │ ├── depd@1.1.0 
+│ │ ├─┬ http-errors@1.6.1 
+│ │ │ └── setprototypeof@1.0.3 
+│ │ ├── iconv-lite@0.4.15 
+│ │ ├── qs@6.4.0 
+│ │ └── raw-body@2.2.0 
+│ ├─┬ combine-lists@1.0.1 
+│ │ └── lodash@4.17.4 
+│ ├─┬ connect@3.6.0 
+│ │ └── finalhandler@1.0.0 
+│ ├── core-js@2.4.1 
+│ ├─┬ dom-serialize@2.2.1 
+│ │ ├── custom-event@1.0.1 
+│ │ ├── ent@2.2.0 
+│ │ └── void-elements@2.0.1 
+│ ├─┬ expand-braces@0.1.2 
+│ │ ├── array-slice@0.2.3 
+│ │ └─┬ braces@0.1.5 
+│ │   └─┬ expand-range@0.1.1 
+│ │     ├── is-number@0.1.1 
+│ │     └── repeat-string@0.2.2 
+│ ├─┬ http-proxy@1.16.2 
+│ │ ├── eventemitter3@1.2.0 
+│ │ └── requires-port@1.0.0 
+│ ├── isbinaryfile@3.0.2 
+│ ├── qjobs@1.1.5 
+│ ├── range-parser@1.2.0 
+│ ├── rimraf@2.6.1 
+│ ├─┬ socket.io@1.7.3 
+│ │ ├── debug@2.3.3 
+│ │ ├─┬ engine.io@1.8.3 
+│ │ │ ├── cookie@0.3.1 
+│ │ │ ├── debug@2.3.3 
+│ │ │ └── ws@1.1.2 
+│ │ ├── object-assign@4.1.0 
+│ │ └─┬ socket.io-client@1.7.3 
+│ │   ├── component-emitter@1.2.1 
+│ │   ├── debug@2.3.3 
+│ │   └─┬ engine.io-client@1.8.3 
+│ │     └── debug@2.3.3 
+│ ├── source-map@0.5.6 
+│ ├─┬ tmp@0.0.31 
+│ │ └── os-tmpdir@1.0.2 
+│ └── useragent@2.1.13 
+├─┬ mocha@3.2.0 
+│ ├── browser-stdout@1.3.0 
+│ ├── diff@1.4.0 
+│ ├── glob@7.0.5 
+│ ├── growl@1.9.2 
+│ ├─┬ lodash.create@3.1.1 
+│ │ ├─┬ lodash._baseassign@3.2.0 
+│ │ │ ├── lodash._basecopy@3.0.1 
+│ │ │ └─┬ lodash.keys@3.1.2 
+│ │ │   ├── lodash._getnative@3.9.1 
+│ │ │   ├── lodash.isarguments@3.1.0 
+│ │ │   └── lodash.isarray@3.0.4 
+│ │ ├── lodash._basecreate@3.0.3 
+│ │ └── lodash._isiterateecall@3.0.9 
+│ └── supports-color@3.1.2 
+├─┬ sails@0.12.13 
+│ ├─┬ @sailshq/express@3.21.3 
+│ │ ├── commander@2.6.0 
+│ │ └── cookie@0.1.3 
+│ ├─┬ anchor@0.10.5 
+│ │ ├─┬ geojsonhint@1.1.0 
+│ │ │ ├── colors@0.6.2 
+│ │ │ ├─┬ concat-stream@1.4.10 
+│ │ │ │ ├── inherits@2.0.1 
+│ │ │ │ ├─┬ readable-stream@1.1.13 
+│ │ │ │ │ ├── core-util-is@1.0.1 
+│ │ │ │ │ ├── isarray@0.0.1 
+│ │ │ │ │ └── string_decoder@0.10.31 
+│ │ │ │ └── typedarray@0.0.6 
+│ │ │ ├─┬ jsonlint-lines@1.6.0 
+│ │ │ │ ├── JSV@4.0.2 
+│ │ │ │ └─┬ nomnom@1.8.1 
+│ │ │ │   ├─┬ chalk@0.4.0 
+│ │ │ │   │ ├── ansi-styles@1.0.0 
+│ │ │ │   │ ├── has-color@0.1.7 
+│ │ │ │   │ └── strip-ansi@0.1.1 
+│ │ │ │   └── underscore@1.6.0 
+│ │ │ ├── minimist@1.1.1 
+│ │ │ └─┬ optimist@0.6.1 
+│ │ │   ├── minimist@0.0.10 
+│ │ │   └── wordwrap@0.0.3 
+│ │ ├── lodash@3.9.3 
+│ │ └── validator@3.41.2 
+│ ├── async@1.5.0 
+│ ├── ejs@2.3.4 
+│ ├─┬ grunt@1.0.1 
+│ │ ├── coffee-script@1.10.0 
+│ │ ├── dateformat@1.0.12 
+│ │ ├── findup-sync@0.3.0 
+│ │ ├── glob@7.0.6 
+│ │ ├── iconv-lite@0.4.15 
+│ │ ├─┬ js-yaml@3.5.5 
+│ │ │ ├── argparse@1.0.9 
+│ │ │ └── esprima@2.7.3 
+│ │ └── rimraf@2.2.8 
+│ ├─┬ grunt-contrib-clean@1.0.0 
+│ │ ├── async@1.5.2 
+│ │ └─┬ rimraf@2.6.1 
+│ │   └── glob@7.1.1 
+│ ├─┬ grunt-contrib-coffee@1.0.0 
+│ │ ├─┬ chalk@1.0.0 
+│ │ │ ├─┬ has-ansi@1.0.3 
+│ │ │ │ └── ansi-regex@1.1.1 
+│ │ │ ├── strip-ansi@2.0.1 
+│ │ │ └── supports-color@1.3.1 
+│ │ └── lodash@4.3.0 
+│ ├─┬ grunt-contrib-concat@1.0.1 
+│ │ └── source-map@0.5.6 
+│ ├── grunt-contrib-copy@1.0.0 
+│ ├─┬ grunt-contrib-cssmin@1.0.1 
+│ │ ├─┬ clean-css@3.4.25 
+│ │ │ ├── commander@2.8.1 
+│ │ │ └── source-map@0.4.4 
+│ │ └─┬ maxmin@1.1.0 
+│ │   ├── gzip-size@1.0.0 
+│ │   └── pretty-bytes@1.0.4 
+│ ├─┬ grunt-contrib-jst@1.0.0 
+│ │ └── lodash@2.4.2 
+│ ├─┬ grunt-contrib-less@1.3.0 
+│ │ ├── async@1.5.2 
+│ │ ├── less@2.6.1 
+│ │ └── lodash@4.17.4 
+│ ├─┬ grunt-contrib-uglify@1.0.1 
+│ │ └─┬ uglify-js@2.6.4 
+│ │   └── async@0.2.10 
+│ ├─┬ grunt-contrib-watch@1.0.0 
+│ │ ├─┬ gaze@1.1.2 
+│ │ │ └─┬ globule@1.1.0 
+│ │ │   ├── glob@7.1.1 
+│ │ │   └── lodash@4.16.6 
+│ │ ├── lodash@3.10.1 
+│ │ └─┬ tiny-lr@0.2.1 
+│ │   ├─┬ body-parser@1.14.2 
+│ │   │ ├── bytes@2.2.0 
+│ │   │ ├── depd@1.1.0 
+│ │   │ ├── http-errors@1.3.1 
+│ │   │ ├── iconv-lite@0.4.13 
+│ │   │ └── qs@5.2.0 
+│ │   ├── faye-websocket@0.10.0 
+│ │   └── qs@5.1.0 
+│ ├── grunt-sails-linker@0.10.1 
+│ ├─┬ grunt-sync@0.5.2 
+│ │ ├── glob@4.5.3 
+│ │ └── lodash@3.10.1 
+│ ├─┬ include-all@1.0.8 
+│ │ └── lodash@3.10.1 
+│ ├─┬ rc@1.0.1 
+│ │ ├── deep-extend@0.2.11 
+│ │ └── strip-json-comments@0.1.3 
+│ ├── semver@5.1.0 
+│ └─┬ skipper@0.7.6 
+│   ├─┬ async@2.0.1 
+│   │ └── lodash@4.17.4 
+│   ├─┬ body-parser@1.17.1 
+│   │ ├── bytes@2.4.0 
+│   │ ├─┬ debug@2.6.1 
+│   │ │ └── ms@0.7.2 
+│   │ ├── depd@1.1.0 
+│   │ ├─┬ http-errors@1.6.1 
+│   │ │ └── setprototypeof@1.0.3 
+│   │ ├── qs@6.4.0 
+│   │ └── raw-body@2.2.0 
+│   ├── colors@1.1.2 
+│   ├── lodash@3.10.1 
+│   ├─┬ multiparty@3.2.10 
+│   │ └─┬ readable-stream@1.1.14 
+│   │   └── isarray@0.0.1 
+│   └── semver@4.3.6 
+├─┬ sails-hook-dotenv@0.1.1 
+│ └── dotenv@0.4.0 
+├─┬ sails-mongo@0.12.2 
+│ ├─┬ async@2.0.1 
+│ │ └── lodash@4.17.4 
+│ ├─┬ mongodb@2.1.20 
+│ │ ├── es6-promise@3.0.2 
+│ │ ├─┬ mongodb-core@1.3.20 
+│ │ │ ├── bson@0.4.23 
+│ │ │ └─┬ require_optional@1.0.0 
+│ │ │   └── resolve-from@2.0.0 
+│ │ └─┬ readable-stream@1.0.31 
+│ │   └── isarray@0.0.1 
+│ └── validator@4.5.1 
+└── selenium@2.20.0 
+
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.0.0 (node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.1: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm ERR! Linux 4.9.12-moby
+npm ERR! argv "/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/bin/node" "/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/bin/npm" "install"
+npm ERR! node v7.7.1
+npm ERR! npm  v4.1.2
+npm ERR! code ELIFECYCLE
+
+npm ERR! bcrypt@0.8.7 install: `node-gyp rebuild`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the bcrypt@0.8.7 install script 'node-gyp rebuild'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the bcrypt package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node-gyp rebuild
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs bcrypt
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls bcrypt
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /var/jenkins_home/workspace/LiteratureNodeJSApp/npm-debug.log
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

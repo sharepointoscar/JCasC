@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Created-By: 0.3.8
+Build-Ruby-Platform: java
+Build-Ruby-Version: 1.8.7
+Built-By: matthewriley
+Group-Id: org.jenkins-ci.plugins
+Short-Name: yammer
+Long-Name: Yammer Plugin
+Url: https://wiki.jenkins-ci.org/display/JENKINS/Yammer+Plugin
+Plugin-Class: ruby.RubyPlugin
+Plugin-Version: 1.1.0
+Jenkins-Version: 1.432
+Plugin-Dependencies: ruby-runtime:0.12,token-macro:1.8
+Bundle-Path: vendor/gems

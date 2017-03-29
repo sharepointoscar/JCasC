@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.tasks.Mailer_-DescriptorImpl plugin="mailer@1.20">
+  <defaultSuffix>@sharepointace.com</defaultSuffix>
+  <smtpAuthUsername>oscar@sharepointace.com</smtpAuthUsername>
+  <smtpAuthPassword>{AQAAABAAAAAgWsierNA825cDst9ByM8HAzH+83Z/CialGHBJ88PXYyKNyznMK2zT4XUPLGO4a1Ms}</smtpAuthPassword>
+  <replyToAddress>no-reply@sharepointace.com</replyToAddress>
+  <smtpHost>outlook.office365.com</smtpHost>
+  <useSsl>true</useSsl>
+  <smtpPort>587</smtpPort>
+  <charset>UTF-8</charset>
+</hudson.tasks.Mailer_-DescriptorImpl>

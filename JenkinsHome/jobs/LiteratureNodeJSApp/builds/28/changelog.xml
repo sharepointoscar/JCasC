@@ -1,0 +1,24 @@
+commit 932be2def07636e72026a1d3bc0974ea7ea9888a
+tree f699f6332956d47e448eef4c4eb29c782adb214a
+parent 7302b0efa66db12753a4111398995faf3c88f395
+author Oscar medina <me@sharepointoscar.com> 2017-03-27 08:25:37 -0700
+committer Oscar medina <me@sharepointoscar.com> 2017-03-27 08:25:37 -0700
+
+    stopped using bcrypt, instead using bcrypt-nodejs
+
+
+
+:100644 100644 09356211feec89850ae1d287e0074bf01f9b1746 a24f85f6e5bc1f1a2de664cd6275da7be7a36454 M	api/models/Passport.js
+:100644 100644 d854cafc08480d87b781013553dbdb26f1f266c7 d04183c6676f468e47e4a793bc6833e34e99548b M	package.json
+commit 7302b0efa66db12753a4111398995faf3c88f395
+tree c3df772ab506c1b2dd6598b479a844407dbded3f
+parent 328d1a6d0c1ce71062606e245f8b3b53ab591a67
+author Oscar medina <me@sharepointoscar.com> 2017-03-27 08:19:55 -0700
+committer Oscar medina <me@sharepointoscar.com> 2017-03-27 08:19:55 -0700
+
+    changed bcrypt version to a higher one
+
+
+
+:100644 100644 a5f7d13b5db630ec2241bee8c2dcde3aaa5ca77c 38ba4242d8092f167ea4db66c5585153e5241242 M	app.js
+:100644 100644 9aeff75241a301f197903d30da050efb89967f00 d854cafc08480d87b781013553dbdb26f1f266c7 M	package.json

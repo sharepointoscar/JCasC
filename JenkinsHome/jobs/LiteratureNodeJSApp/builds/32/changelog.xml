@@ -1,0 +1,63 @@
+commit 4f115c5ab7b7835aee5d22642ecce3f04c8691bd
+tree 7324cd251e58ce3ef9e9e76101bdfbf8a0414580
+parent 66193bdc5936d3bb93649e5da8fd860f143e24ed
+author Oscar medina <me@sharepointoscar.com> 2017-03-27 20:23:29 -0700
+committer Oscar medina <me@sharepointoscar.com> 2017-03-27 20:23:29 -0700
+
+    altered CMD for docker.test
+
+
+
+:100644 100644 3ebe4aaea0362591349abb4c0e53919e1665b0a2 063e84f9e66820589bf29a0e891f5ec903adb9a3 M	Dockerfile.test
+:100644 100644 20e0502b2e8187fa4564a8a80dfd59ec2647cf80 2c242eae05564f2d5177454bf69c645546d9e828 M	config/protractor-conf.js
+commit 66193bdc5936d3bb93649e5da8fd860f143e24ed
+tree deed932ab6876a44928e6100a6fd878a7c4204b5
+parent 5c4ef3c1b2050e1bf1a4ba18965e60ea135c8b2e
+author Oscar medina <me@sharepointoscar.com> 2017-03-27 19:33:47 -0700
+committer Oscar medina <me@sharepointoscar.com> 2017-03-27 19:33:47 -0700
+
+    changed back to chrome browser for protractor config
+
+
+
+:100644 100644 c0a75c17b0c1d126039728dacdd8284c98039978 20e0502b2e8187fa4564a8a80dfd59ec2647cf80 M	config/protractor-conf.js
+commit 5c4ef3c1b2050e1bf1a4ba18965e60ea135c8b2e
+tree 9c8983b2aae5434185d64cbc7e34de3001926eed
+parent cf4dc8addf032ddcbe6640ce43d82d1698139aab
+author Oscar medina <me@sharepointoscar.com> 2017-03-27 19:16:55 -0700
+committer Oscar medina <me@sharepointoscar.com> 2017-03-27 19:16:55 -0700
+
+    changed from chrome to firefox for protractor capabilities testing
+
+
+
+:100644 100644 b3ec675942b481f73cbc3e3c311562516b799ce3 3ebe4aaea0362591349abb4c0e53919e1665b0a2 M	Dockerfile.test
+:100644 100644 5a92617f2e29f68aaa58fdfe401ed06cf374e11e c0a75c17b0c1d126039728dacdd8284c98039978 M	config/protractor-conf.js
+commit cf4dc8addf032ddcbe6640ce43d82d1698139aab
+tree 174230ffb3ec48a9aa7e32a92237f7de90265ce0
+parent 91f98738939c21ae2a9cede41f048d8855e8e82d
+author Oscar medina <me@sharepointoscar.com> 2017-03-27 17:52:48 -0700
+committer Oscar medina <me@sharepointoscar.com> 2017-03-27 17:52:48 -0700
+
+    using env variables on mocha unit tests to connect to mongo
+
+
+
+:100644 100644 459ea01284cd7a5e23a70fd9f8409878f7489bc0 b3ec675942b481f73cbc3e3c311562516b799ce3 M	Dockerfile.test
+:100644 100644 88179a27dc4e15b0f857e5aa7d3af230e1f269c9 6878fd5a73e1082cdaa963375bc7a3352f5bbedf M	tasks/config/protractor.js
+:100644 100644 b0165cbfc2d51d700440d7e8f418ff47cdec935d 1fbea832b98873d5431bd482ee4076407405f45b M	tests/unit/controllers/home.unit.js
+:100644 100644 728baadeede2b02f0f52e83f62f87794570cf242 3c6575270da68558adbb1fb57e5d56c31c96002a M	views/layouts/internal.ejs
+:100644 100644 850ba95fb995be2d565dd467a46e8d5709653c89 6a31f8386ea8aeb4c4dba0de44f49372d3449095 M	views/layouts/public.ejs
+commit 91f98738939c21ae2a9cede41f048d8855e8e82d
+tree 57af831e8e30f575430dce634c1b1cee1932a055
+parent 932be2def07636e72026a1d3bc0974ea7ea9888a
+author Oscar medina <me@sharepointoscar.com> 2017-03-27 17:21:20 -0700
+committer Oscar medina <me@sharepointoscar.com> 2017-03-27 17:21:20 -0700
+
+    increased the timeout for mocha unit tests.
+
+
+
+:100644 100644 509657de3458eb30c41323c4639e600d7d6af5b7 459ea01284cd7a5e23a70fd9f8409878f7489bc0 M	Dockerfile.test
+:100644 100644 f50063f6df5efabe8e8b5cbc79483522c0c4355a 9ce72d3cd23ef160f90534972ba5f2c640ef7125 M	docker-compose.test.yml
+:100644 100644 b1cd6264ac3625a9401531ce8b9cf8dfe8146952 b0165cbfc2d51d700440d7e8f418ff47cdec935d M	tests/unit/controllers/home.unit.js

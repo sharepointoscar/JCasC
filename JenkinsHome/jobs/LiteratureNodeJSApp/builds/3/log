@@ -1,0 +1,67 @@
+Started by user [8mha:////4LUpBPEMWyDWtdtHvvWHlbpAlRv6IgzcrMHryjVwgjhUAAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZR/dLi1CL94IzEotSA/My8Ev/i5MQiAEhiGyXKAAAA[0mOscar Medina
+Building in workspace /var/jenkins_home/workspace/LiteratureNodeJSApp
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git # timeout=10
+Fetching upstream changes from https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials Docker Hub Credentials
+ > git fetch --tags --progress https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 1f89f6539d1d7ec67ae2ed390bdf41e77b8c60b1 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 1f89f6539d1d7ec67ae2ed390bdf41e77b8c60b1
+ > git rev-list 1f89f6539d1d7ec67ae2ed390bdf41e77b8c60b1 # timeout=10
+$ /var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/bin/npm install -g npm@4.1.2 bower@1.8.0 grunt-cli
+/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/bin/bower -> /var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/lib/node_modules/bower/bin/bower
+/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/bin/grunt -> /var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/lib/node_modules/grunt-cli/bin/grunt
+/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/bin/npm -> /var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/lib/node_modules/npm/bin/npm-cli.js
+/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/lib
+├── bower@1.8.0 
+├─┬ grunt-cli@1.2.0 
+│ ├─┬ findup-sync@0.3.0 
+│ │ └─┬ glob@5.0.15 
+│ │   ├─┬ inflight@1.0.6 
+│ │   │ └── wrappy@1.0.2 
+│ │   ├── inherits@2.0.3 
+│ │   ├─┬ minimatch@3.0.3 
+│ │   │ └─┬ brace-expansion@1.1.6 
+│ │   │   ├── balanced-match@0.4.2 
+│ │   │   └── concat-map@0.0.1 
+│ │   ├── once@1.4.0 
+│ │   └── path-is-absolute@1.0.1 
+│ ├── grunt-known-options@1.1.0 
+│ ├─┬ nopt@3.0.6 
+│ │ └── abbrev@1.1.0 
+│ └── resolve@1.1.7 
+└── npm@4.1.2 
+
+[LiteratureNodeJSApp] $ /bin/sh -xe /tmp/hudson4154367215678431944.sh
++ echo /usr/lib/jvm/java-8-openjdk-amd64/bin:/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/bin:/usr/lib/jvm/java-8-openjdk-amd64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+/usr/lib/jvm/java-8-openjdk-amd64/bin:/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/bin:/usr/lib/jvm/java-8-openjdk-amd64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++ node --version
+v7.7.1
++ grunt --version
+grunt-cli v1.2.0
+grunt v0.4.2
++ grunt --version
+grunt-cli v1.2.0
+grunt v0.4.2
+[LiteratureNodeJSApp] $ /var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/bin/node /tmp/hudson8360056617822493272.js
+/tmp/hudson8360056617822493272.js:1
+(function (exports, require, module, __filename, __dirname) { Pipeline {
+                                                                       ^
+SyntaxError: Unexpected token {
+    at createScript (vm.js:53:10)
+    at Object.runInThisContext (vm.js:95:10)
+    at Module._compile (module.js:543:28)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.runMain (module.js:605:10)
+    at run (bootstrap_node.js:425:7)
+    at startup (bootstrap_node.js:146:9)
+Build step 'Execute NodeJS script' marked build as failure
+Finished: FAILURE

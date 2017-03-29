@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<l:dependencies xmlns:l='licenses' groupId='org.codefirst.jenkins.wsnotifier' artifactId='websocket' version='1.0.6'><l:dependency name='Jenkins Websocket Notifier' groupId='org.codefirst.jenkins.wsnotifier' artifactId='websocket' version='1.0.6' url='https://wiki.jenkins-ci.org/display/JENKINS/Websocket+Plugin'><l:description/></l:dependency><l:dependency name='The Netty Project' groupId='io.netty' artifactId='netty' version='3.5.5.Final' url='http://netty.io/'><l:description>The Netty project is an effort to provide an asynchronous event-driven
+    network application framework and tools for rapid development of
+    maintainable high performance and high scalability protocol servers and
+    clients.  In other words, Netty is a NIO client server framework which
+    enables quick and easy development of network applications such as protocol
+    servers and clients. It greatly simplifies and streamlines network
+    programming such as TCP and UDP socket server.</l:description><l:license name='Apache License, Version 2.0' url='http://www.apache.org/licenses/LICENSE-2.0'/></l:dependency><l:dependency name='webbit' groupId='org.webbitserver' artifactId='webbit' version='0.4.15' url='http://webbitserver.org/'><l:description>A Java event based WebSocket and HTTP server</l:description><l:license name='BSD License' url='http://www.opensource.org/licenses/bsd-license'/></l:dependency></l:dependencies>

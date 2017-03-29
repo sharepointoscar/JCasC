@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: vjuranek
+Build-Jdk: 1.8.0_102
+Extension-Name: docker-build-step
+Implementation-Title: docker-build-step
+Implementation-Version: 1.39
+Plugin-Class: org.jenkinsci.plugins.dockerbuildstep.PluginImpl
+Group-Id: org.jenkins-ci.plugins
+Short-Name: docker-build-step
+Long-Name: docker-build-step
+Url: https://wiki.jenkins-ci.org/display/JENKINS/Docker+build+step+plu
+ gin
+Plugin-Version: 1.39
+Hudson-Version: 1.554.1
+Jenkins-Version: 1.554.1
+Plugin-Dependencies: credentials:1.22,docker-commons:1.4.0
+Plugin-Developers: Vojtech Juranek:vjuranek:
+

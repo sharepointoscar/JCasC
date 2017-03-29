@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: stefan
+Build-Jdk: 1.8.0_60
+Extension-Name: seleniumhtmlreport
+Specification-Title: This is an jenkins plugin to visualize the result
+ s of selenium tests
+Implementation-Title: seleniumhtmlreport
+Implementation-Version: 1.0
+Group-Id: org.jenkins-ci.plugins
+Short-Name: seleniumhtmlreport
+Long-Name: Selenium HTML report
+Url: https://wiki.jenkins-ci.org/display/JENKINS/seleniumhtmlreport+Pl
+ ugin
+Plugin-Version: 1.0
+Hudson-Version: 1.609.3
+Jenkins-Version: 1.609.3
+Plugin-Developers: Marco Machmer:m211:
+

@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: csanchez
+Build-Jdk: 1.8.0_40
+Extension-Name: docker-build-publish
+Specification-Title: This plugin provides the ability to build project
+ s with a Dockerfile, and publish the resultant tagged image (repo) to
+  a Docker registry.
+Implementation-Title: docker-build-publish
+Implementation-Version: 1.3.2
+Group-Id: org.jenkins-ci.plugins
+Short-Name: docker-build-publish
+Long-Name: CloudBees Docker Build and Publish plugin
+Url: https://wiki.jenkins-ci.org/display/JENKINS/CloudBees+Docker+Buil
+ d+and+Publish+plugin
+Plugin-Version: 1.3.2
+Hudson-Version: 1.554.2
+Jenkins-Version: 1.554.2
+Plugin-Dependencies: docker-commons:1.3.1,token-macro:1.10
+Plugin-Developers: 
+

@@ -1,0 +1,58 @@
+Started by user [8mha:////4LUpBPEMWyDWtdtHvvWHlbpAlRv6IgzcrMHryjVwgjhUAAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZR/dLi1CL94IzEotSA/My8Ev/i5MQiAEhiGyXKAAAA[0mOscar Medina
+Building in workspace /var/jenkins_home/workspace/LiteratureNodeJSApp
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git # timeout=10
+Fetching upstream changes from https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials Docker Hub Credentials
+ > git fetch --tags --progress https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 1f89f6539d1d7ec67ae2ed390bdf41e77b8c60b1 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 1f89f6539d1d7ec67ae2ed390bdf41e77b8c60b1
+ > git rev-list 1f89f6539d1d7ec67ae2ed390bdf41e77b8c60b1 # timeout=10
+[LiteratureNodeJSApp] $ /bin/sh -xe /tmp/hudson5113579763388354549.sh
++ echo /usr/lib/jvm/java-8-openjdk-amd64/bin:/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/bin:/usr/lib/jvm/java-8-openjdk-amd64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+/usr/lib/jvm/java-8-openjdk-amd64/bin:/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/bin:/usr/lib/jvm/java-8-openjdk-amd64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++ node --version
+v7.7.1
++ grunt --version
+grunt-cli v1.2.0
+grunt v0.4.2
++ grunt --version
+grunt-cli v1.2.0
+grunt v0.4.2
+[LiteratureNodeJSApp] $ /bin/sh -xe /tmp/hudson4039121646895417305.sh
++ npm install
+npm WARN deprecated minimatch@2.0.10: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+
+> sails@0.12.12 preinstall /var/jenkins_home/workspace/LiteratureNodeJSApp/node_modules/.staging/sails-bb95af8a
+> node ./lib/preinstall_npmcheck.js
+
+Sails.js Installation: Checking npm-version successful
+zspharmaliteratureapp@0.2.1 /var/jenkins_home/workspace/LiteratureNodeJSApp
+└── (empty)
+
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.0.0 (node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.1: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm ERR! Linux 4.4.52-boot2docker
+npm ERR! argv "/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/bin/node" "/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.1/bin/npm" "install"
+npm ERR! node v7.7.1
+npm ERR! npm  v4.1.2
+npm ERR! path /var/jenkins_home/workspace/LiteratureNodeJSApp/node_modules/anchor/node_modules/geojsonhint/node_modules/jsonlint-lines/node_modules/nomnom/node_modules/chalk/node_modules/strip-ansi/cli.js
+npm ERR! code ENOENT
+npm ERR! errno -2
+npm ERR! syscall chmod
+
+npm ERR! enoent ENOENT: no such file or directory, chmod '/var/jenkins_home/workspace/LiteratureNodeJSApp/node_modules/anchor/node_modules/geojsonhint/node_modules/jsonlint-lines/node_modules/nomnom/node_modules/chalk/node_modules/strip-ansi/cli.js'
+npm ERR! enoent ENOENT: no such file or directory, chmod '/var/jenkins_home/workspace/LiteratureNodeJSApp/node_modules/anchor/node_modules/geojsonhint/node_modules/jsonlint-lines/node_modules/nomnom/node_modules/chalk/node_modules/strip-ansi/cli.js'
+npm ERR! enoent This is most likely not a problem with npm itself
+npm ERR! enoent and is related to npm not being able to find a file.
+npm ERR! enoent 
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /var/jenkins_home/workspace/LiteratureNodeJSApp/npm-debug.log
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

@@ -1,0 +1,47 @@
+--- Copying files at Wed Jan  4 16:03:20 UTC 2017
+INSTALLED init.groovy.d/tcp-slave-agent-port.groovy
+--- Copying files at Wed Jan  4 19:19:01 UTC 2017
+--- Copying files at Thu Jan  5 16:02:37 UTC 2017
+--- Copying files at Sat Jan 21 06:24:14 UTC 2017
+--- Copying files at Sat Jan 21 06:57:23 UTC 2017
+--- Copying files at Sat Jan 21 07:03:19 UTC 2017
+--- Copying files at Tue Jan 24 23:39:47 UTC 2017
+--- Copying files at Thu Feb 16 05:49:42 UTC 2017
+--- Copying files at Fri Feb 17 00:02:49 UTC 2017
+--- Copying files at Fri Feb 17 01:52:04 UTC 2017
+--- Copying files at Fri Feb 17 02:46:17 UTC 2017
+--- Copying files at Fri Feb 17 02:48:11 UTC 2017
+--- Copying files at Thu Mar  2 21:39:25 UTC 2017
+--- Copying files at Fri Mar  3 15:16:02 UTC 2017
+--- Copying files at Fri Mar  3 15:16:05 UTC 2017
+--- Copying files at Fri Mar  3 15:23:07 UTC 2017
+--- Copying files at Sun Mar  5 05:52:07 UTC 2017
+--- Copying files at Sun Mar  5 06:44:12 UTC 2017
+--- Copying files at Mon Mar  6 02:51:28 UTC 2017
+--- Copying files at Tue Mar  7 17:27:30 UTC 2017
+--- Copying files at Wed Mar  8 01:10:55 UTC 2017
+--- Copying files at Wed Mar  8 02:36:22 UTC 2017
+--- Copying files at Mon Mar 27 14:34:16 UTC 2017
+--- Copying files at Mon Mar 27 23:08:27 UTC 2017
+--- Copying files at Tue Mar 28 14:33:18 UTC 2017
+INSTALLED plugins/github-issues.jpi : 1.2.2
+INSTALLED plugins/github-pullrequest.jpi : 0.1.0-rc22
+INSTALLED plugins/terraform.jpi : 1.0.9
+INSTALLED plugins/chef-identity.jpi : 1.0.0
+INSTALLED plugins/pipeline-githubnotify-step.jpi : 1.0.1
+INSTALLED plugins/greenballs.jpi : 1.15
+INSTALLED plugins/build-monitor-plugin.jpi : 1.11+build.201701152243
+INSTALLED plugins/seleniumhtmlreport.jpi : 1.0
+--- Copying files at Tue Mar 28 14:49:42 UTC 2017
+--- Copying files at Tue Mar 28 14:55:22 UTC 2017
+INSTALLED plugins/docker-plugin.jpi : 0.16.2
+--- Copying files at Tue Mar 28 15:00:39 UTC 2017
+--- Copying files at Tue Mar 28 15:24:01 UTC 2017
+--- Copying files at Tue Mar 28 19:08:57 UTC 2017
+--- Copying files at Tue Mar 28 21:05:15 UTC 2017
+--- Copying files at Tue Mar 28 21:12:48 UTC 2017
+--- Copying files at Tue Mar 28 21:42:00 UTC 2017
+--- Copying files at Tue Mar 28 21:54:29 UTC 2017
+--- Copying files at Tue Mar 28 22:11:26 UTC 2017
+--- Copying files at Tue Mar 28 22:57:19 UTC 2017
+--- Copying files at Tue Mar 28 23:01:44 UTC 2017

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.jenkinsci.plugins.githubissues.GitHubIssueNotifier_-DescriptorImpl plugin="github-issues@1.2.2">
+  <issueTitle>$JOB_NAME $BUILD_DISPLAY_NAME failed</issueTitle>
+  <issueBody>Build &apos;$JOB_NAME&apos; is failing!
+
+Last 50 lines of build output:
+
+```
+${BUILD_LOG, maxLines=50}
+```
+
+Changes since last successful build:
+${CHANGES_SINCE_LAST_SUCCESS, format=&quot;%c&quot;, changesFormat=&quot;- [%a] %r - %m\n&quot;}
+
+[View full output]($BUILD_URL)</issueBody>
+  <issueLabel></issueLabel>
+</org.jenkinsci.plugins.githubissues.GitHubIssueNotifier_-DescriptorImpl>

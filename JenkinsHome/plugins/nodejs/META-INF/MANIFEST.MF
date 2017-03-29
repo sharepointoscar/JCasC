@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: Nikolas Falco
+Build-Jdk: 1.8.0_40
+Extension-Name: nodejs
+Specification-Title: Executes NodeJS script as a build step.
+Implementation-Title: nodejs
+Implementation-Version: 1.1.3
+Plugin-Class: jenkins.plugins.nodejs.NodeJSPlugin
+Group-Id: org.jenkins-ci.plugins
+Short-Name: nodejs
+Long-Name: NodeJS Plugin
+Url: http://wiki.jenkins-ci.org/display/JENKINS/NodeJS+Plugin
+Plugin-Version: 1.1.3
+Hudson-Version: 1.625.3
+Jenkins-Version: 1.625.3
+Plugin-Dependencies: config-file-provider:2.15.5
+Plugin-Developers: Cliffano Subagio:cliffano:blah@cliffano.com,Frédéri
+ c Camblor:fcamblor:fcamblor@gmail.com,Nikolas Falco:nfalco79:nfalco79
+ @hotmail.com
+

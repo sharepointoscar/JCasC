@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: tfitch
+Build-Jdk: 1.7.0_67
+Extension-Name: chef-identity
+Specification-Title: Allows management of Chef credentials so jobs can
+  execute jobs against a Chef server using those credentials
+Implementation-Title: chef-identity
+Implementation-Version: 1.0.0
+Group-Id: org.jenkins-ci.plugins
+Short-Name: chef-identity
+Long-Name: Chef Identity Plugin
+Url: http://wiki.jenkins-ci.org/display/JENKINS/chef-identity+plugin
+Plugin-Version: 1.0.0
+Hudson-Version: 1.554.3
+Jenkins-Version: 1.554.3
+Plugin-Developers: Tyler Fitch:tfitch:jenkins@tfitch.com
+

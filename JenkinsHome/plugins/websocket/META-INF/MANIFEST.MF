@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: mzp
+Build-Jdk: 1.6.0_51
+Extension-Name: websocket
+Implementation-Title: websocket
+Implementation-Version: 1.0.6
+Group-Id: org.codefirst.jenkins.wsnotifier
+Short-Name: websocket
+Long-Name: Jenkins Websocket Notifier
+Url: https://wiki.jenkins-ci.org/display/JENKINS/Websocket+Plugin
+Plugin-Version: 1.0.6
+Hudson-Version: 1.499
+Jenkins-Version: 1.499
+Plugin-Developers: MIZUNO Hiroki:mzp:mzp@ocaml.jp
+

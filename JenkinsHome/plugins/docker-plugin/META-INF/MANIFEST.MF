@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: magnayn
+Build-Jdk: 1.8.0_92
+Extension-Name: docker-plugin
+Specification-Title: Provide Cloud Provisioning and other Docker featu
+ res
+Implementation-Title: docker-plugin
+Implementation-Version: 0.16.2
+Group-Id: com.nirima
+Short-Name: docker-plugin
+Long-Name: Docker plugin
+Url: http://wiki.jenkins-ci.org/display/JENKINS/Docker+Plugin
+Plugin-Version: 0.16.2
+Hudson-Version: 1.625.3
+Jenkins-Version: 1.625.3
+Mask-Classes: com.google.common
+Plugin-Dependencies: ssh-slaves:1.6,token-macro:1.7;resolution:=option
+ al,durable-task:1.3
+Plugin-Developers: Kanstantsin Shautsou:KostyaSha:,Nigel Magnay:magnayn:
+

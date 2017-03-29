@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.plugins.git.GitSCM_-DescriptorImpl plugin="git@3.1.0">
+  <generation>28</generation>
+  <globalConfigName>sharepointoscar</globalConfigName>
+  <globalConfigEmail>me@sharepointoscar.com</globalConfigEmail>
+  <createAccountBasedOnEmail>true</createAccountBasedOnEmail>
+</hudson.plugins.git.GitSCM_-DescriptorImpl>

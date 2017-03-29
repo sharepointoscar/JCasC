@@ -7,7 +7,7 @@ Concept from Adrian Mouat's [article](http://container-solutions.com/running-doc
 
 ***
 
-## Overview
+# Overview
 Like many other nerds out there, I wanted to enhance my CI/CD configuration and have the ability to build Docker images on successful app build and testing.  In order to do that, Jenkins needs the ability to execute Docker CLI commands.  Enter this approach, otherwise known as DooD ()
 
 ## My Setup
@@ -83,7 +83,7 @@ and the image spins up with no problems.
 
 To bring up or build Jenkins image, all you do is execute this command to have it running in the background.
 ` docker-compose up -d`
-### Using Docker CLI To Build and Run Jenkins
+## Build and run the image manually using Docker CLI To Build and Run Jenkins
 If you need to use the CLI, this is how you would build and run the Jenkins image.  We use the -rm=true flag to remove intermediate containers.
 ``` bash
    docker build -t=sharepointoscar/jenkins -rm=true .
@@ -98,6 +98,3 @@ This command ensures that the host machine docker installation is accessible to 
 ```
 
 ** NOTE **: This is a quick way for getting Jenkins to build containers.  I will be working on what I believe is the proper way - using Jenkins master and slaves to perform tests and build of my images as described  on [Building Continuous Integration Pipeline with Docker](https://www.docker.com/sites/default/files/UseCase/RA_CI%20with%20Docker_08.25.2015.pdf)
-
-
-(twitter: SharePointOscar)

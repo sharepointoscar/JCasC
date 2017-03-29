@@ -34,7 +34,7 @@ You can run both Docker Toolbox and Docker for Mac, but it is damn confusing and
 ![Docker for Mac and Docker Toolbox coexistence](https://docs.docker.com/docker-for-mac/images/docker-for-mac-and-toolbox.png)
 
 
-### Setup Jenkins to execute Docker CLI Commands
+## Setup Jenkins to execute Docker CLI Commands
 Now that you have an idea of the setup required, let's dive into setting up Jenkins to allow for executing Docker CLI commands.
 
 
@@ -83,7 +83,7 @@ and the image spins up with no problems.
 
 To bring up or build Jenkins image, all you do is execute this command to have it running in the background.
 ` docker-compose up -d`
-## Build and run the image manually using Docker CLI To Build and Run Jenkins
+## Build and run the Jenkins image manually using Docker CLI
 If you need to use the CLI, this is how you would build and run the Jenkins image.  We use the -rm=true flag to remove intermediate containers.
 ``` bash
    docker build -t=sharepointoscar/jenkins -rm=true .
@@ -97,4 +97,4 @@ This command ensures that the host machine docker installation is accessible to 
         -v /usr/bin/docker:/usr/bin/docker -v $PWD/JenkinsHome:/var/jenkins_home -p 8080:8080 sharepointoscar/jenkins
 ```
 
-** NOTE **: This is a quick way for getting Jenkins to build containers.  I will be working on what I believe is the proper way - using Jenkins master and slaves to perform tests and build of my images as described  on [Building Continuous Integration Pipeline with Docker](https://www.docker.com/sites/default/files/UseCase/RA_CI%20with%20Docker_08.25.2015.pdf)
+** NOTE **: This is a quick way for getting Jenkins to build containers.  I will be working on what I feel is a best practice - using Jenkins master and slaves to perform tests and build my images as described  on [Building Continuous Integration Pipeline with Docker](https://www.docker.com/sites/default/files/UseCase/RA_CI%20with%20Docker_08.25.2015.pdf)

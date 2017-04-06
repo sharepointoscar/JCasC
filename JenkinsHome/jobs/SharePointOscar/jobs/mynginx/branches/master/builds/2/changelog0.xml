@@ -1,0 +1,11 @@
+commit 5986bb25d926f84bef3f1638bf4d95d2537abfb9
+tree c16434b5bcda43723199f96cdf6e0c559360077d
+parent 5f2617547bceb96e1df5c35b76a9c23a6a075f8f
+author Oscar Medina <oscar@sharepointace.com> 2017-04-06 15:15:58 -0700
+committer Oscar Medina <oscar@sharepointace.com> 2017-04-06 15:15:58 -0700
+
+    added sudo
+
+
+
+:100644 100644 0dc1525ae1fa5a2ff37d7f1a1a98c6948ed40aeb 68330d1def659379f320874b543127f7ed290fb6 M	Jenkinsfile

@@ -1,0 +1,21 @@
+[Thu Apr 06 22:13:34 UTC 2017] Received io.jenkins.blueocean.blueocean_github_pipeline.GithubPipelineCreateRequest$SCMSourceEventImpl CREATED event from https://api.github.com with timestamp Thu Apr 06 22:13:34 UTC 2017
+[8mha:////4MiCcQs2Anq2c94kf/aU0v0gYae+7FQcoHTos1b6B/xuAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHS0a0jxAQCzG+E2jgAAAA==[0mConnecting to https://api.github.com using sharepointoscar/****** (Github Access Token)
+[8mha:////4F6qgSL7Hp2885pHMFtkC/FgIPGjGwUZA3w3w4zK/wEXAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHS0a0ipDwA+c7WEjgAAAA==[0mLooking up repository mynginx of myself SharePointOscar
+Proposing mynginx
+Looking up [8mha:////4PfGZFOshHX7Mqb25HKgJIHNZBowyPP2NVMiR9psgWybAAAAqh+LCAAAAAAAAP9b85aBtbiIQSajNKU4P08vOT+vOD8nVc+jsiC1KCczL9svvyTVzHb1RttJBUeZGJg8GdhyUvPSSzJ8GJhLi3JKGIR8shLLEvVzEvPS9YNLijLz0q0rihik0IxzhtAgwxgggJGJgaGiAMgQL2HQyigpKSi20tdPzyzJKE0C6srVD85ILEoNyM/MK/EvTk4s0s+tzEvPzKsAAFCFRyqvAAAA[0mSharePointOscar/mynginx
+
+  Getting remote pull requests...
+
+  0 pull requests were processed
+
+  Getting remote branches...
+
+    Checking branch [8mha:////4G0eQ67ddL8hQHslNqujPYQWRvZxx1Wq2JzIXRKDW4fyAAAAsR+LCAAAAAAAAP9djLENwjAQRY8gMgAlYoa4SwFKRQNSBEiZwATLNjhn63xByRqsAQ1DMA47EJSO1/zX/Pf8wCwSLE17jh6z2mP0TmXbPihyFq97zyovHq/iHt4JJDtInULNpoRpS45hXl7kTQonUYuKyaJedwSLv9xm3F8MRiYJQBcGSRlywxziSght2bSn4dWIykhSR2+RD7GWJJoetcVOMCklGhlZ0RdUitnkuwAAAA==[0mmaster
+      ‘Jenkinsfile’ found
+    Met criteria
+
+  0 branches were processed (query completed)
+
+Done examining SharePointOscar/mynginx
+
+[Thu Apr 06 22:13:36 UTC 2017] io.jenkins.blueocean.blueocean_github_pipeline.GithubPipelineCreateRequest$SCMSourceEventImpl CREATED event from https://api.github.com with timestamp Thu Apr 06 22:13:34 UTC 2017 processed in 1.9 sec

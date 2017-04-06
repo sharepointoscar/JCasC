@@ -1,0 +1,2 @@
+[Thu Apr 06 22:13:34 UTC 2017] Received io.jenkins.blueocean.blueocean_github_pipeline.GithubPipelineCreateRequest$SCMSourceEventImpl CREATED event from https://api.github.com with timestamp Thu Apr 06 22:13:34 UTC 2017
+[Thu Apr 06 22:13:34 UTC 2017] Finished processing io.jenkins.blueocean.blueocean_github_pipeline.GithubPipelineCreateRequest$SCMSourceEventImpl CREATED event from https://api.github.com with timestamp Thu Apr 06 22:13:34 UTC 2017. Matched 0.

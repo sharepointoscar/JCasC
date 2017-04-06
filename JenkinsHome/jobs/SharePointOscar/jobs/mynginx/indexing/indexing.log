@@ -1,0 +1,23 @@
+Started
+[Thu Apr 06 22:13:36 UTC 2017] Starting branch indexing...
+[8mha:////4DQUHmc1GgMxtKbLcQuVpfinM6THL/rKVwQ25CSFA5Q+AAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHS0a0h1MgDpY+exjgAAAA==[0mConnecting to https://api.github.com using sharepointoscar/****** (Github Access Token)
+[8mha:////4IVTsyViO0j+GVD8+LaZH1gD/myXW0q5DPgqXVo6u2XkAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHS0a0htCQCoQW5kjgAAAA==[0mConnecting to https://api.github.com using sharepointoscar/****** (Github Access Token)
+Looking up [8mha:////4PfGZFOshHX7Mqb25HKgJIHNZBowyPP2NVMiR9psgWybAAAAqh+LCAAAAAAAAP9b85aBtbiIQSajNKU4P08vOT+vOD8nVc+jsiC1KCczL9svvyTVzHb1RttJBUeZGJg8GdhyUvPSSzJ8GJhLi3JKGIR8shLLEvVzEvPS9YNLijLz0q0rihik0IxzhtAgwxgggJGJgaGiAMgQL2HQyigpKSi20tdPzyzJKE0C6srVD85ILEoNyM/MK/EvTk4s0s+tzEvPzKsAAFCFRyqvAAAA[0mSharePointOscar/mynginx
+
+  Getting remote pull requests...
+
+  0 pull requests were processed
+
+  Getting remote branches...
+
+    Checking branch [8mha:////4G0eQ67ddL8hQHslNqujPYQWRvZxx1Wq2JzIXRKDW4fyAAAAsR+LCAAAAAAAAP9djLENwjAQRY8gMgAlYoa4SwFKRQNSBEiZwATLNjhn63xByRqsAQ1DMA47EJSO1/zX/Pf8wCwSLE17jh6z2mP0TmXbPihyFq97zyovHq/iHt4JJDtInULNpoRpS45hXl7kTQonUYuKyaJedwSLv9xm3F8MRiYJQBcGSRlywxziSght2bSn4dWIykhSR2+RD7GWJJoetcVOMCklGhlZ0RdUitnkuwAAAA==[0mmaster
+      ‘Jenkinsfile’ found
+    Met criteria
+Scheduled build for branch: master
+
+  1 branches were processed
+
+Done examining SharePointOscar/mynginx
+
+[Thu Apr 06 22:13:37 UTC 2017] Finished branch indexing. Indexing took 1.7 sec
+Finished: SUCCESS

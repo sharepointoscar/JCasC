@@ -1,0 +1,31 @@
+Started by user [8mha:////4NeM5VrPhZ2mvEMQnI4UXVZiEouTpYegkYpYKMCB3A4HAAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZR/dLi1CL94ozEotSC/My8kvzi5MQiAAJwQiPKAAAA[0mOscar Medina
+Building in workspace /var/jenkins_home/workspace/LiteratureNodeJSApp
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git # timeout=10
+Fetching upstream changes from https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials Docker Hub Credentials
+ > git fetch --tags --progress https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision a2daf56d4b73cd91b849adc2f5daf48beb3ef6e7 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a2daf56d4b73cd91b849adc2f5daf48beb3ef6e7
+ > git rev-list a2daf56d4b73cd91b849adc2f5daf48beb3ef6e7 # timeout=10
+[LiteratureNodeJSApp] $ /bin/sh -xe /tmp/hudson893299967676612911.sh
++ echo /usr/lib/jvm/java-8-openjdk-amd64/bin:/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.4/bin:/usr/lib/jvm/java-8-openjdk-amd64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+/usr/lib/jvm/java-8-openjdk-amd64/bin:/var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS_7.7.4/bin:/usr/lib/jvm/java-8-openjdk-amd64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++ node --version
+v7.7.4
++ grunt --version
+grunt-cli v1.2.0
+grunt v0.4.2
++ docker-machine env
+Error: No machine name(s) specified and no "default" machine exists
++ eval
+[LiteratureNodeJSApp] $ /bin/sh -xe /tmp/hudson7585692017785343609.sh
++ sudo docker-compose -f docker-compose.test.yml -p AppDevEnvironment up -d
+Couldn't connect to Docker daemon - you might need to run `docker-machine start default`.
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

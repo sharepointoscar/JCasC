@@ -44,7 +44,8 @@
     <hudson.tasks.Shell>
       <command>echo $PATH
 node --version
-grunt --version</command>
+grunt --version
+eval $(docker-machine env default)</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>sudo docker-compose -f docker-compose.test.yml -p AppDevEnvironment up -d

@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject plugin="workflow-multibranch@2.14">
+  <actions/>
   <properties>
     <jenkins.branch.ProjectNameProperty plugin="branch-api@2.0.8">
       <name>mynginx</name>

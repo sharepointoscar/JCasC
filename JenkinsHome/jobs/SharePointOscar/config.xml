@@ -29,6 +29,15 @@
       <user>sharepointoscar</user>
       <id>github</id>
     </io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanCredentialsProvider_-FolderPropertyImpl>
+    <io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanCredentialsProvider_-FolderPropertyImpl plugin="blueocean-pipeline-api-impl@1.0.0">
+      <domain plugin="credentials@2.1.13">
+        <name>blueocean-folder-credential-domain</name>
+        <description>Blue Ocean Folder Credentials domain</description>
+        <specifications/>
+      </domain>
+      <user>sharepointoscar</user>
+      <id>github</id>
+    </io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanCredentialsProvider_-FolderPropertyImpl>
   </properties>
   <folderViews class="jenkins.branch.OrganizationFolderViewHolder">
     <owner reference="../.."/>
@@ -58,7 +67,7 @@
       <scanCredentialsId>github</scanCredentialsId>
       <checkoutCredentialsId>github</checkoutCredentialsId>
       <apiUri>https://api.github.com</apiUri>
-      <pattern>(mynginx\b)?</pattern>
+      <pattern>(ZSPharmaLiteratureApp\b)?(mynginx\b)?</pattern>
       <buildOriginBranch>true</buildOriginBranch>
       <buildOriginBranchWithPR>true</buildOriginBranchWithPR>
       <buildOriginPRMerge>false</buildOriginPRMerge>

@@ -1,0 +1,4 @@
+[harePointOscar_mynginx_test-L2AOXB7AQMZKX4BK2UX7YGCJKT3U5ZIRXC4RUHPQO3NWMTY4TICQ] Running shell script
++ echo executing Login to Docker Hub Step
+executing Login to Docker Hub Step
+/var/jenkins_home/workspace/harePointOscar_mynginx_test-L2AOXB7AQMZKX4BK2UX7YGCJKT3U5ZIRXC4RUHPQO3NWMTY4TICQ@tmp/durable-a4f0a20b/script.sh: 3: /var/jenkins_home/workspace/harePointOscar_mynginx_test-L2AOXB7AQMZKX4BK2UX7YGCJKT3U5ZIRXC4RUHPQO3NWMTY4TICQ@tmp/durable-a4f0a20b/script.sh: Syntax error: word unexpected (expecting ")")

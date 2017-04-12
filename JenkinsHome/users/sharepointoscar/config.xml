@@ -80,7 +80,12 @@
       <emailAddress>me@sharepointoscar.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.0.4">
-      <data class="concurrent-hash-map"/>
+      <data class="concurrent-hash-map">
+        <entry>
+          <string>SharePointOscar/mynginx/master</string>
+          <boolean>true</boolean>
+        </entry>
+      </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
   </properties>
 </user>

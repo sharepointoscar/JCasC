@@ -1,0 +1,3 @@
+[ZSPharmaLiteratureApp_tests-EO2MRGBVER73YVQQ67W2I2LIPGSSD62IMWDJHZJQ5GNP7OKCFJFA] Running shell script
++ npm --version
+/var/jenkins_home/workspace/ZSPharmaLiteratureApp_tests-EO2MRGBVER73YVQQ67W2I2LIPGSSD62IMWDJHZJQ5GNP7OKCFJFA@tmp/durable-6f7a93e9/script.sh: 2: /var/jenkins_home/workspace/ZSPharmaLiteratureApp_tests-EO2MRGBVER73YVQQ67W2I2LIPGSSD62IMWDJHZJQ5GNP7OKCFJFA@tmp/durable-6f7a93e9/script.sh: npm: not found

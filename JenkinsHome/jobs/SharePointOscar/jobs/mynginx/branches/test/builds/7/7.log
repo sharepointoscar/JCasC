@@ -1,0 +1,15 @@
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from 2 remote Git repositories
+ > git config remote.origin.url https://github.com/SharePointOscar/mynginx.git # timeout=10
+Fetching upstream changes from https://github.com/SharePointOscar/mynginx.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials Github Access Token
+ > git fetch --tags --progress https://github.com/SharePointOscar/mynginx.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin1.url https://github.com/SharePointOscar/mynginx.git # timeout=10
+Fetching upstream changes from https://github.com/SharePointOscar/mynginx.git
+using GIT_ASKPASS to set credentials Github Access Token
+ > git fetch --tags --progress https://github.com/SharePointOscar/mynginx.git +refs/pull/*/head:refs/remotes/origin/pr/*
+Checking out Revision a57509a83b2d1c665bf7b2192c821acdccb298e4 (test)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a57509a83b2d1c665bf7b2192c821acdccb298e4
+ > git rev-list a57509a83b2d1c665bf7b2192c821acdccb298e4 # timeout=10

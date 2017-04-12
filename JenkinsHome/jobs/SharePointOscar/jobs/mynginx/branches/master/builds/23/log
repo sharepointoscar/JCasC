@@ -1,0 +1,116 @@
+Branch indexing
+[8mha:////4P4uMWI29xKmE8V+6acm5jzGcllr4qBrz0I1q6mHHl/fAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHR0/KKF1QCzbrFXjgAAAA==[0mConnecting to https://api.github.com using sharepointoscar/****** (Github Access Token)
+Obtained Jenkinsfile from d2bbc8726eeaedc2a79e3d9d3c29974d6c6a0bb9
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] node
+Running on master in /var/jenkins_home/workspace/rePointOscar_mynginx_master-IDPVYVQ67I4XV76H6AKHZTNV2A5GCTP24ZUGFIBAFYPD6OA4SSIQ
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] {
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] { (Declarative: Checkout SCM)
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] checkout
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from 2 remote Git repositories
+ > git config remote.origin.url https://github.com/SharePointOscar/mynginx.git # timeout=10
+Fetching upstream changes from https://github.com/SharePointOscar/mynginx.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials Github Access Token
+ > git fetch --tags --progress https://github.com/SharePointOscar/mynginx.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin1.url https://github.com/SharePointOscar/mynginx.git # timeout=10
+Fetching upstream changes from https://github.com/SharePointOscar/mynginx.git
+using GIT_ASKPASS to set credentials Github Access Token
+ > git fetch --tags --progress https://github.com/SharePointOscar/mynginx.git +refs/pull/*/head:refs/remotes/origin/pr/*
+Checking out Revision d2bbc8726eeaedc2a79e3d9d3c29974d6c6a0bb9 (master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d2bbc8726eeaedc2a79e3d9d3c29974d6c6a0bb9
+ > git rev-list d2bbc8726eeaedc2a79e3d9d3c29974d6c6a0bb9 # timeout=10
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // stage
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] { (Build)
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] sh
+[rePointOscar_mynginx_master-IDPVYVQ67I4XV76H6AKHZTNV2A5GCTP24ZUGFIBAFYPD6OA4SSIQ] Running shell script
++ docker-machine env
+Error: No machine name(s) specified and no "default" machine exists
++ eval
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] sh
+[rePointOscar_mynginx_master-IDPVYVQ67I4XV76H6AKHZTNV2A5GCTP24ZUGFIBAFYPD6OA4SSIQ] Running shell script
++ sudo docker version
+Client:
+ Version:      17.03.1-ce
+ API version:  1.27
+ Go version:   go1.7.5
+ Git commit:   c6d412e
+ Built:        Fri Mar 24 00:00:50 2017
+ OS/Arch:      linux/amd64
+
+Server:
+ Version:      17.03.1-ce
+ API version:  1.27 (minimum version 1.12)
+ Go version:   go1.7.5
+ Git commit:   c6d412e
+ Built:        Fri Mar 24 00:00:50 2017
+ OS/Arch:      linux/amd64
+ Experimental: true
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] sh
+[rePointOscar_mynginx_master-IDPVYVQ67I4XV76H6AKHZTNV2A5GCTP24ZUGFIBAFYPD6OA4SSIQ] Running shell script
++ sudo docker build -t sharepointoscar/mywebsite:test .
+Sending build context to Docker daemon 3.321 MB
+Step 1/4 : FROM nginx
+ ---> 5e69fe4b3c31
+Step 2/4 : COPY _site /usr/share/nginx/html
+ ---> Using cache
+ ---> 3270ba2fa6c5
+Step 3/4 : VOLUME /usr/share/nginx/html
+ ---> Using cache
+ ---> 3d579d11deee
+Step 4/4 : VOLUME /etc/nginx
+ ---> Using cache
+ ---> e19ed88380bd
+Successfully built e19ed88380bd
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // stage
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] { (Login to Docker Hub)
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] sh
+[rePointOscar_mynginx_master-IDPVYVQ67I4XV76H6AKHZTNV2A5GCTP24ZUGFIBAFYPD6OA4SSIQ] Running shell script
++ echo executing Login to Docker Hub Step
+executing Login to Docker Hub Step
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] withCredentials
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] {
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] sh
+[rePointOscar_mynginx_master-IDPVYVQ67I4XV76H6AKHZTNV2A5GCTP24ZUGFIBAFYPD6OA4SSIQ] Running shell script
++ sudo docker login --username **** --password ****
+Login Succeeded
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] sh
+[rePointOscar_mynginx_master-IDPVYVQ67I4XV76H6AKHZTNV2A5GCTP24ZUGFIBAFYPD6OA4SSIQ] Running shell script
++ sudo docker push ****/mywebsite:test
+The push refers to a repository [docker.io/****/mywebsite]
+0a7e68492010: Preparing
+1e3e36e082bc: Preparing
+5196375a9691: Preparing
+e6a86eb2ebd1: Preparing
+5d6cbe0dbcf9: Preparing
+5d6cbe0dbcf9: Layer already exists
+5196375a9691: Layer already exists
+e6a86eb2ebd1: Layer already exists
+1e3e36e082bc: Layer already exists
+0a7e68492010: Layer already exists
+test: digest: sha256:63e3930fa140fada981920037d89a77ee65a925d905fb65e22e24a966cddaa62 size: 1367
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // withCredentials
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // stage
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] { (Declarative: Post Actions)
+This will always run
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] echo
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] echo
+This will run only if successful
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // stage
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // node
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] End of Pipeline
+
+GitHub has been notified of this commit’s build result
+
+Finished: SUCCESS

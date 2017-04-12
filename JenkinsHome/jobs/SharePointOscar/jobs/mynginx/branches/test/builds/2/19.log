@@ -1,0 +1,5 @@
+[harePointOscar_mynginx_test-L2AOXB7AQMZKX4BK2UX7YGCJKT3U5ZIRXC4RUHPQO3NWMTY4TICQ] Running shell script
++ echo executing Login to Docker Hub Step
+executing Login to Docker Hub Step
++ environment {
+/var/jenkins_home/workspace/harePointOscar_mynginx_test-L2AOXB7AQMZKX4BK2UX7YGCJKT3U5ZIRXC4RUHPQO3NWMTY4TICQ@tmp/durable-470db941/script.sh: 3: /var/jenkins_home/workspace/harePointOscar_mynginx_test-L2AOXB7AQMZKX4BK2UX7YGCJKT3U5ZIRXC4RUHPQO3NWMTY4TICQ@tmp/durable-470db941/script.sh: environment: not found

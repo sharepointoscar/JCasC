@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.10">
+  <actions/>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <org.jenkinsci.plugins.workflow.multibranch.BranchJobProperty plugin="workflow-multibranch@2.14">
+      <branch plugin="branch-api@2.0.8">
+        <sourceId>org.jenkinsci.plugins.github_branch_source.GitHubSCMNavigator::https://api.github.com::SharePointOscar::ZSPharmaLiteratureApp</sourceId>
+        <head class="org.jenkinsci.plugins.github_branch_source.BranchSCMHead" plugin="github-branch-source@2.0.4">
+          <name>testing</name>
+        </head>
+        <scm class="hudson.plugins.git.GitSCM" plugin="git@3.1.0">
+          <configVersion>2</configVersion>
+          <userRemoteConfigs>
+            <hudson.plugins.git.UserRemoteConfig>
+              <name>origin</name>
+              <refspec>+refs/heads/*:refs/remotes/origin/*</refspec>
+              <url>https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git</url>
+              <credentialsId>github</credentialsId>
+            </hudson.plugins.git.UserRemoteConfig>
+            <hudson.plugins.git.UserRemoteConfig>
+              <name>origin</name>
+              <refspec>+refs/pull/*/head:refs/remotes/origin/pr/*</refspec>
+              <url>https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git</url>
+              <credentialsId>github</credentialsId>
+            </hudson.plugins.git.UserRemoteConfig>
+          </userRemoteConfigs>
+          <branches class="singleton-list">
+            <hudson.plugins.git.BranchSpec>
+              <name>testing</name>
+            </hudson.plugins.git.BranchSpec>
+          </branches>
+          <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+          <browser class="hudson.plugins.git.browser.GithubWeb">
+            <url>https://github.com/SharePointOscar/ZSPharmaLiteratureApp</url>
+          </browser>
+          <submoduleCfg class="empty-list"/>
+          <extensions/>
+        </scm>
+        <properties/>
+        <actions>
+          <org.jenkinsci.plugins.github__branch__source.GitHubLink plugin="github-branch-source@2.0.4">
+            <iconClassName>icon-github-branch</iconClassName>
+            <url>https://github.com/SharePointOscar/ZSPharmaLiteratureApp/tree/testing</url>
+          </org.jenkinsci.plugins.github__branch__source.GitHubLink>
+          <jenkins.scm.api.metadata.ObjectMetadataAction plugin="scm-api@2.1.1">
+            <objectDisplayName>testing</objectDisplayName>
+            <objectUrl>https://github.com/SharePointOscar/ZSPharmaLiteratureApp/tree/testing</objectUrl>
+          </jenkins.scm.api.metadata.ObjectMetadataAction>
+        </actions>
+      </branch>
+    </org.jenkinsci.plugins.workflow.multibranch.BranchJobProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.multibranch.SCMBinder" plugin="workflow-multibranch@2.14"/>
+  <triggers/>
+</flow-definition>

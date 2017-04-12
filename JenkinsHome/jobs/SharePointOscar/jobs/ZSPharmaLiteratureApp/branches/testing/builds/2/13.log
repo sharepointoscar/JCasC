@@ -1,0 +1,3 @@
+[PharmaLiteratureApp_testing-W2ERIJH5M6KIT3YGJWIW5RIV2IDCWQV3U7ZG5QWLGA4GE4IG7T4Q] Running shell script
++ docker build -t 846be04a5893292cadae971a4c5bab0d3a2d07a7 -f Dockerfile.test .
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post http://%2Fvar%2Frun%2Fdocker.sock/v1.27/build?buildargs=%7B%7D&cachefrom=%5B%5D&cgroupparent=&cpuperiod=0&cpuquota=0&cpusetcpus=&cpusetmems=&cpushares=0&dockerfile=Dockerfile.test&labels=%7B%7D&memory=0&memswap=0&networkmode=default&rm=1&shmsize=0&t=846be04a5893292cadae971a4c5bab0d3a2d07a7&ulimits=null: dial unix /var/run/docker.sock: connect: permission denied

@@ -1,22 +1,11 @@
 Started by timer
-[Fri Apr 07 00:49:00 UTC 2017] Starting organization scan...
-[Fri Apr 07 00:49:00 UTC 2017] Updating actions...
+[Wed Apr 12 00:49:00 UTC 2017] Starting organization scan...
+[Wed Apr 12 00:49:00 UTC 2017] Updating actions...
 Looking up details of SharePointOscar...
-[8mha:////4MK6lHq/8RTR21IDrpyAoenDnGrhV+VT16uxOocQN49LAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHS066PjXgCTmPZ6jgAAAA==[0mGitHub API Usage: Current quota has 5000 remaining (450 over budget). Next quota of 5000 in 1 hr 23 min. Sleeping for 7 min 35 sec.
-[8mha:////4Lbu4gzbqyp7GH3BcGWwDAjwGHY0+ovddfgq5/JYj/AAAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHS069O2agBo8AXHjgAAAA==[0mGitHub API Usage: The quota may have been refreshed earlier than expected, rechecking...
-[8mha:////4IFeGKADmaIVSflghikJ3ezbq+qoY3lUEem9TKPqV2G+AAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHS069OOHQDsTutbjgAAAA==[0mGitHub API Usage: Current quota has 5000 remaining (1637 over budget). Next quota of 5000 in 1 hr 42 min. Sleeping for 26 min.
-[8mha:////4G9Jo32Agpu1d50HlMw9ZQOo4ByETLt+rAIq00toxhSNAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHS06wv3mwDwR+QljgAAAA==[0mGitHub API Usage: The quota may have been refreshed earlier than expected, rechecking...
-[8mha:////4E4AbQKuMSKtWw4aFMiYYJM7MKzTY7fLhuz/9CXJj7x9AAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHS06wsvaQAhmiDljgAAAA==[0mGitHub API Usage: Current quota has 5000 remaining (1637 over budget). Next quota of 5000 in 1 hr 42 min. Sleeping for 26 min.
-[8mha:////4FMFxk8cUfl+YI99ZJF2+t2ZayBYpLwe+a2xd97c1gO3AAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHS062tOWwBDvT/ujgAAAA==[0mGitHub API Usage: The quota may have been refreshed earlier than expected, rechecking...
-[8mha:////4A9L5K9foSZtLEIQzs+nikV3ExDFeIU/m/IJtcRzont7AAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHS062vuPgD3PWGOjgAAAA==[0mGitHub API Usage: Current quota has 5000 remaining (1637 over budget). Next quota of 5000 in 1 hr 42 min. Sleeping for 26 min.
-[8mha:////4EKVhGGn7t3QdbG0JVDUiRDUbCGGYNYrqYgz+rkId01OAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHS069tTGwDhumyZjgAAAA==[0mGitHub API Usage: The quota may have been refreshed earlier than expected, rechecking...
-[8mha:////4DEOtXisRu8eSRRGmsTxg5Ve1s1smonZCI9jxs8dTZvDAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHS069sz9wGuYTsSjgAAAA==[0mGitHub API Usage: Current quota has 5000 remaining (1637 over budget). Next quota of 5000 in 1 hr 42 min. Sleeping for 26 min.
-[8mha:////4KO+bVV3O8+BXtjcAHAqvbOzfjn19GjjWWCYF8LImHvfAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHS064ceBgDN0dDgjgAAAA==[0mGitHub API Usage: The quota may have been refreshed earlier than expected, rechecking...
-[8mha:////4MXuwGoylcusaK701L+ynGVNGEoeNwU2L8UJ2YKXLVlbAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHS064c+CwDRC+T6jgAAAA==[0mGitHub API Usage: Current quota has 5000 remaining (1637 over budget). Next quota of 5000 in 1 hr 42 min. Sleeping for 26 min.
 Organization URL: [8mha:////4BAYLlPKEkwEwue3pOcTyX0jhit23V2d9jqpZdmlT2iJAAAAoh+LCAAAAAAAAP9b85aBtbiIQSajNKU4P08vOT+vOD8nVc+jsiC1KCczL9svvyTVzHb1RttJBUeZGJg8GdhyUvPSSzJ8GJhLi3JKGIR8shLLEvVzEvPS9YNLijLz0q0rihik0IxzhtAgwxgggJGJgaGiAMjgKWFQyigpKSi20tdPzyzJKE0C6srVD85ILEoNyM/MK/EvTk4sAgAhgplGpwAAAA==[0mOscar Medina
-[Fri Apr 07 01:49:17 UTC 2017] Consulting GitHub Organization
-[8mha:////4FmUKDEyj6wAo/5xn58vBlFoXbZLlE3PpmxEUrsLteudAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHS0m+RnFwC8dUCNjgAAAA==[0mConnecting to https://api.github.com using sharepointoscar/****** (Github Access Token)
-[8mha:////4O/FVrAvcZkW7w/tUMJ3+cFiu5CbcAzT54k1qfz8WuYPAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHS0m+SXEwBwLA8mjgAAAA==[0mLooking up repositories of myself SharePointOscar
+[Wed Apr 12 00:49:00 UTC 2017] Consulting GitHub Organization
+[8mha:////4GHhSvgdwm40kFCn1Z+wI3wQIPRlNSBx2isavvRzpQFpAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHR0/KIJmwGDI1MEjgAAAA==[0mConnecting to https://api.github.com using sharepointoscar/****** (Github Access Token)
+[8mha:////4IPZhlXbSQgO48xuoRKNk5vvNpRnf8I32KdJxbQ0LGAZAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHR0/KJJbAACBm6NjgAAAA==[0mLooking up repositories of myself SharePointOscar
 Ignoring api-blueprint
 Ignoring BikeLafayette
 Ignoring bundle
@@ -50,6 +39,7 @@ Looking up [8mha:////4PfGZFOshHX7Mqb25HKgJIHNZBowyPP2NVMiR9psgWybAAAAqh+LCAAAAA
 Done examining SharePointOscar/mynginx
 
 Ignoring PackageManagementFiles
+Ignoring pipeline-examples
 Ignoring PlayDate
 Ignoring profilePictureEditor
 Ignoring Resume
@@ -65,6 +55,26 @@ Ignoring SP.me-Windows-Phone-Edition
 Ignoring three20
 Ignoring UbuntuDesktop
 Ignoring ZSPharmaLiterature
-Ignoring ZSPharmaLiteratureApp
-[Fri Apr 07 01:49:19 UTC 2017] Finished organization scan. Scan took 1 hr 0 min
+Proposing ZSPharmaLiteratureApp
+Looking up [8mha:////4HuVckAjQS4/cKExjBiBMqLPs8X5TDvlm6cbru2zppWNAAAAth+LCAAAAAAAAP9djDEKwjAYhX8regBHcXVtNhGlg7goFC10c4s1JNE0CX/+SL2G19DFQ3gc72Clm295jw/e9/zAICBMVDwFZ9PK2eCMSDc3L9Boe9k5ErPs8cru/p1AsoWhEVaSyqEf0RCM8jO/cma4lawk1FYuG4Txn27d9U8GXXoJQOPbMSWYKyIfFoxJTSoe21fNSsVRFE5b2oeKIzuURUtqnmsSyCmiWHn/BVD5b+29AAAA[0mSharePointOscar/ZSPharmaLiteratureApp
+
+  Getting remote pull requests...
+
+  0 pull requests were processed
+
+  Getting remote branches...
+
+    Checking branch [8mha:////4BEJnQ65PhBfqiqemlDVDj2MAydBhIdRNWJgPeevzo8NAAAAvR+LCAAAAAAAAP9djLENwjAQRY8gMgAlYoa4owClQFCAFEGkdHQmnGKDY1vnCwprsAY0DME47EBQOn7zv5703/MDo0AwVc0pOJuUzgZnMNncPJLR9rJzjLP08Urv/h1BtIXYoK1YZTBsyDCMs7O8SmGkrUTBpG21aAkmf7pV3z8Z9BlEAK3vRsywVsw+zIWoNKvm2L1qUShJmDtteR9KSeJQ5B2pZaYZSXJDuPReMCGKWoaOfQGjy2XeyQAAAA==[0mmaster
+      ‘Jenkinsfile’ not found
+    Does not meet criteria
+
+    Checking branch [8mha:////4Bt/gOAtzzS/elxOPPIABk6bFwhxbsMkXLg++50eqEnHAAAAvR+LCAAAAAAAAP9djTEKwkAURL8RtbcUz5DtLJQUIoJC0EA6uzV+squb3eXvj8RreA1tPITH8Q5G0jnNDAPz5vmBQSCYqvoUnI0LZ4MzGG9uHsloe9k5xlnyeCV3/44g2sLQoC1ZpdCvyTCM07O8SmGkLUXOpG25aAgmf7hV5z8YdOpFAI1vw4hhrZh9mAtRalb1sV1VIleSMHPa8j4UksQhz9qmkqlmJMk14dJ7wYQoGAO3v1+418VmygAAAA==[0mtesting
+      ‘Jenkinsfile’ found
+    Met criteria
+
+  0 branches were processed (query completed)
+
+Done examining SharePointOscar/ZSPharmaLiteratureApp
+
+[Wed Apr 12 00:49:05 UTC 2017] Finished organization scan. Scan took 5.1 sec
 Finished: SUCCESS

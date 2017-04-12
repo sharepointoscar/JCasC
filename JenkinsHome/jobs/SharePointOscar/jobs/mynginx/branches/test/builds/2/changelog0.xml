@@ -1,0 +1,11 @@
+commit 83306d8da09786b7f3d69e00163357b3a2fc540e
+tree f289d1d1037e1cbf64e594bf53cfce85e5f9d4f9
+parent a5cf121677d6c52bbddd3ba1f746e0edc67cf55c
+author Oscar Medina <oscar@sharepointace.com> 2017-04-11 15:03:49 -0700
+committer Oscar Medina <oscar@sharepointace.com> 2017-04-11 15:03:49 -0700
+
+    Updated Jenkinsfile
+
+
+
+:100644 100644 d4648c62ceb5fcae806114f9336bc9125f940954 b41f1ee498e0257475ae68d42cdc7b0996dec147 M	Jenkinsfile

@@ -1,0 +1,3 @@
+[PharmaLiteratureApp_testing-W2ERIJH5M6KIT3YGJWIW5RIV2IDCWQV3U7ZG5QWLGA4GE4IG7T4Q] Running shell script
++ npm install -g grunt-cli
+/var/jenkins_home/workspace/PharmaLiteratureApp_testing-W2ERIJH5M6KIT3YGJWIW5RIV2IDCWQV3U7ZG5QWLGA4GE4IG7T4Q@tmp/durable-13eaa752/script.sh: 2: /var/jenkins_home/workspace/PharmaLiteratureApp_testing-W2ERIJH5M6KIT3YGJWIW5RIV2IDCWQV3U7ZG5QWLGA4GE4IG7T4Q@tmp/durable-13eaa752/script.sh: npm: not found

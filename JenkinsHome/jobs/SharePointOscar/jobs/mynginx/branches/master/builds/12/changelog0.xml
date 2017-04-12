@@ -1,0 +1,94 @@
+commit f9779f2a43e83d5066a698f63e085e361da9b54d
+tree db62492d7e4259f3a29c5c9ef39f9711554ca4b2
+parent 84e7c50116c5d152fcabfc01ce9cc5e6ebc5e19b
+author Oscar medina <me@sharepointoscar.com> 2017-04-10 21:44:44 -0700
+committer Oscar medina <me@sharepointoscar.com> 2017-04-10 21:44:44 -0700
+
+    added debug info to Jenkinsfile
+
+
+
+:100644 100644 08f6242f307b13c5e320281bf64306c0cecd7bba 198f7b84fbb65e2eceada294e6c3d90a7988bb31 M	Jenkinsfile
+commit 84e7c50116c5d152fcabfc01ce9cc5e6ebc5e19b
+tree c8913b4b334cf5d7e36dac206e50e1eec3e05604
+parent f1601d594974ab16e5fcd6bb6f10ef5dfa5d79ca
+author Oscar medina <me@sharepointoscar.com> 2017-04-10 21:42:50 -0700
+committer Oscar medina <me@sharepointoscar.com> 2017-04-10 21:42:50 -0700
+
+    added eval export DOCKER_TLS_VERIFY="1" export
+    DOCKER_HOST="tcp://192.168.99.100:2376" export
+    DOCKER_CERT_PATH="/Users/sharepointoscar/.docker/machine/machines/default"
+    export DOCKER_MACHINE_NAME="default" # Run this command to configure
+    your shell: # eval $(docker-machine env)
+
+
+
+:100644 100644 c7a48f5d35e88a21e0838658e1e24f490dbf4e19 08f6242f307b13c5e320281bf64306c0cecd7bba M	Jenkinsfile
+commit f1601d594974ab16e5fcd6bb6f10ef5dfa5d79ca
+tree d9fbf69548d79e018cc6111a7d73c272ee964ce5
+parent 700267e18e4091aaaea736323925b0e6a193ed63
+author Oscar medina <me@sharepointoscar.com> 2017-04-10 21:39:40 -0700
+committer Oscar medina <me@sharepointoscar.com> 2017-04-10 21:39:40 -0700
+
+    added dockerfile agent
+
+
+
+:100644 100644 53c5bdf06561f6ef46c1350d49663fe854997485 c7a48f5d35e88a21e0838658e1e24f490dbf4e19 M	Jenkinsfile
+commit 700267e18e4091aaaea736323925b0e6a193ed63
+tree a9484b4caf749a3ef64e890020974834fa7943ed
+parent 3359a3061cd8476a80116159a676ae5dfac08bd8
+author Oscar medina <me@sharepointoscar.com> 2017-04-10 21:36:21 -0700
+committer Oscar medina <me@sharepointoscar.com> 2017-04-10 21:36:21 -0700
+
+    added step body
+
+
+
+:100644 100644 873a542b8bf02071e4cdf02225e51a73f2ddda8f 53c5bdf06561f6ef46c1350d49663fe854997485 M	Jenkinsfile
+commit 3359a3061cd8476a80116159a676ae5dfac08bd8
+tree bcb0d793290db000ba68b93bbb63a8300d1da62c
+parent ea1e00e061b8db32f3f3eed95c49160586ee4236
+author Oscar medina <me@sharepointoscar.com> 2017-04-10 21:23:51 -0700
+committer Oscar medina <me@sharepointoscar.com> 2017-04-10 21:23:51 -0700
+
+    simply outputting docker version
+
+
+
+:100644 100644 90127204ec4d750dc92073485aebd2ca7042d03b 873a542b8bf02071e4cdf02225e51a73f2ddda8f M	Jenkinsfile
+commit ea1e00e061b8db32f3f3eed95c49160586ee4236
+tree 750acc75b027a8edd9ada15f90cfd03330a7f2ae
+parent 5ea0ccba6ad13daebf91a7857c2765ff65bd4eaa
+author Oscar medina <me@sharepointoscar.com> 2017-04-10 21:12:39 -0700
+committer Oscar medina <me@sharepointoscar.com> 2017-04-10 21:12:39 -0700
+
+    modified jenkinsfile
+
+
+
+:100644 100644 bdfadcb487d8bb9a3273c8217a7ed1f691df2235 90127204ec4d750dc92073485aebd2ca7042d03b M	Jenkinsfile
+commit dc206ed7a6384aca6a8c226beeb23bf69a9b388f
+tree 4529b1bf25d170fe92acdd01fd66ecdf77a75562
+parent 72350c73cc5eaeb05c44b2be4a37ea2153f45a00
+author Oscar medina <me@sharepointoscar.com> 2017-04-10 21:05:46 -0700
+committer Oscar medina <me@sharepointoscar.com> 2017-04-10 21:07:51 -0700
+
+    typo fixed
+
+
+
+:100644 100644 e536bc33216542a5251a5e99e617926a7de94b0c 332f60cb48e0b64ff61a6402b6e9b182b08fec7c M	Jenkinsfile
+:100644 100644 d80ee0a4eb91d84782dd4101067edbe640cce12f 2e3a41aaf7d802003dc1e3c38ba36de32dac95bb M	README.md
+commit 09acd091113484b4216794f73e6cb91496ba6923
+tree abcc9872bd76c2c30014ea63875c81ef0f47bfb3
+parent 72350c73cc5eaeb05c44b2be4a37ea2153f45a00
+author Oscar medina <me@sharepointoscar.com> 2017-04-10 21:05:46 -0700
+committer Oscar medina <me@sharepointoscar.com> 2017-04-10 21:05:46 -0700
+
+    added docker-machine env default to Jenkinsfile
+
+
+
+:100644 100644 e536bc33216542a5251a5e99e617926a7de94b0c 6117918d93798eadeabbe540b87414d26663209e M	Jenkinsfile
+:100644 100644 d80ee0a4eb91d84782dd4101067edbe640cce12f 2e3a41aaf7d802003dc1e3c38ba36de32dac95bb M	README.md

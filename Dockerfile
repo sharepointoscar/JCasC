@@ -1,4 +1,4 @@
-FROM jenkins:2.32.3
+FROM jenkins:latest
 
 MAINTAINER Oscar Medina "me@sharepointoscar.com"
 

@@ -1,0 +1,31 @@
+Started
+[Wed Apr 12 00:49:05 UTC 2017] Starting branch indexing...
+[8mha:////4HQ8qEjr12H6pxaqwTCTM9SnibMsL5rQ//m4Zyhm1hAdAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHR0/KKFNwDhnG4YjgAAAA==[0mConnecting to https://api.github.com using sharepointoscar/****** (Github Access Token)
+Looking up [8mha:////4HuVckAjQS4/cKExjBiBMqLPs8X5TDvlm6cbru2zppWNAAAAth+LCAAAAAAAAP9djDEKwjAYhX8regBHcXVtNhGlg7goFC10c4s1JNE0CX/+SL2G19DFQ3gc72Clm295jw/e9/zAICBMVDwFZ9PK2eCMSDc3L9Boe9k5ErPs8cru/p1AsoWhEVaSyqEf0RCM8jO/cma4lawk1FYuG4Txn27d9U8GXXoJQOPbMSWYKyIfFoxJTSoe21fNSsVRFE5b2oeKIzuURUtqnmsSyCmiWHn/BVD5b+29AAAA[0mSharePointOscar/ZSPharmaLiteratureApp
+
+  Getting remote pull requests...
+
+  0 pull requests were processed
+
+  Getting remote branches...
+
+    Checking branch [8mha:////4BEJnQ65PhBfqiqemlDVDj2MAydBhIdRNWJgPeevzo8NAAAAvR+LCAAAAAAAAP9djLENwjAQRY8gMgAlYoa4owClQFCAFEGkdHQmnGKDY1vnCwprsAY0DME47EBQOn7zv5703/MDo0AwVc0pOJuUzgZnMNncPJLR9rJzjLP08Urv/h1BtIXYoK1YZTBsyDCMs7O8SmGkrUTBpG21aAkmf7pV3z8Z9BlEAK3vRsywVsw+zIWoNKvm2L1qUShJmDtteR9KSeJQ5B2pZaYZSXJDuPReMCGKWoaOfQGjy2XeyQAAAA==[0mmaster
+      ‘Jenkinsfile’ not found
+    Does not meet criteria
+
+    Checking branch [8mha:////4Bt/gOAtzzS/elxOPPIABk6bFwhxbsMkXLg++50eqEnHAAAAvR+LCAAAAAAAAP9djTEKwkAURL8RtbcUz5DtLJQUIoJC0EA6uzV+squb3eXvj8RreA1tPITH8Q5G0jnNDAPz5vmBQSCYqvoUnI0LZ4MzGG9uHsloe9k5xlnyeCV3/44g2sLQoC1ZpdCvyTCM07O8SmGkLUXOpG25aAgmf7hV5z8YdOpFAI1vw4hhrZh9mAtRalb1sV1VIleSMHPa8j4UksQhz9qmkqlmJMk14dJ7wYQoGAO3v1+418VmygAAAA==[0mtesting
+      ‘Jenkinsfile’ found
+    Met criteria
+No changes detected: testing (still at 6c3a976172a88346163800af38e121687ae27b78)
+
+    Checking branch [8mha:////4O0xzyYN5/rkX6cgIGPKK4jw1mxJ9Gvw3x94BOaEP3kGAAAAvB+LCAAAAAAAAP9djLENwjAQRY+gMAAlYoa4owClQGlAiiBSOjoTTrHBsa3zBYU1WAMahmAcdiAoHb/5X0/67/mBOBDMVXsKziaVs8EZTDY3j2S0vewc4yJ9vNK7f0cQbWFi0Naschi3ZBim+VlepTDS1qJk0rZedQSzP1029E8GQ0YRQOf7ETNkitmHpRC1ZtUe+1cjSiUJC6ct70MlSRzKoieNzDUjSW4J194LJkTBGDh8AZpqg5LIAAAA[0mtests
+      ‘Jenkinsfile’ found
+    Met criteria
+No changes detected: tests (still at c7405fee8cc6aef0c0b6f7a386664f6900b01752)
+
+  2 branches were processed
+
+Done examining SharePointOscar/ZSPharmaLiteratureApp
+
+[Wed Apr 12 00:49:08 UTC 2017] Finished branch indexing. Indexing took 2.9 sec
+Finished: SUCCESS

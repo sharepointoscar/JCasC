@@ -13,3 +13,4 @@ seleniumhtmlreport
 github-pullrequest
 terraform
 docker-plugin
+junit

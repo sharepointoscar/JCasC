@@ -1,0 +1,11 @@
+commit a57509a83b2d1c665bf7b2192c821acdccb298e4
+tree ecc16214f1455126d368f01c151237544f346660
+parent 4a48d4c2020d1eda317c09151532823c77f7455c
+author Oscar Medina <oscar@sharepointace.com> 2017-04-11 15:33:38 -0700
+committer Oscar Medina <oscar@sharepointace.com> 2017-04-11 15:33:38 -0700
+
+    now using Jenkinsfile in repo
+
+
+
+:100644 100644 71e1d59911f90062cfe42724d9a322eb008dcd3e 8f99784656be1202567dd40ce3da70279257a1d2 M	Jenkinsfile

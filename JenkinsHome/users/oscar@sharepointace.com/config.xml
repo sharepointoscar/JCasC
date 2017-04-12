@@ -14,7 +14,19 @@
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.0.4">
       <data class="concurrent-hash-map">
         <entry>
+          <string>SharePointOscar/mynginx/test</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>SharePointOscar/ZSPharmaLiteratureApp/tests</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>SharePointOscar/mynginx/master</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>SharePointOscar/ZSPharmaLiteratureApp/testing</string>
           <boolean>true</boolean>
         </entry>
       </data>

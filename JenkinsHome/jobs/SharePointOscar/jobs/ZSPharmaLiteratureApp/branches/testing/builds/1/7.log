@@ -1,0 +1,21 @@
+Cloning the remote Git repository
+Cloning repository https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git
+ > git init /var/jenkins_home/workspace/PharmaLiteratureApp_testing-W2ERIJH5M6KIT3YGJWIW5RIV2IDCWQV3U7ZG5QWLGA4GE4IG7T4Q # timeout=10
+Fetching upstream changes from https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials Github Access Token
+ > git fetch --tags --progress https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git # timeout=10
+Fetching upstream changes from https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git
+using GIT_ASKPASS to set credentials Github Access Token
+ > git fetch --tags --progress https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin1.url https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git # timeout=10
+Fetching upstream changes from https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git
+using GIT_ASKPASS to set credentials Github Access Token
+ > git fetch --tags --progress https://github.com/SharePointOscar/ZSPharmaLiteratureApp.git +refs/pull/*/head:refs/remotes/origin/pr/*
+Checking out Revision 654165d40fc3a6711c36e8acc5eb093327745a91 (testing)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 654165d40fc3a6711c36e8acc5eb093327745a91
+First time build. Skipping changelog.

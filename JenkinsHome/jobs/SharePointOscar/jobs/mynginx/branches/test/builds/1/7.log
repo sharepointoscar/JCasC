@@ -1,0 +1,21 @@
+Cloning the remote Git repository
+Cloning repository https://github.com/SharePointOscar/mynginx.git
+ > git init /var/jenkins_home/workspace/harePointOscar_mynginx_test-L2AOXB7AQMZKX4BK2UX7YGCJKT3U5ZIRXC4RUHPQO3NWMTY4TICQ # timeout=10
+Fetching upstream changes from https://github.com/SharePointOscar/mynginx.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials Github Access Token
+ > git fetch --tags --progress https://github.com/SharePointOscar/mynginx.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://github.com/SharePointOscar/mynginx.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/SharePointOscar/mynginx.git # timeout=10
+Fetching upstream changes from https://github.com/SharePointOscar/mynginx.git
+using GIT_ASKPASS to set credentials Github Access Token
+ > git fetch --tags --progress https://github.com/SharePointOscar/mynginx.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin1.url https://github.com/SharePointOscar/mynginx.git # timeout=10
+Fetching upstream changes from https://github.com/SharePointOscar/mynginx.git
+using GIT_ASKPASS to set credentials Github Access Token
+ > git fetch --tags --progress https://github.com/SharePointOscar/mynginx.git +refs/pull/*/head:refs/remotes/origin/pr/*
+Checking out Revision a5cf121677d6c52bbddd3ba1f746e0edc67cf55c (test)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a5cf121677d6c52bbddd3ba1f746e0edc67cf55c
+First time build. Skipping changelog.

@@ -1,0 +1,10 @@
+[_packer-windows2016-testing-CT6RLZYBHPBT5SZ6RSXMNHMDQGFJNNEOIJPWGZHTEXWCQ4PKUN4A] Running shell script
++ echo Installing Packer 1.0.0 - unfortunately version is hardcoded right now
+Installing Packer 1.0.0 - unfortunately version is hardcoded right now
++ wget https://dl.bintray.com/mitchellh/packer/1.0.0_linux_amd64.zip
+--2017-06-09 00:59:43--  https://dl.bintray.com/mitchellh/packer/1.0.0_linux_amd64.zip
+Resolving dl.bintray.com (dl.bintray.com)... 35.165.107.204, 52.37.135.119
+Connecting to dl.bintray.com (dl.bintray.com)|35.165.107.204|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2017-06-09 00:59:43 ERROR 404: Not Found.
+

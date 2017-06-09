@@ -1,0 +1,281 @@
+Started by user [8mha:////4NeM5VrPhZ2mvEMQnI4UXVZiEouTpYegkYpYKMCB3A4HAAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZR/dLi1CL94ozEotSC/My8kvzi5MQiAAJwQiPKAAAA[0mOscar Medina
+[8mha:////4MnXbanbi0LBRyNU6ozn9YJoqs3LMzmjCAqgZw5QgDOoAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHRM13yNGgBqO42sjgAAAA==[0mConnecting to https://api.github.com using sharepointoscar/****** (Github Access Token)
+Obtained Jenkinsfile from ade995bdd39ec3ee2060482d24b1c5cc4075a212
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] node
+Running on master in /var/jenkins_home/workspace/_packer-windows2016-testing-CT6RLZYBHPBT5SZ6RSXMNHMDQGFJNNEOIJPWGZHTEXWCQ4PKUN4A
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] {
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] { (Declarative: Checkout SCM)
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] checkout
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from 2 remote Git repositories
+ > git config remote.origin.url https://github.com/SharePointOscar/packer-windows.git # timeout=10
+Fetching upstream changes from https://github.com/SharePointOscar/packer-windows.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials Github Access Token
+ > git fetch --tags --progress https://github.com/SharePointOscar/packer-windows.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin1.url https://github.com/SharePointOscar/packer-windows.git # timeout=10
+Fetching upstream changes from https://github.com/SharePointOscar/packer-windows.git
+using GIT_ASKPASS to set credentials Github Access Token
+ > git fetch --tags --progress https://github.com/SharePointOscar/packer-windows.git +refs/pull/*/head:refs/remotes/origin/pr/*
+Checking out Revision ade995bdd39ec3ee2060482d24b1c5cc4075a212 (packer-windows2016-testing)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f ade995bdd39ec3ee2060482d24b1c5cc4075a212
+ > git rev-list e8bb0d5dbf342feb9fe7454cc391fde8733a0c5c # timeout=10
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // stage
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] { (Build)
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] echo
+Building..
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] sh
+[_packer-windows2016-testing-CT6RLZYBHPBT5SZ6RSXMNHMDQGFJNNEOIJPWGZHTEXWCQ4PKUN4A] Running shell script
++ cd /var/jenkins_home/
++ mkdir packer
++ cd packer
++ wget https://releases.hashicorp.com/packer/1.0.0/packer_1.0.0_darwin_amd64.zip
+--2017-06-09 02:11:51--  https://releases.hashicorp.com/packer/1.0.0/packer_1.0.0_darwin_amd64.zip
+Resolving releases.hashicorp.com (releases.hashicorp.com)... 151.101.41.183, 2a04:4e42:a::439
+Connecting to releases.hashicorp.com (releases.hashicorp.com)|151.101.41.183|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 10743519 (10M) [application/zip]
+Saving to: ‘packer_1.0.0_darwin_amd64.zip’
+
+     0K .......... .......... .......... .......... ..........  0% 1.15M 9s
+    50K .......... .......... .......... .......... ..........  0% 1.76M 7s
+   100K .......... .......... .......... .......... ..........  1% 1.74M 7s
+   150K .......... .......... .......... .......... ..........  1% 1.55M 7s
+   200K .......... .......... .......... .......... ..........  2% 2.03M 6s
+   250K .......... .......... .......... .......... ..........  2% 2.02M 6s
+   300K .......... .......... .......... .......... ..........  3% 1.67M 6s
+   350K .......... .......... .......... .......... ..........  3% 1.56M 6s
+   400K .......... .......... .......... .......... ..........  4% 2.11M 6s
+   450K .......... .......... .......... .......... ..........  4% 2.06M 6s
+   500K .......... .......... .......... .......... ..........  5% 1.75M 6s
+   550K .......... .......... .......... .......... ..........  5% 2.03M 6s
+   600K .......... .......... .......... .......... ..........  6% 2.37M 5s
+   650K .......... .......... .......... .......... ..........  6% 2.24M 5s
+   700K .......... .......... .......... .......... ..........  7% 2.29M 5s
+   750K .......... .......... .......... .......... ..........  7% 2.01M 5s
+   800K .......... .......... .......... .......... ..........  8% 2.36M 5s
+   850K .......... .......... .......... .......... ..........  8% 1.74M 5s
+   900K .......... .......... .......... .......... ..........  9% 2.07M 5s
+   950K .......... .......... .......... .......... ..........  9% 2.06M 5s
+  1000K .......... .......... .......... .......... .......... 10% 1.97M 5s
+  1050K .......... .......... .......... .......... .......... 10% 1.29M 5s
+  1100K .......... .......... .......... .......... .......... 10% 1.25M 5s
+  1150K .......... .......... .......... .......... .......... 11% 1.26M 5s
+  1200K .......... .......... .......... .......... .......... 11% 1.52M 5s
+  1250K .......... .......... .......... .......... .......... 12% 1.50M 5s
+  1300K .......... .......... .......... .......... .......... 12% 1.56M 5s
+  1350K .......... .......... .......... .......... .......... 13% 1.27M 5s
+  1400K .......... .......... .......... .......... .......... 13% 1.54M 5s
+  1450K .......... .......... .......... .......... .......... 14% 1.19M 5s
+  1500K .......... .......... .......... .......... .......... 14% 1.57M 5s
+  1550K .......... .......... .......... .......... .......... 15% 1.26M 5s
+  1600K .......... .......... .......... .......... .......... 15% 1.37M 5s
+  1650K .......... .......... .......... .......... .......... 16% 1.31M 5s
+  1700K .......... .......... .......... .......... .......... 16% 1.68M 5s
+  1750K .......... .......... .......... .......... .......... 17% 1.59M 5s
+  1800K .......... .......... .......... .......... .......... 17% 1.91M 5s
+  1850K .......... .......... .......... .......... .......... 18% 2.16M 5s
+  1900K .......... .......... .......... .......... .......... 18% 2.20M 5s
+  1950K .......... .......... .......... .......... .......... 19% 1.85M 5s
+  2000K .......... .......... .......... .......... .......... 19% 2.36M 5s
+  2050K .......... .......... .......... .......... .......... 20% 2.45M 5s
+  2100K .......... .......... .......... .......... .......... 20% 2.14M 5s
+  2150K .......... .......... .......... .......... .......... 20% 1.71M 5s
+  2200K .......... .......... .......... .......... .......... 21% 1.89M 5s
+  2250K .......... .......... .......... .......... .......... 21% 1.53M 5s
+  2300K .......... .......... .......... .......... .......... 22% 2.26M 5s
+  2350K .......... .......... .......... .......... .......... 22% 1.93M 5s
+  2400K .......... .......... .......... .......... .......... 23% 2.33M 5s
+  2450K .......... .......... .......... .......... .......... 23% 2.34M 4s
+  2500K .......... .......... .......... .......... .......... 24% 2.31M 4s
+  2550K .......... .......... .......... .......... .......... 24% 1.99M 4s
+  2600K .......... .......... .......... .......... .......... 25% 2.39M 4s
+  2650K .......... .......... .......... .......... .......... 25% 1.99M 4s
+  2700K .......... .......... .......... .......... .......... 26% 1.59M 4s
+  2750K .......... .......... .......... .......... .......... 26% 1.66M 4s
+  2800K .......... .......... .......... .......... .......... 27% 1.56M 4s
+  2850K .......... .......... .......... .......... .......... 27% 1.39M 4s
+  2900K .......... .......... .......... .......... .......... 28%  923K 4s
+  2950K .......... .......... .......... .......... .......... 28% 1.15M 4s
+  3000K .......... .......... .......... .......... .......... 29% 2.06M 4s
+  3050K .......... .......... .......... .......... .......... 29% 1.65M 4s
+  3100K .......... .......... .......... .......... .......... 30% 1.72M 4s
+  3150K .......... .......... .......... .......... .......... 30% 1.89M 4s
+  3200K .......... .......... .......... .......... .......... 30% 2.18M 4s
+  3250K .......... .......... .......... .......... .......... 31% 2.30M 4s
+  3300K .......... .......... .......... .......... .......... 31% 2.18M 4s
+  3350K .......... .......... .......... .......... .......... 32% 1.97M 4s
+  3400K .......... .......... .......... .......... .......... 32% 2.02M 4s
+  3450K .......... .......... .......... .......... .......... 33% 1.84M 4s
+  3500K .......... .......... .......... .......... .......... 33% 1.44M 4s
+  3550K .......... .......... .......... .......... .......... 34% 1.15M 4s
+  3600K .......... .......... .......... .......... .......... 34% 1.50M 4s
+  3650K .......... .......... .......... .......... .......... 35% 1.48M 4s
+  3700K .......... .......... .......... .......... .......... 35% 1.53M 4s
+  3750K .......... .......... .......... .......... .......... 36% 1.33M 4s
+  3800K .......... .......... .......... .......... .......... 36% 1.45M 4s
+  3850K .......... .......... .......... .......... .......... 37% 1.73M 4s
+  3900K .......... .......... .......... .......... .......... 37% 1.92M 4s
+  3950K .......... .......... .......... .......... .......... 38% 1.19M 4s
+  4000K .......... .......... .......... .......... .......... 38% 1.96M 4s
+  4050K .......... .......... .......... .......... .......... 39% 2.35M 4s
+  4100K .......... .......... .......... .......... .......... 39% 2.24M 4s
+  4150K .......... .......... .......... .......... .......... 40% 1.91M 4s
+  4200K .......... .......... .......... .......... .......... 40% 2.10M 4s
+  4250K .......... .......... .......... .......... .......... 40% 2.07M 4s
+  4300K .......... .......... .......... .......... .......... 41% 2.21M 3s
+  4350K .......... .......... .......... .......... .......... 41% 1.89M 3s
+  4400K .......... .......... .......... .......... .......... 42% 2.11M 3s
+  4450K .......... .......... .......... .......... .......... 42% 1.75M 3s
+  4500K .......... .......... .......... .......... .......... 43% 1.91M 3s
+  4550K .......... .......... .......... .......... .......... 43% 1.92M 3s
+  4600K .......... .......... .......... .......... .......... 44% 2.13M 3s
+  4650K .......... .......... .......... .......... .......... 44% 2.20M 3s
+  4700K .......... .......... .......... .......... .......... 45% 2.02M 3s
+  4750K .......... .......... .......... .......... .......... 45% 1.57M 3s
+  4800K .......... .......... .......... .......... .......... 46% 1.95M 3s
+  4850K .......... .......... .......... .......... .......... 46% 2.19M 3s
+  4900K .......... .......... .......... .......... .......... 47% 2.36M 3s
+  4950K .......... .......... .......... .......... .......... 47% 1.92M 3s
+  5000K .......... .......... .......... .......... .......... 48% 1.80M 3s
+  5050K .......... .......... .......... .......... .......... 48% 2.36M 3s
+  5100K .......... .......... .......... .......... .......... 49% 2.34M 3s
+  5150K .......... .......... .......... .......... .......... 49% 2.06M 3s
+  5200K .......... .......... .......... .......... .......... 50% 2.35M 3s
+  5250K .......... .......... .......... .......... .......... 50% 2.27M 3s
+  5300K .......... .......... .......... .......... .......... 50% 2.38M 3s
+  5350K .......... .......... .......... .......... .......... 51% 2.05M 3s
+  5400K .......... .......... .......... .......... .......... 51% 2.53M 3s
+  5450K .......... .......... .......... .......... .......... 52% 2.29M 3s
+  5500K .......... .......... .......... .......... .......... 52% 2.45M 3s
+  5550K .......... .......... .......... .......... .......... 53% 1.52M 3s
+  5600K .......... .......... .......... .......... .......... 53% 1.91M 3s
+  5650K .......... .......... .......... .......... .......... 54% 1.82M 3s
+  5700K .......... .......... .......... .......... .......... 54% 2.45M 3s
+  5750K .......... .......... .......... .......... .......... 55% 2.16M 3s
+  5800K .......... .......... .......... .......... .......... 55% 2.21M 3s
+  5850K .......... .......... .......... .......... .......... 56% 2.52M 2s
+  5900K .......... .......... .......... .......... .......... 56% 2.33M 2s
+  5950K .......... .......... .......... .......... .......... 57% 2.13M 2s
+  6000K .......... .......... .......... .......... .......... 57% 2.70M 2s
+  6050K .......... .......... .......... .......... .......... 58% 2.64M 2s
+  6100K .......... .......... .......... .......... .......... 58% 1.92M 2s
+  6150K .......... .......... .......... .......... .......... 59% 1.45M 2s
+  6200K .......... .......... .......... .......... .......... 59% 2.26M 2s
+  6250K .......... .......... .......... .......... .......... 60% 2.04M 2s
+  6300K .......... .......... .......... .......... .......... 60% 2.13M 2s
+  6350K .......... .......... .......... .......... .......... 61% 1.89M 2s
+  6400K .......... .......... .......... .......... .......... 61% 2.27M 2s
+  6450K .......... .......... .......... .......... .......... 61% 2.13M 2s
+  6500K .......... .......... .......... .......... .......... 62% 2.22M 2s
+  6550K .......... .......... .......... .......... .......... 62% 2.03M 2s
+  6600K .......... .......... .......... .......... .......... 63% 2.37M 2s
+  6650K .......... .......... .......... .......... .......... 63% 2.01M 2s
+  6700K .......... .......... .......... .......... .......... 64% 1.43M 2s
+  6750K .......... .......... .......... .......... .......... 64% 1.92M 2s
+  6800K .......... .......... .......... .......... .......... 65% 2.30M 2s
+  6850K .......... .......... .......... .......... .......... 65% 2.27M 2s
+  6900K .......... .......... .......... .......... .......... 66% 1.94M 2s
+  6950K .......... .......... .......... .......... .......... 66% 1.39M 2s
+  7000K .......... .......... .......... .......... .......... 67% 2.08M 2s
+  7050K .......... .......... .......... .......... .......... 67% 2.16M 2s
+  7100K .......... .......... .......... .......... .......... 68% 2.27M 2s
+  7150K .......... .......... .......... .......... .......... 68% 1.52M 2s
+  7200K .......... .......... .......... .......... .......... 69% 1.76M 2s
+  7250K .......... .......... .......... .......... .......... 69% 2.05M 2s
+  7300K .......... .......... .......... .......... .......... 70% 2.05M 2s
+  7350K .......... .......... .......... .......... .......... 70% 1.98M 2s
+  7400K .......... .......... .......... .......... .......... 71% 2.39M 2s
+  7450K .......... .......... .......... .......... .......... 71% 2.39M 2s
+  7500K .......... .......... .......... .......... .......... 71% 2.51M 2s
+  7550K .......... .......... .......... .......... .......... 72% 1.99M 2s
+  7600K .......... .......... .......... .......... .......... 72% 2.38M 1s
+  7650K .......... .......... .......... .......... .......... 73% 2.07M 1s
+  7700K .......... .......... .......... .......... .......... 73% 1.35M 1s
+  7750K .......... .......... .......... .......... .......... 74% 1.19M 1s
+  7800K .......... .......... .......... .......... .......... 74% 1.39M 1s
+  7850K .......... .......... .......... .......... .......... 75% 1.88M 1s
+  7900K .......... .......... .......... .......... .......... 75% 2.24M 1s
+  7950K .......... .......... .......... .......... .......... 76% 1.97M 1s
+  8000K .......... .......... .......... .......... .......... 76% 2.33M 1s
+  8050K .......... .......... .......... .......... .......... 77% 2.38M 1s
+  8100K .......... .......... .......... .......... .......... 77%  990K 1s
+  8150K .......... .......... .......... .......... .......... 78% 1.53M 1s
+  8200K .......... .......... .......... .......... .......... 78% 2.33M 1s
+  8250K .......... .......... .......... .......... .......... 79% 2.48M 1s
+  8300K .......... .......... .......... .......... .......... 79% 2.46M 1s
+  8350K .......... .......... .......... .......... .......... 80% 2.25M 1s
+  8400K .......... .......... .......... .......... .......... 80% 2.61M 1s
+  8450K .......... .......... .......... .......... .......... 81% 2.26M 1s
+  8500K .......... .......... .......... .......... .......... 81% 2.38M 1s
+  8550K .......... .......... .......... .......... .......... 81% 2.14M 1s
+  8600K .......... .......... .......... .......... .......... 82% 2.56M 1s
+  8650K .......... .......... .......... .......... .......... 82% 2.99M 1s
+  8700K .......... .......... .......... .......... .......... 83% 3.16M 1s
+  8750K .......... .......... .......... .......... .......... 83% 2.60M 1s
+  8800K .......... .......... .......... .......... .......... 84% 2.63M 1s
+  8850K .......... .......... .......... .......... .......... 84% 2.92M 1s
+  8900K .......... .......... .......... .......... .......... 85% 3.06M 1s
+  8950K .......... .......... .......... .......... .......... 85% 2.81M 1s
+  9000K .......... .......... .......... .......... .......... 86% 3.17M 1s
+  9050K .......... .......... .......... .......... .......... 86% 3.21M 1s
+  9100K .......... .......... .......... .......... .......... 87% 2.88M 1s
+  9150K .......... .......... .......... .......... .......... 87% 2.25M 1s
+  9200K .......... .......... .......... .......... .......... 88% 3.09M 1s
+  9250K .......... .......... .......... .......... .......... 88% 3.07M 1s
+  9300K .......... .......... .......... .......... .......... 89% 3.10M 1s
+  9350K .......... .......... .......... .......... .......... 89% 2.86M 1s
+  9400K .......... .......... .......... .......... .......... 90% 2.94M 1s
+  9450K .......... .......... .......... .......... .......... 90% 2.75M 1s
+  9500K .......... .......... .......... .......... .......... 91% 2.49M 0s
+  9550K .......... .......... .......... .......... .......... 91% 1.56M 0s
+  9600K .......... .......... .......... .......... .......... 91% 2.05M 0s
+  9650K .......... .......... .......... .......... .......... 92% 2.28M 0s
+  9700K .......... .......... .......... .......... .......... 92% 1.97M 0s
+  9750K .......... .......... .......... .......... .......... 93% 1.82M 0s
+  9800K .......... .......... .......... .......... .......... 93% 1.85M 0s
+  9850K .......... .......... .......... .......... .......... 94% 2.01M 0s
+  9900K .......... .......... .......... .......... .......... 94% 2.05M 0s
+  9950K .......... .......... .......... .......... .......... 95% 1.90M 0s
+ 10000K .......... .......... .......... .......... .......... 95% 1.32M 0s
+ 10050K .......... .......... .......... .......... .......... 96% 1.55M 0s
+ 10100K .......... .......... .......... .......... .......... 96% 1.88M 0s
+ 10150K .......... .......... .......... .......... .......... 97% 1.82M 0s
+ 10200K .......... .......... .......... .......... .......... 97% 2.39M 0s
+ 10250K .......... .......... .......... .......... .......... 98% 1.78M 0s
+ 10300K .......... .......... .......... .......... .......... 98% 1.33M 0s
+ 10350K .......... .......... .......... .......... .......... 99% 1.49M 0s
+ 10400K .......... .......... .......... .......... .......... 99% 2.58M 0s
+ 10450K .......... .......... .......... .......... .         100% 2.53M=5.4s
+
+2017-06-09 02:11:56 (1.91 MB/s) - ‘packer_1.0.0_darwin_amd64.zip’ saved [10743519/10743519]
+
++ unzip packer_1.0.0_darwin_amd64.zip
+Archive:  packer_1.0.0_darwin_amd64.zip
+  inflating: packer                  
++ echo export PATH=$PATH:~/packer/
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // stage
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] { (Test)
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] echo
+Testing..
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // stage
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] stage
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] { (Deploy)
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] echo
+Deploying....
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // stage
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] }
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] // node
+[8mha:////4GzqyndZeqXioD5Qx41n5yl3TTjU/c+1n2zGlXv+w1b0AAAAaB+LCAAAAAAAAP9b85aBtbiIwTG/KF0vKzUvOzOvODlTryCnNB3I0ivPL8pOy8kv18vKT9JLzs8rzs9J1QuHCgaV5jlDhPzyS1IZIICRiYGhoohBKqM0pTg/D64Hh8ICAFt0h+h/AAAA[0m[Pipeline] End of Pipeline
+
+GitHub has been notified of this commit’s build result
+
+Finished: SUCCESS

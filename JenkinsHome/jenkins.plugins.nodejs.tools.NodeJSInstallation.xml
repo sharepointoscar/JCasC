@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<jenkins.plugins.nodejs.tools.NodeJSInstallation_-DescriptorImpl plugin="nodejs@1.1.0">
+<jenkins.plugins.nodejs.tools.NodeJSInstallation_-DescriptorImpl plugin="nodejs@1.2.0">
   <installations class="jenkins.plugins.nodejs.tools.NodeJSInstallation-array">
     <jenkins.plugins.nodejs.tools.NodeJSInstallation>
       <name>NodeJS 7.7.4</name>

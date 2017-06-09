@@ -68,9 +68,9 @@ A few things to note:
   - Use the Dockerfile at build time, as it contains specific tasks we want to run.  In my case, I want to have a list of Jenkins plugins to quickly install at build time and install additional software.
   - Specify the image the service Jenkins will use
   - Volumes
-    - JENKINS_HOME - I override this to use the JenkinsHome folder in this git repo to save configuration changes, this means every time I spin up Jenkins, it will have all my plugins and UI configuration
-    - Docker Socket - This is the socket the docker client uses to communicate with the daemon within the Jenkins container
-    - Docker executable (/usr/bin/docker) - The docker binary.
+    - *JENKINS_HOME* - I override this to use the JenkinsHome folder in this git repo to save configuration changes, this means every time I spin up Jenkins, it will have all my plugins and UI configuration I previously setup.
+    - *Docker Socket* - This is the socket the docker client uses to communicate with the daemon within the Jenkins container
+    - *Docker executable* (/usr/bin/docker) - The docker binary.
 
 
 NOTE: One thing to note, is that my configuration had ` /usr/local/bin/docker` as I am using Docker for Mac and so when I tried executing

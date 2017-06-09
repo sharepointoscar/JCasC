@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: csanchez
+Build-Jdk: 1.8.0_111
+Extension-Name: kubernetes
+Specification-Title: Jenkins plugin to run dynamic slaves in a Kuberne
+ tes/Docker environment
+Implementation-Title: kubernetes
+Implementation-Version: 0.11
+Group-Id: org.csanchez.jenkins.plugins
+Short-Name: kubernetes
+Long-Name: Kubernetes plugin
+Url: https://wiki.jenkins-ci.org/display/JENKINS/Kubernetes+Plugin
+Plugin-Version: 0.11
+Hudson-Version: 2.32.1
+Jenkins-Version: 2.32.1
+PluginFirstClassLoader: true
+Plugin-Dependencies: workflow-cps:2.17,workflow-durable-task-step:2.7,
+ workflow-step-api:2.7,credentials:1.24,durable-task:1.12
+Plugin-Developers: Carlos Sanchez:carlos:carlos@apache.org
+

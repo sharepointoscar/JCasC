@@ -95,3 +95,45 @@ Looking up [8mha:////4PfGZFOshHX7Mqb25HKgJIHNZBowyPP2NVMiR9psgWybAAAAqh+LCAAAAA
 Done examining SharePointOscar/mynginx
 
 [Tue Apr 11 21:31:05 UTC 2017] io.jenkins.blueocean.blueocean_github_pipeline.GithubPipelineCreateRequest$SCMSourceEventImpl CREATED event from https://api.github.com with timestamp Tue Apr 11 21:31:03 UTC 2017 processed in 1.9 sec
+[Fri Jun 09 00:47:26 UTC 2017] Received io.jenkins.blueocean.blueocean_github_pipeline.GithubPipelineCreateRequest$SCMSourceEventImpl CREATED event from https://api.github.com with timestamp Fri Jun 09 00:47:26 UTC 2017
+[8mha:////4KN6j/Zl87TauDOLeOLBfnLXr16VtiHhR9o8CkHZw7pnAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHRMV+C39QDf6903jgAAAA==[0mConnecting to https://api.github.com using sharepointoscar/****** (Github Access Token)
+[8mha:////4JVRRB5/GLOST0AkiugxiKHvjq+hLkL7lKZFCASkAbfIAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHRMV+CP7wCXH+7MjgAAAA==[0mLooking up repository packer-windows of myself SharePointOscar
+Proposing packer-windows
+Looking up [8mha:////4IIEYgzh2a7CaZCuCfQNE2to7draJ5rIQ2vSIJBIebEtAAAAsR+LCAAAAAAAAP9b85aBtbiIQSajNKU4P08vOT+vOD8nVc+jsiC1KCczL9svvyTVzHb1RttJBUeZGJg8GdhyUvPSSzJ8GJhLi3JKGIR8shLLEvVzEvPS9YNLijLz0q0rihik0IxzhtAgwxgggJGJgaGiAMiQK2EwzCgpKSi20tdPzyzJKE0C6srVD85ILEoNyM/MK/EvTk4s0i9ITM5OLdItz8xLyS8vBgBuXrvwtgAAAA==[0mSharePointOscar/packer-windows
+
+  Getting remote pull requests...
+
+  0 pull requests were processed
+
+  Getting remote branches...
+
+    Checking branch [8mha:////4KJt8rgub3oWBTfai6A6dTwOCJV5XRgxpuezezJ3OZIxAAAAtx+LCAAAAAAAAP9djLENwjAQRY8gMgAlYgXijgKUigakCJAygUlOsYljW+cLCWuwBjQMwTjsQBAdr/mv+e/xhkkgmKu2DM4mhbPBGUy2V49ktK33jnGZ3p/pzb8iiHYQG7QVqwzGLRmGaXaWFymMtJXImbSt1j3B7C+3+e03Bj9GEUDvB4kZUsXsw0qISrNqT8OrEbmShEenLR9CIUl4WdRIi07b0nVBMCGKRgZG+gC5NyU3wgAAAA==[0mmaster
+      ‘Jenkinsfile’ found
+    Met criteria
+
+  0 branches were processed (query completed)
+
+Done examining SharePointOscar/packer-windows
+
+[Fri Jun 09 00:47:28 UTC 2017] io.jenkins.blueocean.blueocean_github_pipeline.GithubPipelineCreateRequest$SCMSourceEventImpl CREATED event from https://api.github.com with timestamp Fri Jun 09 00:47:26 UTC 2017 processed in 2.1 sec
+[Fri Jun 09 00:52:07 UTC 2017] Received io.jenkins.blueocean.blueocean_github_pipeline.GithubPipelineCreateRequest$SCMSourceEventImpl CREATED event from https://api.github.com with timestamp Fri Jun 09 00:52:07 UTC 2017
+[8mha:////4Bi3k4J4UIRzKR5icox3twv3470dQuucrqf6amUyTdpZAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHRMV5izIQDkGZe8jgAAAA==[0mConnecting to https://api.github.com using sharepointoscar/****** (Github Access Token)
+[8mha:////4Fs2Ssc+J+orn+5XRVRM3xXWqwXUghHtsM/h1rLMAI2iAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHRMV5jLWQAUMd1HjgAAAA==[0mLooking up repository packer-windows of myself SharePointOscar
+Proposing packer-windows
+Looking up [8mha:////4IIEYgzh2a7CaZCuCfQNE2to7draJ5rIQ2vSIJBIebEtAAAAsR+LCAAAAAAAAP9b85aBtbiIQSajNKU4P08vOT+vOD8nVc+jsiC1KCczL9svvyTVzHb1RttJBUeZGJg8GdhyUvPSSzJ8GJhLi3JKGIR8shLLEvVzEvPS9YNLijLz0q0rihik0IxzhtAgwxgggJGJgaGiAMiQK2EwzCgpKSi20tdPzyzJKE0C6srVD85ILEoNyM/MK/EvTk4s0i9ITM5OLdItz8xLyS8vBgBuXrvwtgAAAA==[0mSharePointOscar/packer-windows
+
+  Getting remote pull requests...
+
+  0 pull requests were processed
+
+  Getting remote branches...
+
+    Checking branch [8mha:////4KJt8rgub3oWBTfai6A6dTwOCJV5XRgxpuezezJ3OZIxAAAAtx+LCAAAAAAAAP9djLENwjAQRY8gMgAlYgXijgKUigakCJAygUlOsYljW+cLCWuwBjQMwTjsQBAdr/mv+e/xhkkgmKu2DM4mhbPBGUy2V49ktK33jnGZ3p/pzb8iiHYQG7QVqwzGLRmGaXaWFymMtJXImbSt1j3B7C+3+e03Bj9GEUDvB4kZUsXsw0qISrNqT8OrEbmShEenLR9CIUl4WdRIi07b0nVBMCGKRgZG+gC5NyU3wgAAAA==[0mmaster
+      ‘Jenkinsfile’ found
+    Met criteria
+
+  0 branches were processed (query completed)
+
+Done examining SharePointOscar/packer-windows
+
+[Fri Jun 09 00:52:09 UTC 2017] io.jenkins.blueocean.blueocean_github_pipeline.GithubPipelineCreateRequest$SCMSourceEventImpl CREATED event from https://api.github.com with timestamp Fri Jun 09 00:52:07 UTC 2017 processed in 2 sec

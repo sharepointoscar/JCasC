@@ -2,7 +2,7 @@
 <hudson.plugins.emailext.ExtendedEmailPublisherDescriptor plugin="email-ext@2.57.1">
   <defaultSuffix>@sharepointace.com</defaultSuffix>
   <smtpAuthUsername>outlook.office365.com</smtpAuthUsername>
-  <smtpAuthPassword>{AQAAABAAAAAgplamQBUdUPPsbPfR34AOjrCmC7hFA6P57dYNOy83MtRJ9XGfww5CD9lXTlhM5WqT}</smtpAuthPassword>
+  <smtpAuthPassword>{AQAAABAAAAAgobjtpouqbl+dJW6iDVSTEcScyP6TzGxrEQn6+su2uU3AyMvOQysijhsktnGfTUew}</smtpAuthPassword>
   <smtpHost>outlook.office365.com</smtpHost>
   <useSsl>true</useSsl>
   <smtpPort>995</smtpPort>

@@ -7,18 +7,18 @@ Extension-Name: pipeline-githubnotify-step
 Specification-Title: Plugin that provides a GitHub status notification
   step
 Implementation-Title: pipeline-githubnotify-step
-Implementation-Version: 1.0.1
+Implementation-Version: 1.0.2
 Group-Id: org.jenkins-ci.plugins
 Short-Name: pipeline-githubnotify-step
 Long-Name: Pipeline GitHub Notify Step Plugin
 Url: https://wiki.jenkins-ci.org/display/JENKINS/Pipeline+Githubnotify
  +Step+Plugin
-Plugin-Version: 1.0.1
+Plugin-Version: 1.0.2
 Hudson-Version: 1.642.3
 Jenkins-Version: 1.642.3
-Plugin-Dependencies: workflow-step-api:1.15,workflow-api:1.15,credenti
- als:2.1.5,github-api:1.77,github-branch-source:1.10.1,display-url-api
- :0.5
+Plugin-Dependencies: display-url-api:0.5,github-branch-source:1.10.1,w
+ orkflow-api:1.15,github-api:1.77,workflow-step-api:1.15,credentials:2
+ .1.5
 Plugin-Developers: Raul Arabaolaza:raul-arabaolaza:rarabaolaza@cloudbe
  es.com
 

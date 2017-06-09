@@ -29,6 +29,10 @@
           <string>SharePointOscar/ZSPharmaLiteratureApp/testing</string>
           <boolean>true</boolean>
         </entry>
+        <entry>
+          <string>SharePointOscar/packer-windows/packer-windows2016-testing</string>
+          <boolean>true</boolean>
+        </entry>
       </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <hudson.model.MyViewsProperty>

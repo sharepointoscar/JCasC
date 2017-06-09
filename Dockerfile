@@ -1,9 +1,8 @@
 FROM jenkins:latest
-
 MAINTAINER Oscar Medina "me@sharepointoscar.com"
 
 # perform tasks as root
-# installs python, curl, docker-compose, sudo, docker-machine
+# installs python, curl, docker-compose, sudo, docker-machine, Packer
 USER root
 RUN apt-get update && \
   apt-get install -y python python-dev python-distribute python-pip && \
@@ -13,7 +12,10 @@ RUN apt-get update && \
   apt-get -y install sudo && \
   curl -L https://github.com/docker/machine/releases/download/v0.10.0/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine && \
   chmod +x /tmp/docker-machine && \
-  sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
+  sudo cp /tmp/docker-machine /usr/local/bin/docker-machine && \
+  curl -L https://releases.hashicorp.com/packer/1.0.0/packer_1.0.0_linux_amd64.zip-`uname -s`-`uname -m` >/tmp/packer && \
+  chmod +x /tmp/packer && \
+  sudo cp /tmp/packer /usr/local/bin/packer
 
 # add jenkins to the docker group
 RUN sudo usermod -aG docker jenkins

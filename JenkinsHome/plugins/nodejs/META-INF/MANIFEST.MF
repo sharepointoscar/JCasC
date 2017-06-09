@@ -6,13 +6,13 @@ Build-Jdk: 1.8.0_40
 Extension-Name: nodejs
 Specification-Title: Executes NodeJS script as a build step.
 Implementation-Title: nodejs
-Implementation-Version: 1.1.3
+Implementation-Version: 1.2.0
 Plugin-Class: jenkins.plugins.nodejs.NodeJSPlugin
 Group-Id: org.jenkins-ci.plugins
 Short-Name: nodejs
 Long-Name: NodeJS Plugin
 Url: http://wiki.jenkins-ci.org/display/JENKINS/NodeJS+Plugin
-Plugin-Version: 1.1.3
+Plugin-Version: 1.2.0
 Hudson-Version: 1.625.3
 Jenkins-Version: 1.625.3
 Plugin-Dependencies: config-file-provider:2.15.5

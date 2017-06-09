@@ -10,7 +10,7 @@
 
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>pipeline-githubnotify-step</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 
     <packaging>hpi</packaging>
     <name>Pipeline GitHub Notify Step Plugin</name>
@@ -25,7 +25,7 @@
         <connection>scm:git:git@github.com:jenkinsci/pipeline-githubnotify-step-plugin.git</connection>
         <developerConnection>scm:git:git@github.com:jenkinsci/pipeline-githubnotify-step-plugin.git</developerConnection>
         <url>https://github.com/jenkinsci/pipeline-githubnotify-step-plugin</url>
-        <tag>pipeline-githubnotify-step-1.0.1</tag>
+        <tag>pipeline-githubnotify-step-1.0.2</tag>
     </scm>
 
     <licenses>
@@ -97,6 +97,12 @@
             <artifactId>workflow-support</artifactId>
             <version>1.15</version>
             <classifier>tests</classifier>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>cloudbees-folder</artifactId>
+            <version>6.0.3</version>
             <scope>test</scope>
         </dependency>
         <dependency>

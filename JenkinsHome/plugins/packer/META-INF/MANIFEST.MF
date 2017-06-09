@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: rvl994
+Build-Jdk: 1.8.0_77
+Extension-Name: packer
+Specification-Title: Integrates Packer as a publisher in Jenkins
+Implementation-Title: packer
+Implementation-Version: 1.4
+Group-Id: biz.neustar.jenkins.plugins
+Short-Name: packer
+Long-Name: packer
+Url: http://wiki.jenkins-ci.org/display/JENKINS/Packer+Plugin
+Plugin-Version: 1.4
+Hudson-Version: 1.554.1
+Jenkins-Version: 1.554.1
+Plugin-Developers: Jeffrey Damick:jdamick:
+

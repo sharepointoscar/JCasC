@@ -4,8 +4,9 @@
     <string>hudson.diagnosis.ReverseProxySetupMonitor</string>
     <string>jenkins.diagnostics.SecurityIsOffMonitor</string>
     <string>jenkins.model.DownloadSettings$Warning</string>
+    <string>jenkins.CLI</string>
   </disabledAdministrativeMonitors>
-  <version>2.32.3</version>
+  <version>2.46.1</version>
   <numExecutors>4</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
@@ -41,7 +42,7 @@
   <views>
     <hudson.model.AllView>
       <owner class="hudson" reference="../../.."/>
-      <name>All</name>
+      <name>all</name>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
@@ -69,8 +70,26 @@
       </columns>
       <recurse>false</recurse>
     </listView>
+    <com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView plugin="build-monitor-plugin@1.12+build.201704111018">
+      <owner class="hudson" reference="../../.."/>
+      <name>Packer Builds</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+      </jobNames>
+      <jobFilters/>
+      <columns/>
+      <recurse>false</recurse>
+      <title>Packer Builds</title>
+      <config>
+        <displayCommitters>true</displayCommitters>
+        <order class="com.smartcodeltd.jenkinsci.plugins.buildmonitor.order.ByName"/>
+      </config>
+    </com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView>
   </views>
-  <primaryView>All</primaryView>
+  <primaryView>all</primaryView>
   <slaveAgentPort>50000</slaveAgentPort>
   <label></label>
   <nodeProperties/>
@@ -80,7 +99,7 @@
         <unserializable-parents/>
         <tree-map>
           <default>
-            <comparator class="hudson.util.CaseInsensitiveComparator"/>
+            <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../../../../views/com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView/jobNames/comparator"/>
           </default>
           <int>0</int>
         </tree-map>

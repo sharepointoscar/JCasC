@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<l:dependencies xmlns:l='licenses' groupId='biz.neustar.jenkins.plugins' artifactId='packer' version='1.4'><l:dependency name='packer' groupId='biz.neustar.jenkins.plugins' artifactId='packer' version='1.4' url='http://wiki.jenkins-ci.org/display/JENKINS/Packer+Plugin'><l:description>Integrates Packer as a publisher in Jenkins</l:description><l:license name='MIT license' url=''/></l:dependency></l:dependencies>

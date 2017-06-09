@@ -1,0 +1,21 @@
+Cloning the remote Git repository
+Cloning repository https://github.com/SharePointOscar/packer-windows.git
+ > git init /var/jenkins_home/workspace/Oscar_packer-windows_master-57SPMFRX2DD2UKTFOBQM6DUTVJAGFG3H6KIFGDT4GP7PDFNVTKKA # timeout=10
+Fetching upstream changes from https://github.com/SharePointOscar/packer-windows.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials Github Access Token
+ > git fetch --tags --progress https://github.com/SharePointOscar/packer-windows.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://github.com/SharePointOscar/packer-windows.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/SharePointOscar/packer-windows.git # timeout=10
+Fetching upstream changes from https://github.com/SharePointOscar/packer-windows.git
+using GIT_ASKPASS to set credentials Github Access Token
+ > git fetch --tags --progress https://github.com/SharePointOscar/packer-windows.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin1.url https://github.com/SharePointOscar/packer-windows.git # timeout=10
+Fetching upstream changes from https://github.com/SharePointOscar/packer-windows.git
+using GIT_ASKPASS to set credentials Github Access Token
+ > git fetch --tags --progress https://github.com/SharePointOscar/packer-windows.git +refs/pull/*/head:refs/remotes/origin/pr/*
+Checking out Revision a3e192b4418a14d278206bf9ed77573f7a8656ac (master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a3e192b4418a14d278206bf9ed77573f7a8656ac
+First time build. Skipping changelog.

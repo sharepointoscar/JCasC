@@ -3,7 +3,6 @@ git-client:latest
 git:latest
 github-oauth
 github-issues
-greenballs:latest
 nodejs
 workflow-aggregator
 pipeline-githubnotify-step
@@ -14,3 +13,5 @@ github-pullrequest
 terraform
 docker-plugin
 junit
+blueocean
+kubernetes

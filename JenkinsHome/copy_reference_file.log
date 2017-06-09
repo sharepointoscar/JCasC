@@ -65,3 +65,47 @@ INSTALLED plugins/docker-plugin.jpi : 0.16.2
 --- Copying files at Tue Apr 11 04:57:43 UTC 2017
 --- Copying files at Tue Apr 11 05:15:21 UTC 2017
 --- Copying files at Tue Apr 11 22:46:17 UTC 2017
+--- Copying files at Wed Apr 12 02:50:36 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+--- Copying files at Mon Apr 17 00:35:52 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+INSTALLED plugins/kubernetes.jpi : 0.11
+--- Copying files at Mon Apr 17 02:03:39 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+--- Copying files at Mon Apr 17 20:45:03 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+--- Copying files at Tue Apr 18 16:23:06 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+--- Copying files at Wed Apr 19 00:12:13 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+--- Copying files at Thu Apr 20 16:43:45 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+--- Copying files at Fri Apr 21 16:08:06 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+--- Copying files at Sun May 28 03:05:53 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+--- Copying files at Sun May 28 03:06:43 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+--- Copying files at Wed Jun  7 14:59:32 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+--- Copying files at Thu Jun  8 20:35:47 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+--- Copying files at Fri Jun  9 02:21:56 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+--- Copying files at Fri Jun  9 02:30:57 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+--- Copying files at Fri Jun  9 03:12:44 UTC 2017
+UPGRADED plugins/github-pullrequest.jpi : Image version (0.1.0-rc24) is newer than installed version (0.1.0-rc22)
+INSTALLED plugins/custom-tools-plugin.jpi : 0.5
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+UPGRADED plugins/build-monitor-plugin.jpi : Image version (1.12+build.201704111018) is newer than installed version (1.11+build.201701152243)
+--- Copying files at Fri Jun  9 03:33:35 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+--- Copying files at Fri Jun  9 03:50:43 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+INSTALLED plugins/extended-choice-parameter.jpi : 0.76
+--- Copying files at Fri Jun  9 04:04:22 UTC 2017
+INSTALLED plugins/jquery.jpi : 1.11.2-0
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+--- Copying files at Fri Jun  9 05:13:26 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)

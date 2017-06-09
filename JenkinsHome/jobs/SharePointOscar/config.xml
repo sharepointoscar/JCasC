@@ -2,7 +2,7 @@
 <jenkins.branch.OrganizationFolder plugin="branch-api@2.0.8">
   <actions/>
   <properties>
-    <io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanCredentialsProvider_-FolderPropertyImpl plugin="blueocean-pipeline-api-impl@1.0.0">
+    <io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanCredentialsProvider_-FolderPropertyImpl plugin="blueocean-pipeline-api-impl@1.0.1">
       <domain plugin="credentials@2.1.13">
         <name>blueocean-folder-credential-domain</name>
         <description>Blue Ocean Folder Credentials domain</description>
@@ -11,7 +11,7 @@
       <user>sharepointoscar</user>
       <id>github</id>
     </io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanCredentialsProvider_-FolderPropertyImpl>
-    <io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanCredentialsProvider_-FolderPropertyImpl plugin="blueocean-pipeline-api-impl@1.0.0">
+    <io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanCredentialsProvider_-FolderPropertyImpl plugin="blueocean-pipeline-api-impl@1.0.1">
       <domain plugin="credentials@2.1.13">
         <name>blueocean-folder-credential-domain</name>
         <description>Blue Ocean Folder Credentials domain</description>
@@ -20,7 +20,7 @@
       <user>sharepointoscar</user>
       <id>github</id>
     </io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanCredentialsProvider_-FolderPropertyImpl>
-    <io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanCredentialsProvider_-FolderPropertyImpl plugin="blueocean-pipeline-api-impl@1.0.0">
+    <io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanCredentialsProvider_-FolderPropertyImpl plugin="blueocean-pipeline-api-impl@1.0.1">
       <domain plugin="credentials@2.1.13">
         <name>blueocean-folder-credential-domain</name>
         <description>Blue Ocean Folder Credentials domain</description>
@@ -29,7 +29,7 @@
       <user>sharepointoscar</user>
       <id>github</id>
     </io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanCredentialsProvider_-FolderPropertyImpl>
-    <io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanCredentialsProvider_-FolderPropertyImpl plugin="blueocean-pipeline-api-impl@1.0.0">
+    <io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanCredentialsProvider_-FolderPropertyImpl plugin="blueocean-pipeline-api-impl@1.0.1">
       <domain plugin="credentials@2.1.13">
         <name>blueocean-folder-credential-domain</name>
         <description>Blue Ocean Folder Credentials domain</description>
@@ -38,7 +38,16 @@
       <user>sharepointoscar</user>
       <id>github</id>
     </io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanCredentialsProvider_-FolderPropertyImpl>
-    <io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanCredentialsProvider_-FolderPropertyImpl plugin="blueocean-pipeline-api-impl@1.0.0">
+    <io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanCredentialsProvider_-FolderPropertyImpl plugin="blueocean-pipeline-api-impl@1.0.1">
+      <domain plugin="credentials@2.1.13">
+        <name>blueocean-folder-credential-domain</name>
+        <description>Blue Ocean Folder Credentials domain</description>
+        <specifications/>
+      </domain>
+      <user>sharepointoscar</user>
+      <id>github</id>
+    </io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanCredentialsProvider_-FolderPropertyImpl>
+    <io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanCredentialsProvider_-FolderPropertyImpl plugin="blueocean-pipeline-api-impl@1.0.1">
       <domain plugin="credentials@2.1.13">
         <name>blueocean-folder-credential-domain</name>
         <description>Blue Ocean Folder Credentials domain</description>
@@ -71,12 +80,12 @@
     </com.cloudbees.hudson.plugins.folder.computed.PeriodicFolderTrigger>
   </triggers>
   <navigators>
-    <org.jenkinsci.plugins.github__branch__source.GitHubSCMNavigator plugin="github-branch-source@2.0.4">
+    <org.jenkinsci.plugins.github__branch__source.GitHubSCMNavigator plugin="github-branch-source@2.0.5">
       <repoOwner>SharePointOscar</repoOwner>
       <scanCredentialsId>github</scanCredentialsId>
       <checkoutCredentialsId>github</checkoutCredentialsId>
       <apiUri>https://api.github.com</apiUri>
-      <pattern>(mynginx\b)?(ZSPharmaLiteratureApp\b)?</pattern>
+      <pattern>(packer-windows\b)?(mynginx\b)?(ZSPharmaLiteratureApp\b)?</pattern>
       <buildOriginBranch>true</buildOriginBranch>
       <buildOriginBranchWithPR>true</buildOriginBranchWithPR>
       <buildOriginPRMerge>false</buildOriginPRMerge>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<org.jenkinsci.plugins.cloudstats.CloudStatistics plugin="cloud-stats@0.9">
-  <active class="linked-hash-set"/>
+<org.jenkinsci.plugins.cloudstats.CloudStatistics plugin="cloud-stats@0.11">
+  <active class="java.util.concurrent.CopyOnWriteArrayList"/>
   <log>
     <data>
       <org.jenkinsci.plugins.cloudstats.ProvisioningActivity>

@@ -1,7 +1,6 @@
 Started
-[Fri Jun 09 00:52:09 UTC 2017] Starting branch indexing...
-[8mha:////4OOWKwoQl4nXRbewjtrB9zGGSIheV4sU/n/hu34w1AlDAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHRMV5i3AgAes/4ejgAAAA==[0mConnecting to https://api.github.com using sharepointoscar/****** (Github Access Token)
-[8mha:////4Bs7ejVvznANqjMmmgh2XVLWfcb/BOPq50w5r9av7PQ9AAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHRMV5jvcQBDY8p2jgAAAA==[0mConnecting to https://api.github.com using sharepointoscar/****** (Github Access Token)
+[Sun Jun 11 01:40:18 UTC 2017] Starting branch indexing...
+[8mha:////4F8gVPst5B9uxqShDaDDADyha35TMcwbTML+sht8olsJAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHTMlAu/lABVClBYjgAAAA==[0mConnecting to https://api.github.com using sharepointoscar/****** (Github Access Token)
 Looking up [8mha:////4IIEYgzh2a7CaZCuCfQNE2to7draJ5rIQ2vSIJBIebEtAAAAsR+LCAAAAAAAAP9b85aBtbiIQSajNKU4P08vOT+vOD8nVc+jsiC1KCczL9svvyTVzHb1RttJBUeZGJg8GdhyUvPSSzJ8GJhLi3JKGIR8shLLEvVzEvPS9YNLijLz0q0rihik0IxzhtAgwxgggJGJgaGiAMiQK2EwzCgpKSi20tdPzyzJKE0C6srVD85ILEoNyM/MK/EvTk4s0i9ITM5OLdItz8xLyS8vBgBuXrvwtgAAAA==[0mSharePointOscar/packer-windows
 
   Getting remote pull requests...
@@ -13,17 +12,16 @@ Looking up [8mha:////4IIEYgzh2a7CaZCuCfQNE2to7draJ5rIQ2vSIJBIebEtAAAAsR+LCAAAAA
     Checking branch [8mha:////4KJt8rgub3oWBTfai6A6dTwOCJV5XRgxpuezezJ3OZIxAAAAtx+LCAAAAAAAAP9djLENwjAQRY8gMgAlYgXijgKUigakCJAygUlOsYljW+cLCWuwBjQMwTjsQBAdr/mv+e/xhkkgmKu2DM4mhbPBGUy2V49ktK33jnGZ3p/pzb8iiHYQG7QVqwzGLRmGaXaWFymMtJXImbSt1j3B7C+3+e03Bj9GEUDvB4kZUsXsw0qISrNqT8OrEbmShEenLR9CIUl4WdRIi07b0nVBMCGKRgZG+gC5NyU3wgAAAA==[0mmaster
       ‘Jenkinsfile’ found
     Met criteria
-Changes detected: master (e35b91adb0554ee79a80f4ee21c416e8e61198b9 → a3e192b4418a14d278206bf9ed77573f7a8656ac)
-Scheduled build for branch: master
+No changes detected: master (still at a3e192b4418a14d278206bf9ed77573f7a8656ac)
 
     Checking branch [8mha:////4A9Tjd8ebSOgeD6QyhST3DNHYj7XP3y8PfXFdB1X6lyQAAAAwB+LCAAAAAAAAP9djr0NwjAUhB9BMAAlYoVgoEgBSkUDEuJHmcAkT7HB2NbzCz9rsAY0DME47EBQOq6500n36Z4f6ASCgaqK4OwwdzY4g8PFzSMZbY9rx5ikj1d69+8IoiV0DdqS1QraFRmG3uogz1IYaUuRMWlbzq4E/T/cvPEfDBq1IoCrr0OfYaeYfZgKUWpW1b5enUSmJOHWacubkEsSXuZHpPiibeEuQTAh/nWT0TiJGQPXH76VRDg61gAAAA==[0mpacker-windows2016-testing
       ‘Jenkinsfile’ found
     Met criteria
-Scheduled build for branch: packer-windows2016-testing
+No changes detected: packer-windows2016-testing (still at 49d715c28f0fa6529f9819da7b6f69a2134a992c)
 
   2 branches were processed
 
 Done examining SharePointOscar/packer-windows
 
-[Fri Jun 09 00:52:12 UTC 2017] Finished branch indexing. Indexing took 2.4 sec
+[Sun Jun 11 01:42:24 UTC 2017] Finished branch indexing. Indexing took 2 min 5 sec
 Finished: SUCCESS

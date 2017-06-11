@@ -3,5 +3,5 @@
   <head class="org.jenkinsci.plugins.github_branch_source.BranchSCMHead" plugin="github-branch-source@2.0.5">
     <name>packer-windows2016-testing</name>
   </head>
-  <hash>cb29fa0e0791a9bb0483891640c3b458209a14e5</hash>
+  <hash>49d715c28f0fa6529f9819da7b6f69a2134a992c</hash>
 </jenkins.plugins.git.AbstractGitSCMSource_-SCMRevisionImpl>

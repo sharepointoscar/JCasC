@@ -13,9 +13,14 @@ RUN apt-get update && \
   curl -L https://github.com/docker/machine/releases/download/v0.10.0/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine && \
   chmod +x /tmp/docker-machine && \
   sudo cp /tmp/docker-machine /usr/local/bin/docker-machine && \
-  curl -L https://releases.hashicorp.com/packer/1.0.0/packer_1.0.0_linux_amd64.zip-`uname -s`-`uname -m` >/tmp/packer && \
-  chmod +x /tmp/packer && \
-  sudo cp /tmp/packer /usr/local/bin/packer
+  curl -L https://releases.hashicorp.com/packer/1.0.0/packer_1.0.0_linux_amd64.zip -o /tmp/packer.zip; unzip /tmp/packer.zip -d /usr/local/bin
+  #sudo echo "deb http://download.virtualbox.org/virtualbox/debian jessie contrib" >> /etc/apt/sources.list && \
+  #wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add - && \
+  #wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add - && \
+  #wget -q http://download.virtualbox.org/virtualbox/debian/sun_vbox.asc -O- | sudo apt-key add - && \
+  #sudo apt-get update -y; sudo apt-get install -y virtualbox-5.1 dkms
+
+
 
 # add jenkins to the docker group
 RUN sudo usermod -aG docker jenkins

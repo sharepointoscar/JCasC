@@ -1,0 +1,14 @@
+[_packer-windows2016-testing-CT6RLZYBHPBT5SZ6RSXMNHMDQGFJNNEOIJPWGZHTEXWCQ4PKUN4A] Running shell script
++ echo going through build phase
+going through build phase
++ packer -v
+1.0.0
++ packer build -only=virtualbox-iso windows_2016.json
+[1;32mvirtualbox-iso output will be in this color.[0m
+
+[1;31mBuild 'virtualbox-iso' errored: Failed creating VirtualBox driver: exec: "VBoxManage": executable file not found in $PATH[0m
+
+==> Some builds didn't complete successfully and had errors:
+--> virtualbox-iso: Failed creating VirtualBox driver: exec: "VBoxManage": executable file not found in $PATH
+
+==> Builds finished but no artifacts were created.

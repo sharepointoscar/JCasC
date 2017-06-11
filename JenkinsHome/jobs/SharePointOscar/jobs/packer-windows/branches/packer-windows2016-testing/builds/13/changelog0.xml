@@ -1,0 +1,11 @@
+commit 975b267324c110a4a9be08a1c270516de40649f6
+tree 08cda5107760b419c14208d0db808282f5591534
+parent 4008e0dc3e15222eedbe6147143e8b946d780db1
+author Oscar Medina <oscar@sharepointace.com> 2017-06-09 10:45:50 -0700
+committer Oscar Medina <oscar@sharepointace.com> 2017-06-09 10:45:50 -0700
+
+    changed ls script
+
+
+
+:100644 100644 8fa938c189362b858a66bcc5023f73e546dc45ba bf15f4b1fd55ab268b77a2eca09160fd1ccf7574 M	Jenkinsfile

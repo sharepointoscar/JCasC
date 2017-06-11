@@ -1,0 +1,40 @@
+VirtualBox XPCOM Server 5.1.22 r115126 linux.amd64 (Apr 28 2017 17:20:10) release log
+00:00:00.008305 main     Log opened 2017-06-10T01:16:15.031146000Z
+00:00:00.008306 main     Build Type: release
+00:00:00.008311 main     OS Product: Linux
+00:00:00.008312 main     OS Release: 4.9.27-moby
+00:00:00.008312 main     OS Version: #1 SMP Thu May 11 04:01:18 UTC 2017
+00:00:00.009911 main     DMI Product Name: BHYVE
+00:00:00.009932 main     DMI Product Version: 1.0
+00:00:00.009992 main     Host RAM: 3947MB (3.8GB) total, 2935MB (2.8GB) available
+00:00:00.009996 main     Executable: /usr/lib/virtualbox/VBoxSVC
+00:00:00.009997 main     Process ID: 772
+00:00:00.009997 main     Package type: LINUX_64BITS_DEBIAN_8_0
+00:00:00.015136 main     IPC socket path: /tmp/.vbox-jenkins-ipc/ipcd
+00:00:00.129392 nspr-2   VirtualBox: object creation starts
+00:00:00.132051 nspr-2   Home directory: '/var/jenkins_home/.config/VirtualBox'
+00:00:00.153981 nspr-2   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link status for gretap0: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:00:00.157969 nspr-2   NAT: resolv.conf: nameserver 127.0.0.11
+00:00:00.158358 nspr-2   NAT: resolv.conf: ignoring "options ndots:0"
+00:00:00.158648 nspr-2   HostDnsMonitor: old information
+00:00:00.158879 nspr-2     no server entries
+00:00:00.159124 nspr-2     no domain set
+00:00:00.159329 nspr-2     no search string entries
+00:00:00.159569 nspr-2   HostDnsMonitor: new information
+00:00:00.159809 nspr-2     server 1: 127.0.0.11
+00:00:00.160022 nspr-2     domain: hsd1.ca.comcast.net
+00:00:00.160249 nspr-2     search string 1: hsd1.ca.comcast.net
+00:00:00.160466 nspr-2   HostDnsMonitorProxy::notify
+00:00:00.179244 nspr-2   HostPowerServiceLinux: DBus connection Error (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
+00:00:00.183924 nspr-2   VD: VDInit finished
+00:00:00.189968 nspr-2   VirtualBox: object created
+00:00:00.913521 nspr-3   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={b2547866-a0a1-4391-8b86-6952d82efaa0} aComponent={SessionMachine} aText={No storage device attached to device slot 0 on port 0 of controller 'IDE Controller'}, preserve=false aResultDetail=0
+00:00:00.914769 nspr-3   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={b2547866-a0a1-4391-8b86-6952d82efaa0} aComponent={SessionMachine} aText={No storage device attached to device slot 0 on port 0 of controller 'IDE Controller'}, preserve=false aResultDetail=0
+00:00:00.969824 nspr-2   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={b2547866-a0a1-4391-8b86-6952d82efaa0} aComponent={SessionMachine} aText={No storage device attached to device slot 1 on port 0 of controller 'IDE Controller'}, preserve=false aResultDetail=0
+00:00:01.549703 nspr-2   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={b2547866-a0a1-4391-8b86-6952d82efaa0} aComponent={SessionMachine} aText={No storage device attached to device slot 1 on port 0 of controller 'IDE Controller'}, preserve=false aResultDetail=0
+00:00:01.786353 nspr-2   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={b2547866-a0a1-4391-8b86-6952d82efaa0} aComponent={SessionMachine} aText={No storage device attached to device slot 0 on port 0 of controller 'Floppy Controller'}, preserve=false aResultDetail=0
+00:00:02.537154 Watcher  ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={b2547866-a0a1-4391-8b86-6952d82efaa0} aComponent={MachineWrap} aText={The virtual machine 'packer-virtualbox-iso-1497055887' has terminated unexpectedly during startup with exit code 1 (0x1)}, preserve=false aResultDetail=0
+00:00:07.809832 main     VirtualBox: object deletion starts
+00:00:07.810774 main     {00007eff400116c0} HostPowerServiceLinux::~HostPowerServiceLinux: RTThreadWait() for 5000 ms failed with VERR_INVALID_HANDLE
+00:00:07.811647 Watcher  ERROR [COM]: aRC=E_ACCESSDENIED (0x80070005) aIID={0169423f-46b4-cde9-91af-1e9d5b6cd945} aComponent={VirtualBoxWrap} aText={The object is not ready}, preserve=false aResultDetail=0
+00:00:07.812124 main     VirtualBox: object deleted

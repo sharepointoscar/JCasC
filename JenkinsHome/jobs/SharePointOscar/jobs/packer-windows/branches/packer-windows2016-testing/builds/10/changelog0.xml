@@ -1,0 +1,11 @@
+commit a0957aaa1c6e7d8b4bb348c838b8cf1c4e7097ef
+tree 1595e5c4d6fc6d0b981dea275c745af4d008b324
+parent a11ed2ca716be2afa7091e24417abb5820b79eab
+author Oscar Medina <oscar@sharepointace.com> 2017-06-09 07:37:27 -0700
+committer Oscar Medina <oscar@sharepointace.com> 2017-06-09 07:37:27 -0700
+
+    print current workspace directory contents
+
+
+
+:100644 100644 ce6eee86089bb01ca8672eff23e13f4a4dfccbe4 e639d54f88b5f551204566370d15e8d5344c8685 M	Jenkinsfile

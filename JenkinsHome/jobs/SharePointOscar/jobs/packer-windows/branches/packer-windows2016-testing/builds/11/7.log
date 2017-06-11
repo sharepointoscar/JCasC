@@ -1,0 +1,15 @@
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from 2 remote Git repositories
+ > git config remote.origin.url https://github.com/SharePointOscar/packer-windows.git # timeout=10
+Fetching upstream changes from https://github.com/SharePointOscar/packer-windows.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials Github Access Token
+ > git fetch --tags --progress https://github.com/SharePointOscar/packer-windows.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin1.url https://github.com/SharePointOscar/packer-windows.git # timeout=10
+Fetching upstream changes from https://github.com/SharePointOscar/packer-windows.git
+using GIT_ASKPASS to set credentials Github Access Token
+ > git fetch --tags --progress https://github.com/SharePointOscar/packer-windows.git +refs/pull/*/head:refs/remotes/origin/pr/*
+Checking out Revision 4366610640a5feb2508845e68d3717ce9edd18e1 (packer-windows2016-testing)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 4366610640a5feb2508845e68d3717ce9edd18e1
+ > git rev-list a0957aaa1c6e7d8b4bb348c838b8cf1c4e7097ef # timeout=10

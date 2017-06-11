@@ -1,0 +1,41 @@
+VirtualBox XPCOM Server 5.1.22 r115126 linux.amd64 (Apr 28 2017 17:20:10) release log
+00:00:00.010003 main     Log opened 2017-06-10T01:41:09.195280000Z
+00:00:00.010005 main     Build Type: release
+00:00:00.010010 main     OS Product: Linux
+00:00:00.010011 main     OS Release: 4.9.27-moby
+00:00:00.010012 main     OS Version: #1 SMP Thu May 11 04:01:18 UTC 2017
+00:00:00.010036 main     DMI Product Name: BHYVE
+00:00:00.010041 main     DMI Product Version: 1.0
+00:00:00.010100 main     Host RAM: 3947MB (3.8GB) total, 2956MB (2.8GB) available
+00:00:00.010105 main     Executable: /usr/lib/virtualbox/VBoxSVC
+00:00:00.010105 main     Process ID: 2260
+00:00:00.010106 main     Package type: LINUX_64BITS_DEBIAN_8_0
+00:00:00.014907 main     IPC socket path: /tmp/.vbox-jenkins-ipc/ipcd
+00:00:00.126494 nspr-2   VirtualBox: object creation starts
+00:00:00.129186 nspr-2   Home directory: '/var/jenkins_home/.config/VirtualBox'
+00:00:00.135886 nspr-2   Loading settings file "/var/jenkins_home/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:00:00.141300 nspr-2   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link status for gretap0: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:00:00.142221 nspr-2   NAT: resolv.conf: nameserver 127.0.0.11
+00:00:00.142503 nspr-2   NAT: resolv.conf: ignoring "options ndots:0"
+00:00:00.142852 nspr-2   HostDnsMonitor: old information
+00:00:00.143071 nspr-2     no server entries
+00:00:00.143273 nspr-2     no domain set
+00:00:00.143482 nspr-2     no search string entries
+00:00:00.143692 nspr-2   HostDnsMonitor: new information
+00:00:00.143902 nspr-2     server 1: 127.0.0.11
+00:00:00.144104 nspr-2     domain: hsd1.ca.comcast.net
+00:00:00.144304 nspr-2     search string 1: hsd1.ca.comcast.net
+00:00:00.144516 nspr-2   HostDnsMonitorProxy::notify
+00:00:00.146510 nspr-2   HostPowerServiceLinux: DBus connection Error (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
+00:00:00.147223 nspr-2   VD: VDInit finished
+00:00:00.148177 nspr-2   VirtualBox: object created
+00:00:00.791977 nspr-2   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={b2547866-a0a1-4391-8b86-6952d82efaa0} aComponent={SessionMachine} aText={No storage device attached to device slot 0 on port 0 of controller 'IDE Controller'}, preserve=false aResultDetail=0
+00:00:00.793535 nspr-2   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={b2547866-a0a1-4391-8b86-6952d82efaa0} aComponent={SessionMachine} aText={No storage device attached to device slot 0 on port 0 of controller 'IDE Controller'}, preserve=false aResultDetail=0
+00:00:00.863890 nspr-3   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={b2547866-a0a1-4391-8b86-6952d82efaa0} aComponent={SessionMachine} aText={No storage device attached to device slot 1 on port 0 of controller 'IDE Controller'}, preserve=false aResultDetail=0
+00:00:01.402178 nspr-3   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={b2547866-a0a1-4391-8b86-6952d82efaa0} aComponent={SessionMachine} aText={No storage device attached to device slot 1 on port 0 of controller 'IDE Controller'}, preserve=false aResultDetail=0
+00:00:01.597454 nspr-2   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={b2547866-a0a1-4391-8b86-6952d82efaa0} aComponent={SessionMachine} aText={No storage device attached to device slot 0 on port 0 of controller 'Floppy Controller'}, preserve=false aResultDetail=0
+00:00:02.391261 Watcher  ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={b2547866-a0a1-4391-8b86-6952d82efaa0} aComponent={MachineWrap} aText={The virtual machine 'packer-virtualbox-iso-1497058835' has terminated unexpectedly during startup with exit code 1 (0x1)}, preserve=false aResultDetail=0
+00:00:07.613635 main     VirtualBox: object deletion starts
+00:00:07.614674 main     {00007f5458011980} HostPowerServiceLinux::~HostPowerServiceLinux: RTThreadWait() for 5000 ms failed with VERR_INVALID_HANDLE
+00:00:07.615576 Watcher  ERROR [COM]: aRC=E_ACCESSDENIED (0x80070005) aIID={0169423f-46b4-cde9-91af-1e9d5b6cd945} aComponent={VirtualBoxWrap} aText={The object is not ready}, preserve=false aResultDetail=0
+00:00:07.616113 main     VirtualBox: object deleted

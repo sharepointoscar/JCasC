@@ -1,11 +1,11 @@
 Started by timer
-[Fri Jun 09 00:49:07 UTC 2017] Starting organization scan...
-[Fri Jun 09 00:49:07 UTC 2017] Updating actions...
+[Sun Jun 11 01:39:43 UTC 2017] Starting organization scan...
+[Sun Jun 11 01:39:43 UTC 2017] Updating actions...
 Looking up details of SharePointOscar...
 Organization URL: [8mha:////4BAYLlPKEkwEwue3pOcTyX0jhit23V2d9jqpZdmlT2iJAAAAoh+LCAAAAAAAAP9b85aBtbiIQSajNKU4P08vOT+vOD8nVc+jsiC1KCczL9svvyTVzHb1RttJBUeZGJg8GdhyUvPSSzJ8GJhLi3JKGIR8shLLEvVzEvPS9YNLijLz0q0rihik0IxzhtAgwxgggJGJgaGiAMjgKWFQyigpKSi20tdPzyzJKE0C6srVD85ILEoNyM/MK/EvTk4sAgAhgplGpwAAAA==[0mOscar Medina
-[Fri Jun 09 00:49:08 UTC 2017] Consulting GitHub Organization
-[8mha:////4A5nBbrMRPPxMCOzSKQrFAqzZWkwwRpLcIeKoOdO0KGsAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHRMV3DrKQBTgJMNjgAAAA==[0mConnecting to https://api.github.com using sharepointoscar/****** (Github Access Token)
-[8mha:////4Ot2je6cOPkbRu/MhuKIcNzrr5kDo+DZNFqgMidf4R8jAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHRMV3C7GwDaLavbjgAAAA==[0mLooking up repositories of myself SharePointOscar
+[Sun Jun 11 01:40:14 UTC 2017] Consulting GitHub Organization
+[8mha:////4N9SnCOqi5bjyDmJ+rmN2a4VnQb5q1Jd4+/C3E7soNkZAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHTMlPMcgQChTaygjgAAAA==[0mConnecting to https://api.github.com using sharepointoscar/****** (Github Access Token)
+[8mha:////4Hz1SJk8PqeXdat0meyLOiepkei1NCCegIHy3SsCJKwBAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHTMlPOcxwGRStugjgAAAA==[0mLooking up repositories of myself SharePointOscar
 Ignoring ansible-examples
 Ignoring api-blueprint
 Ignoring aws-fundamentals
@@ -84,6 +84,7 @@ Ignoring three20
 Ignoring ubuntu-packer-templates
 Ignoring UbuntuDesktop
 Ignoring vagrant-ansible-packer-spfarm
+Ignoring vagrant-sandbox
 Ignoring vagrant-serverspec
 Ignoring Windows-Ansible
 Ignoring Windows-Ansible-Examples
@@ -110,5 +111,5 @@ Looking up [8mha:////4HuVckAjQS4/cKExjBiBMqLPs8X5TDvlm6cbru2zppWNAAAAth+LCAAAAA
 
 Done examining SharePointOscar/ZSPharmaLiteratureApp
 
-[Fri Jun 09 00:49:14 UTC 2017] Finished organization scan. Scan took 6.2 sec
+[Sun Jun 11 01:42:26 UTC 2017] Finished organization scan. Scan took 2 min 42 sec
 Finished: SUCCESS

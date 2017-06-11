@@ -1,6 +1,6 @@
 
 
-## A Dockerfile to spin up a Jenkins Container configured to use the Docker CLI
+## A Dockerfile to spin up a Jenkins Docker Containers for a Jenkins Master Agent Configuration
 Concept from Adrian Mouat's [article](http://container-solutions.com/running-docker-in-jenkins-in-docker)
 
 ![alt text](http://www.focusedsupport.com/blog/content/images/2015/06/docker_jenkins_page-2.png "Cute Docker Whale In Action")

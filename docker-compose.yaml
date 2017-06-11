@@ -1,6 +1,6 @@
 version: "3"
 services:
-  jenkins:
+  jenkins_master:
     tty: true
     stdin_open: true
     build:

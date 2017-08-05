@@ -1,19 +1,0 @@
-[_packer-windows2016-testing-CT6RLZYBHPBT5SZ6RSXMNHMDQGFJNNEOIJPWGZHTEXWCQ4PKUN4A] Running shell script
-Reading package lists...
-Building dependency tree...
-Reading state information...
-The following NEW packages will be installed:
-  jq
-0 upgraded, 1 newly installed, 0 to remove and 1 not upgraded.
-Need to get 102 kB of archives.
-After this operation, 283 kB of additional disk space will be used.
-Get:1 http://deb.debian.org/debian/ jessie/main jq amd64 1.4-2.1+deb8u1 [102 kB]
-debconf: delaying package configuration, since apt-utils is not installed
-Fetched 102 kB in 0s (109 kB/s)
-Selecting previously unselected package jq.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 25029 files and directories currently installed.)
-Preparing to unpack .../jq_1.4-2.1+deb8u1_amd64.deb ...
-Unpacking jq (1.4-2.1+deb8u1) ...
-Setting up jq (1.4-2.1+deb8u1) ...
-/var/jenkins_home/workspace/_packer-windows2016-testing-CT6RLZYBHPBT5SZ6RSXMNHMDQGFJNNEOIJPWGZHTEXWCQ4PKUN4A@tmp/durable-9ec7975f/script.sh: line 51: unexpected EOF while looking for matching `"'
-/var/jenkins_home/workspace/_packer-windows2016-testing-CT6RLZYBHPBT5SZ6RSXMNHMDQGFJNNEOIJPWGZHTEXWCQ4PKUN4A@tmp/durable-9ec7975f/script.sh: line 59: syntax error: unexpected end of file

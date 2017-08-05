@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2017-08-05 05:26:26.558 UTC</timestamp>
+  <md5sum>69ca51af4e9a67a1027a7f95b52c3e8f</md5sum>
+  <fileName>javax.servlet:servlet-api-2.5.jar</fileName>
+  <usages>
+    <entry>
+      <string>TEST MVN/com.example.maven-samples:single-module-project</string>
+      <ranges>2</ranges>
+    </entry>
+    <entry>
+      <string>TEST MVN/com.example.maven-samples:webapp</string>
+      <ranges>2</ranges>
+    </entry>
+    <entry>
+      <string>TEST MVN</string>
+      <ranges>2</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

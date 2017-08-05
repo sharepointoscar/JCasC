@@ -1,12 +1,13 @@
 version: "3"
 services:
-  jenkins_master:
+  web:
+    hostname: jenkins
     tty: true
     stdin_open: true
     build:
       context: .
       dockerfile: Dockerfile
-    image: sharepointoscar/jenkins:latest
+    image: sharepointoscar/jenkins:beta
     container_name: SIR_JENKINS
     restart: always
     ports:

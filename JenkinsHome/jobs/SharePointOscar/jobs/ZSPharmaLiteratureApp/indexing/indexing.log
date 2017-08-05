@@ -1,7 +1,6 @@
-Started
-[Sun Jun 11 01:42:26 UTC 2017] Starting branch indexing...
-[8mha:////4J0P8L7Zl25qsAhoMvD/3sVq3WDbnpdDBDIp/2AQJCgSAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHTMlIucHgBaWmTLjgAAAA==[0mConnecting to https://api.github.com using sharepointoscar/****** (Github Access Token)
-[8mha:////4NZ/8BjehJwzAJKuZzmUaJXqa8OzE1Jm0/bwZZ6oC2BpAAAAhR+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHTMlEsv1wMANGAyqY4AAAA=[0mConnecting to https://api.github.com using sharepointoscar/****** (Github Access Token)
+Started by timer
+[Sat Aug 05 17:06:21 UTC 2017] Starting branch indexing...
+[8mha:////4Bm9ry1KVaiiV0s8XCB1dJUx57xaIh/YSAFJuFfSG2YOAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHTs5pj1KwCplVt6jgAAAA==[0mConnecting to https://api.github.com using sharepointoscar/****** (Github Access Token)
 Looking up [8mha:////4HuVckAjQS4/cKExjBiBMqLPs8X5TDvlm6cbru2zppWNAAAAth+LCAAAAAAAAP9djDEKwjAYhX8regBHcXVtNhGlg7goFC10c4s1JNE0CX/+SL2G19DFQ3gc72Clm295jw/e9/zAICBMVDwFZ9PK2eCMSDc3L9Boe9k5ErPs8cru/p1AsoWhEVaSyqEf0RCM8jO/cma4lawk1FYuG4Txn27d9U8GXXoJQOPbMSWYKyIfFoxJTSoe21fNSsVRFE5b2oeKIzuURUtqnmsSyCmiWHn/BVD5b+29AAAA[0mSharePointOscar/ZSPharmaLiteratureApp
 
   Getting remote pull requests...
@@ -28,5 +27,5 @@ No changes detected: tests (still at c7405fee8cc6aef0c0b6f7a386664f6900b01752)
 
 Done examining SharePointOscar/ZSPharmaLiteratureApp
 
-[Sun Jun 11 01:44:31 UTC 2017] Finished branch indexing. Indexing took 2 min 5 sec
+[Sat Aug 05 17:06:24 UTC 2017] Finished branch indexing. Indexing took 3 sec
 Finished: SUCCESS

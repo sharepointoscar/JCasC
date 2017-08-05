@@ -15,7 +15,7 @@
         <org.jenkinsci.plugins.github__branch__source.GitHubDefaultBranch plugin="github-branch-source@2.0.5">
           <repoOwner>SharePointOscar</repoOwner>
           <repository>packer-windows</repository>
-          <defaultBranch>master</defaultBranch>
+          <defaultBranch>my</defaultBranch>
         </org.jenkinsci.plugins.github__branch__source.GitHubDefaultBranch>
       </list>
     </entry>

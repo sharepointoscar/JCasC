@@ -1,0 +1,46 @@
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building A Single Maven Module 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.pom
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.pom (481 B at 6.8 kB/s)
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-parent/1.1/hamcrest-parent-1.1.pom
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-parent/1.1/hamcrest-parent-1.1.pom (5.9 kB at 90 kB/s)
+[INFO] 
+[8mha:////4K5M9kYvX9lCdd8HxZSuf0Flm17vjEXncZNyqcIygDAdAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ single-module-project ---
+[debug] execute contextualize
+[INFO] Using 'utf-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/TEST MVN/single-module/src/main/resources
+[INFO] 
+[8mha:////4K5M9kYvX9lCdd8HxZSuf0Flm17vjEXncZNyqcIygDAdAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ single-module-project ---
+[INFO] Compiling 1 source file to /var/jenkins_home/workspace/TEST MVN/single-module/target/classes
+[INFO] 
+[8mha:////4K5M9kYvX9lCdd8HxZSuf0Flm17vjEXncZNyqcIygDAdAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ single-module-project ---
+[debug] execute contextualize
+[INFO] Using 'utf-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/TEST MVN/single-module/src/test/resources
+[INFO] 
+[8mha:////4K5M9kYvX9lCdd8HxZSuf0Flm17vjEXncZNyqcIygDAdAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ single-module-project ---
+[INFO] Compiling 1 source file to /var/jenkins_home/workspace/TEST MVN/single-module/target/test-classes
+[INFO] 
+[8mha:////4K5M9kYvX9lCdd8HxZSuf0Flm17vjEXncZNyqcIygDAdAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-surefire-plugin:2.11:test (default-test) @ single-module-project ---
+[INFO] Surefire report directory: /var/jenkins_home/workspace/TEST MVN/single-module/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.example.TestGreeter
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.122 sec
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[JENKINS] Recording test results
+[INFO] 
+[8mha:////4K5M9kYvX9lCdd8HxZSuf0Flm17vjEXncZNyqcIygDAdAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ single-module-project ---
+[INFO] Building jar: /var/jenkins_home/workspace/TEST MVN/single-module/target/single-module-project.jar
+[INFO] 
+[8mha:////4K5M9kYvX9lCdd8HxZSuf0Flm17vjEXncZNyqcIygDAdAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-install-plugin:2.4:install (default-install) @ single-module-project ---
+[INFO] Installing /var/jenkins_home/workspace/TEST MVN/single-module/target/single-module-project.jar to /var/jenkins_home/.m2/repository/com/example/maven-samples/single-module-project/1.0-SNAPSHOT/single-module-project-1.0-SNAPSHOT.jar
+[INFO] Installing /var/jenkins_home/workspace/TEST MVN/single-module/pom.xml to /var/jenkins_home/.m2/repository/com/example/maven-samples/single-module-project/1.0-SNAPSHOT/single-module-project-1.0-SNAPSHOT.pom

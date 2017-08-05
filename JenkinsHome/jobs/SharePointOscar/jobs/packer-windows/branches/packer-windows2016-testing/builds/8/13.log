@@ -1,5 +1,0 @@
-[_packer-windows2016-testing-CT6RLZYBHPBT5SZ6RSXMNHMDQGFJNNEOIJPWGZHTEXWCQ4PKUN4A] Running shell script
-+ echo going through build phase
-going through build phase
-+ packer -v
-/usr/local/bin/packer: 2: /usr/local/bin/packer: Syntax error: newline unexpected

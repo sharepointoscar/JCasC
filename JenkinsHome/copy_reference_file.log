@@ -127,3 +127,28 @@ SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has b
 SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
 --- Copying files at Sun Jun 11 20:34:10 UTC 2017
 SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+--- Copying files at Sun Jun 11 21:05:14 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+--- Copying files at Sun Jun 11 23:17:28 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+--- Copying files at Sun Jun 11 23:35:26 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+--- Copying files at Mon Jun 12 00:05:02 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+--- Copying files at Mon Jun 12 00:06:59 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+--- Copying files at Mon Jun 12 01:05:50 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+--- Copying files at Mon Jun 12 19:26:49 UTC 2017
+INSTALLED plugins/yet-another-docker-plugin.jpi : 0.1.0-rc37
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+INSTALLED plugins/jucies.jpi : 0.2.0
+--- Copying files at Mon Jun 12 19:36:06 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+--- Copying files at Mon Jun 12 20:25:07 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+--- Copying files at Wed Jun 14 22:43:21 UTC 2017
+SKIPPED plugins/pipeline-githubnotify-step.jpi : Installed version (1.0.2) has been manually upgraded from initial version (1.0.1)
+UPGRADED plugins/jucies.jpi : Image version (0.2.1) is newer than installed version (0.2.0)
+--- Copying files at Sat Aug  5 04:15:25 UTC 2017
+--- Copying files at Sat Aug  5 04:25:25 UTC 2017

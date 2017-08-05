@@ -1,6 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <jenkins.branch.MultiBranchProject_-BranchIndexing plugin="branch-api@2.0.8">
-  <actions/>
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.triggers.TimerTrigger_-TimerTriggerCause/>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+  </actions>
   <result>
     <name>SUCCESS</name>
     <ordinal>0</ordinal>
@@ -8,8 +17,8 @@
     <completeBuild>true</completeBuild>
   </result>
   <durations>
-    <long>126036</long>
+    <long>2918</long>
   </durations>
-  <timestamp>1497145217162</timestamp>
-  <duration>126036</duration>
+  <timestamp>1501952781632</timestamp>
+  <duration>2918</duration>
 </jenkins.branch.MultiBranchProject_-BranchIndexing>

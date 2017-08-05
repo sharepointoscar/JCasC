@@ -1,5 +1,0 @@
-[_packer-windows2016-testing-CT6RLZYBHPBT5SZ6RSXMNHMDQGFJNNEOIJPWGZHTEXWCQ4PKUN4A] Running shell script
-+ echo Installing Packer 1.0.0 - unfortunately version is hardcoded right now
-Installing Packer 1.0.0 - unfortunately version is hardcoded right now
-+ pwd
-/var/jenkins_home/workspace/_packer-windows2016-testing-CT6RLZYBHPBT5SZ6RSXMNHMDQGFJNNEOIJPWGZHTEXWCQ4PKUN4A

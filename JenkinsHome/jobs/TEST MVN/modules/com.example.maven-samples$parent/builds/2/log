@@ -1,0 +1,22 @@
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Parent 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[8mha:////4K5M9kYvX9lCdd8HxZSuf0Flm17vjEXncZNyqcIygDAdAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-install-plugin:2.4:install (default-install) @ parent ---
+[INFO] Installing /var/jenkins_home/workspace/TEST MVN/pom.xml to /var/jenkins_home/.m2/repository/com/example/maven-samples/parent/1.0-SNAPSHOT/parent-1.0-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] Multi Module Project Parent ........................ SUCCESS [  6.923 s]
+[INFO] Server ............................................. SUCCESS [ 31.970 s]
+[INFO] Webapp ............................................. SUCCESS [  4.548 s]
+[INFO] A Single Maven Module .............................. SUCCESS [  2.541 s]
+[INFO] Parent ............................................. SUCCESS [  0.087 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 49.214 s
+[INFO] Finished at: 2017-08-05T05:26:30Z
+[INFO] Final Memory: 37M/354M
+[INFO] ------------------------------------------------------------------------

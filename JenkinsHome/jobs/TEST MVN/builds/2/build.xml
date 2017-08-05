@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.maven.MavenModuleSetBuild plugin="maven-plugin@2.17">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>sharepointoscar</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <jenkins.metrics.impl.TimeInQueueAction plugin="metrics@3.1.2.9">
+      <queuingDurationMillis>10</queuingDurationMillis>
+    </jenkins.metrics.impl.TimeInQueueAction>
+    <hudson.plugins.git.util.BuildData plugin="git@3.2.0">
+      <buildsByBranchName>
+        <entry>
+          <string>refs/remotes/origin/master</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@2.4.1">
+              <sha1>4d47c7d9bd4ca5ea765d78c76020dd71cf133e8b</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/master</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>2</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <remoteUrls>
+        <string>https://github.com/gabrielf/maven-samples.git</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <hudson.plugins.git.GitTagAction plugin="git@3.2.0">
+      <tags class="hudson.util.CopyOnWriteMap$Tree">
+        <entry>
+          <string>refs/remotes/origin/master</string>
+          <list/>
+        </entry>
+      </tags>
+      <ws>/var/jenkins_home/workspace/TEST MVN</ws>
+    </hudson.plugins.git.GitTagAction>
+    <hudson.scm.SCMRevisionState_-None/>
+    <hudson.maven.reporters.MavenAggregatedArtifactRecord>
+      <records/>
+      <parent reference="../../.."/>
+    </hudson.maven.reporters.MavenAggregatedArtifactRecord>
+    <hudson.maven.reporters.SurefireAggregatedReport>
+      <descriptions class="concurrent-hash-map"/>
+      <failCount>0</failCount>
+      <skipCount>0</skipCount>
+      <totalCount>4</totalCount>
+      <children>
+        <hudson.tasks.test.AggregatedTestResultAction_-Child plugin="junit@1.20">
+          <name>com.example.maven-samples:server</name>
+          <build>2</build>
+        </hudson.tasks.test.AggregatedTestResultAction_-Child>
+        <hudson.tasks.test.AggregatedTestResultAction_-Child plugin="junit@1.20">
+          <name>com.example.maven-samples:single-module-project</name>
+          <build>2</build>
+        </hudson.tasks.test.AggregatedTestResultAction_-Child>
+      </children>
+    </hudson.maven.reporters.SurefireAggregatedReport>
+    <hudson.tasks.Fingerprinter_-FingerprintAction>
+      <record>
+        <entry>
+          <string>com.example.maven-samples:webapp:pom.xml</string>
+          <string>e03508eff8e9ff3907000489313666f0</string>
+        </entry>
+        <entry>
+          <string>junit:junit-dep-4.10.jar</string>
+          <string>842f5d05ce8160b43ae47fce1746869e</string>
+        </entry>
+        <entry>
+          <string>org.hamcrest:hamcrest-core-1.2.1.jar</string>
+          <string>e1f4d2a97f1b08bb2a78fe7cd7bf73df</string>
+        </entry>
+        <entry>
+          <string>com.example.maven-samples:single-module-project.jar</string>
+          <string>a4fb577fb25e291f588b87d3106de1b4</string>
+        </entry>
+        <entry>
+          <string>org.mockito:mockito-core-1.8.5.jar</string>
+          <string>931b4bbc58d87bcd2eef61390dd60858</string>
+        </entry>
+        <entry>
+          <string>org.objenesis:objenesis-1.0.jar</string>
+          <string>1989c831f28c92fae9b333cf5c9f9926</string>
+        </entry>
+        <entry>
+          <string>com.example.maven-samples:webapp.war</string>
+          <string>9431ca1c85180b73ec5f5d2a8ec6fdec</string>
+        </entry>
+        <entry>
+          <string>org.hamcrest:hamcrest-library-1.2.1.jar</string>
+          <string>6d52de1b934ed8708f802c40af5e0c9c</string>
+        </entry>
+        <entry>
+          <string>javax.servlet:servlet-api-2.5.jar</string>
+          <string>69ca51af4e9a67a1027a7f95b52c3e8f</string>
+        </entry>
+        <entry>
+          <string>com.example.maven-samples:single-module-project:pom.xml</string>
+          <string>1c248b89c9940ff44a5729f02142b7b2</string>
+        </entry>
+        <entry>
+          <string>com.example.maven-samples:server:pom.xml</string>
+          <string>ece0033c35ff05483514efc676e91846</string>
+        </entry>
+        <entry>
+          <string>javax.servlet.jsp:jsp-api-2.2.jar</string>
+          <string>dd575c153ec55c650d2a66aefc5ba9d3</string>
+        </entry>
+        <entry>
+          <string>com.example.maven-samples:multi-module-parent:pom.xml</string>
+          <string>f9b35cf0e9dff2d34b188dc833c7bea2</string>
+        </entry>
+        <entry>
+          <string>com.example.maven-samples:parent:pom.xml</string>
+          <string>0401769e559adf52f249188c98e8742e</string>
+        </entry>
+        <entry>
+          <string>com.example.maven-samples:multi-module-parent:multi-module-parent-1.0-SNAPSHOT.pom</string>
+          <string>f9b35cf0e9dff2d34b188dc833c7bea2</string>
+        </entry>
+        <entry>
+          <string>com.example.maven-samples:server.jar</string>
+          <string>4d22031cefaf318063cd0cd968a139c8</string>
+        </entry>
+      </record>
+    </hudson.tasks.Fingerprinter_-FingerprintAction>
+    <com.sonyericsson.rebuild.RebuildAction plugin="rebuild@1.25"/>
+  </actions>
+  <queueId>6</queueId>
+  <timestamp>1501910724256</timestamp>
+  <startTime>1501910724268</startTime>
+  <result>SUCCESS</result>
+  <duration>66923</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/jenkins_home/workspace/TEST MVN</workspace>
+  <hudsonVersion>2.46.3</hudsonVersion>
+  <scm class="hudson.plugins.git.GitChangeLogParser" plugin="git@3.2.0">
+    <authorOrCommitter>false</authorOrCommitter>
+  </scm>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+  <mavenVersionUsed>3.5.0</mavenVersionUsed>
+</hudson.maven.MavenModuleSetBuild>

@@ -1,3 +1,0 @@
-[_packer-windows2016-testing-CT6RLZYBHPBT5SZ6RSXMNHMDQGFJNNEOIJPWGZHTEXWCQ4PKUN4A] Running shell script
-+ packer -v
-/var/jenkins_home/workspace/_packer-windows2016-testing-CT6RLZYBHPBT5SZ6RSXMNHMDQGFJNNEOIJPWGZHTEXWCQ4PKUN4A@tmp/durable-fd6d023f/script.sh: 2: /var/jenkins_home/workspace/_packer-windows2016-testing-CT6RLZYBHPBT5SZ6RSXMNHMDQGFJNNEOIJPWGZHTEXWCQ4PKUN4A@tmp/durable-fd6d023f/script.sh: packer: not found

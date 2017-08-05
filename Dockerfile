@@ -21,7 +21,6 @@ RUN apt-get update && \
   #sudo apt-get update -y; sudo apt-get install -y virtualbox-5.1 dkms
 
 
-
 # add jenkins to the docker group
 RUN sudo usermod -aG docker jenkins
 RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers

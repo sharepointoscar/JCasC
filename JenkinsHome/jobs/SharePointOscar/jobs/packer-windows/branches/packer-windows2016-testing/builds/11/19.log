@@ -1,4 +1,0 @@
-[_packer-windows2016-testing-CT6RLZYBHPBT5SZ6RSXMNHMDQGFJNNEOIJPWGZHTEXWCQ4PKUN4A] Running shell script
-+ echo Print current workspace conetents
-Print current workspace conetents
-/var/jenkins_home/workspace/_packer-windows2016-testing-CT6RLZYBHPBT5SZ6RSXMNHMDQGFJNNEOIJPWGZHTEXWCQ4PKUN4A@tmp/durable-21440b59/script.sh: 3: /var/jenkins_home/workspace/_packer-windows2016-testing-CT6RLZYBHPBT5SZ6RSXMNHMDQGFJNNEOIJPWGZHTEXWCQ4PKUN4A@tmp/durable-21440b59/script.sh: Bad substitution

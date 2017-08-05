@@ -1,6 +1,6 @@
-Started
-[Sun Jun 11 01:40:17 UTC 2017] Starting branch indexing...
-[8mha:////4Lee/r9LJKZZChvkxjhz7x/1PCKs+FbWRrxgg561+aCLAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHTMlPOC8gAuiMiqjgAAAA==[0mConnecting to https://api.github.com using sharepointoscar/****** (Github Access Token)
+Started by timer
+[Sat Aug 05 17:06:21 UTC 2017] Starting branch indexing...
+[8mha:////4BCnSFm/Nop3ogUVAnh45uNGwuIVt1w1gKhfvN4w5hSpAAAAhB+LCAAAAAAAAP9b85aBtbiIwSa/KF0vKzUvOzOvODlTryCnNB3I0kvPLMkoTYpPKkrMS86IL84vLUpO1XPPLPEoTXLOzyvOz0n1yy9JZYAARiYGRi8GzpLM3NTiksTcgooiBqmM0pTi/Dy9ZIhiPayaGCoKgHTs5pj1ywCuuOOdjgAAAA==[0mConnecting to https://api.github.com using sharepointoscar/****** (Github Access Token)
 Looking up [8mha:////4PfGZFOshHX7Mqb25HKgJIHNZBowyPP2NVMiR9psgWybAAAAqh+LCAAAAAAAAP9b85aBtbiIQSajNKU4P08vOT+vOD8nVc+jsiC1KCczL9svvyTVzHb1RttJBUeZGJg8GdhyUvPSSzJ8GJhLi3JKGIR8shLLEvVzEvPS9YNLijLz0q0rihik0IxzhtAgwxgggJGJgaGiAMgQL2HQyigpKSi20tdPzyzJKE0C6srVD85ILEoNyM/MK/EvTk4s0s+tzEvPzKsAAFCFRyqvAAAA[0mSharePointOscar/mynginx
 
   Getting remote pull requests...
@@ -23,5 +23,5 @@ No changes detected: test (still at a57509a83b2d1c665bf7b2192c821acdccb298e4)
 
 Done examining SharePointOscar/mynginx
 
-[Sun Jun 11 01:42:23 UTC 2017] Finished branch indexing. Indexing took 2 min 6 sec
+[Sat Aug 05 17:06:24 UTC 2017] Finished branch indexing. Indexing took 2.8 sec
 Finished: SUCCESS

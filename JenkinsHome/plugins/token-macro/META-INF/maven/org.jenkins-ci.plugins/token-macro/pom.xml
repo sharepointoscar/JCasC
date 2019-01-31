@@ -4,13 +4,14 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>2.19</version>
+    <version>3.2</version>
+    <relativePath />
   </parent>
 
   <properties>
     <jenkins.version>1.642.3</jenkins.version>
     <java.level>7</java.level>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <findbugs.failOnError>false</findbugs.failOnError> <!-- TODO fix the warnings instead -->
   </properties>
   
   <licenses>
@@ -22,7 +23,7 @@
   </licenses>
 
   <artifactId>token-macro</artifactId>
-  <version>2.1</version>
+  <version>2.5</version>
   <packaging>hpi</packaging>
   <name>Token Macro Plugin</name>
   <description>This plugin adds reusable macro expansion capability for other plugins to use.</description>
@@ -44,27 +45,38 @@
   <scm>
     <connection>scm:git:git://github.com/jenkinsci/token-macro-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/token-macro-plugin.git</developerConnection>
-    <tag>token-macro-2.1</tag>
+    <tag>token-macro-2.5</tag>
   </scm>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>findbugs-maven-plugin</artifactId>
-        <configuration>
-          <xmlOutput>true</xmlOutput>
-          <failOnError>false</failOnError>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
-  
   <dependencies>
+    <dependency>
+      <groupId>org.jenkins-ci.plugins.workflow</groupId>
+      <artifactId>workflow-step-api</artifactId>
+      <version>2.7</version>
+    </dependency>
     <dependency>
       <groupId>org.parboiled</groupId>
       <artifactId>parboiled-java</artifactId>
       <version>1.1.7</version>
+      <exclusions>
+        <!-- Jenkins core bundles ASM 4, so if this really requires ASM 5 and is used at runtime, you are SOL. -->
+        <exclusion>
+          <groupId>org.ow2.asm</groupId>
+          <artifactId>asm</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.ow2.asm</groupId>
+          <artifactId>asm-analysis</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.ow2.asm</groupId>
+          <artifactId>asm-tree</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.ow2.asm</groupId>
+          <artifactId>asm-util</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>com.google.code.findbugs</groupId>
@@ -72,74 +84,41 @@
       <version>3.0.0</version>
       <scope>provided</scope>
     </dependency>
-
+    <dependency>
+      <groupId>com.jayway.jsonpath</groupId>
+      <artifactId>json-path</artifactId>
+      <version>2.4.0</version>
+      <exclusions>
+        <exclusion> <!-- Note that json-smart *also* bundles ASM 5 inline, which we cannot do anything about. Bad form! -->
+          <groupId>org.ow2.asm</groupId>
+          <artifactId>asm</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
 
     <!-- Test Deps -->
     <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-all</artifactId>
-      <version>1.8.5</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.jenkins-ci.main</groupId>
-      <artifactId>jenkins-war</artifactId>
-      <type>war</type>
-      <version>${jenkins.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.jenkins-ci.plugins</groupId>
-      <version>2.5</version>
-      <artifactId>subversion</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.jenkins-ci.plugins</groupId>
-      <version>1.1</version>
-      <artifactId>scm-api</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.jenkins-ci.plugins</groupId>
-      <version>1.10</version>
-      <artifactId>ssh-credentials</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.jenkins-ci.plugins</groupId>
-      <version>1.16.1</version>
-      <artifactId>credentials</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.jenkins-ci.plugins</groupId>
-      <version>1.18</version>
-      <artifactId>script-security</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
       <groupId>org.jenkins-ci.plugins.workflow</groupId>
-      <artifactId>workflow-support</artifactId>
+      <artifactId>workflow-api</artifactId>
       <version>2.0</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins.workflow</groupId>
-      <version>2.1</version>
-      <artifactId>workflow-step-api</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.jenkins-ci.plugins.workflow</groupId>
       <artifactId>workflow-cps</artifactId>
-      <version>2.1</version>
+      <version>2.0</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins.workflow</groupId>
       <artifactId>workflow-job</artifactId>
-      <version>2.1</version>
+      <version>2.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jenkins-ci.plugins.workflow</groupId>
+      <artifactId>workflow-durable-task-step</artifactId>
+      <version>2.0</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -149,10 +128,16 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.jenkins-ci.plugins.workflow</groupId>
-      <artifactId>workflow-durable-task-step</artifactId>
-      <version>2.0</version>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>1.9.5</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>hamcrest-core</artifactId>
+          <groupId>org.hamcrest</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
   </dependencies>
 
@@ -170,4 +155,3 @@
     </pluginRepository>
   </pluginRepositories>
 </project>  
-

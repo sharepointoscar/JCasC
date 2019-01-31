@@ -5,7 +5,7 @@
     <parent>
         <groupId>io.jenkins.blueocean</groupId>
         <artifactId>blueocean-parent</artifactId>
-        <version>1.0.1</version>
+        <version>1.9.0</version>
     </parent>
 
     <artifactId>blueocean</artifactId>
@@ -22,11 +22,23 @@
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
+            <artifactId>jenkins-design-language</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>blueocean-core-js</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
             <artifactId>blueocean-web</artifactId>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>blueocean-dashboard</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>blueocean-events</artifactId>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
@@ -74,6 +86,20 @@
             <artifactId>blueocean-git-pipeline</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>blueocean-bitbucket-pipeline</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>blueocean-pipeline-editor</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>blueocean-jira</artifactId>
+        </dependency>
 
         <!-- Bundled plugins for improved out of the box experience -->
         <dependency>
@@ -87,10 +113,14 @@
         </dependency>
 
         <dependency>
-          <groupId>io.jenkins.blueocean</groupId>
-          <artifactId>blueocean-pipeline-editor</artifactId>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>pipeline-build-step</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>pipeline-milestone-step</artifactId>
+        </dependency>
 
         <!-- Test deps -->
         <dependency>
@@ -145,28 +175,24 @@
                             }
                         };
 
-                        //
-                        // Link in other sub-modules. Add as needed.
-                        //
-                        linkHPI('blueocean-web');
-                        linkHPI('blueocean-dashboard');
-                        linkHPI('blueocean-personalization');
-                        linkHPI('blueocean-rest');
-                        linkHPI('blueocean-commons');
-                        linkHPI('blueocean-i18n');
-                        linkHPI('blueocean-jwt');
-                        linkHPI('blueocean-rest-impl');
-                        linkHPI('blueocean-pipeline-api-impl')
-                        linkHPI('blueocean-config')
-                        linkHPI('blueocean-github-pipeline')
-                        linkHPI('blueocean-git-pipeline')
+                        println('Automatically linking HPIs for submodules...')
+
+                        // modules to be excluded from hpi linking below
+                        def hpiExcludes = ['blueocean']
+
+                        project.parent.modules.each { module -&gt;
+                            def moduleName = module.toString()
+
+                            if (!hpiExcludes.contains(moduleName)) {
+                                linkHPI(moduleName)
+                            }
+                        }
                     </source>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.jenkins-ci.tools</groupId>
                 <artifactId>maven-hpi-plugin</artifactId>
-                <version>1.119</version>
                 <executions>
                     <execution>
                         <phase>package</phase>

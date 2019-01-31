@@ -1,4 +1,0 @@
-[rePointOscar_mynginx_master-IDPVYVQ67I4XV76H6AKHZTNV2A5GCTP24ZUGFIBAFYPD6OA4SSIQ] Running shell script
-+ echo executing Login to Docker Hub Step
-executing Login to Docker Hub Step
-/var/jenkins_home/workspace/rePointOscar_mynginx_master-IDPVYVQ67I4XV76H6AKHZTNV2A5GCTP24ZUGFIBAFYPD6OA4SSIQ@tmp/durable-b48c009b/script.sh: 3: /var/jenkins_home/workspace/rePointOscar_mynginx_master-IDPVYVQ67I4XV76H6AKHZTNV2A5GCTP24ZUGFIBAFYPD6OA4SSIQ@tmp/durable-b48c009b/script.sh: Syntax error: word unexpected (expecting ")")

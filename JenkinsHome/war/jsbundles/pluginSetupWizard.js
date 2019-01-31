@@ -2097,7 +2097,7 @@ exports.restartJenkins = function(handler) {
 	});
 };
 
-},{"../util/jenkins":33}],17:[function(require,module,exports){
+},{"../util/jenkins":34}],17:[function(require,module,exports){
 /**
  * Provides a wrapper to interact with the security configuration
  */
@@ -2109,10 +2109,25 @@ var jenkins = require('../util/jenkins');
  */
 exports.saveFirstUser = function($form, success, error) {
 	jenkins.staplerPost(
-			'/setupWizard/createAdminUser',
+		'/setupWizard/createAdminUser',
 		$form,
 		function(response) {
-        		var crumbRequestField = response.data.crumbRequestField;
+			var crumbRequestField = response.data.crumbRequestField;
+			if (crumbRequestField) {
+				require('window-handle').getWindow().crumb.init(crumbRequestField, response.data.crumb);
+			}
+			success(response);
+		}, {
+			error: error
+		});
+};
+
+exports.saveConfigureInstance = function($form, success, error){
+	jenkins.staplerPost(
+		'/setupWizard/configureInstance',
+		$form,
+		function(response) {
+			var crumbRequestField = response.data.crumbRequestField;
 			if (crumbRequestField) {
 				require('window-handle').getWindow().crumb.init(crumbRequestField, response.data.crumb);
 			}
@@ -2127,7 +2142,7 @@ exports.saveFirstUser = function($form, success, error) {
  */
 exports.saveProxy = function($form, success, error) {
 	jenkins.staplerPost(
-			'/pluginManager/proxyConfigure',
+		'/pluginManager/proxyConfigure',
 		$form,
 		success, {
 			dataType: 'html',
@@ -2135,7 +2150,7 @@ exports.saveProxy = function($form, success, error) {
 		});
 };
 
-},{"../util/jenkins":33,"window-handle":15}],18:[function(require,module,exports){
+},{"../util/jenkins":34,"window-handle":15}],18:[function(require,module,exports){
 require('jenkins-js-modules').whoami('undefined:pluginSetupWizard');
 
 require('jenkins-js-modules')
@@ -2280,6 +2295,7 @@ var createPluginSetupWizard = function(appendTarget) {
 	var setupCompletePanel = require('./templates/setupCompletePanel.hbs');
 	var proxyConfigPanel = require('./templates/proxyConfigPanel.hbs');
 	var firstUserPanel = require('./templates/firstUserPanel.hbs');
+	var configureInstancePanel = require('./templates/configureInstance.hbs');
 	var offlinePanel = require('./templates/offlinePanel.hbs');
 	var pluginSetupWizard = require('./templates/pluginSetupWizard.hbs');
 	var incompleteInstallationPanel = require('./templates/incompleteInstallationPanel.hbs');
@@ -2369,7 +2385,7 @@ var createPluginSetupWizard = function(appendTarget) {
 	};
 
 	var getJenkinsVersion = function() {
-		return getJenkinsVersionFull().replace(/(\d[.]\d).*/,'$1');
+		return getJenkinsVersionFull().replace(/(\d[.][\d.]+).*/,'$1');
 	};
 
 	// call this to set the panel in the app, this performs some additional things & adds common transitions
@@ -2584,8 +2600,37 @@ var createPluginSetupWizard = function(appendTarget) {
 		});
 	};
 	
+	var enableButtonsImmediately = function() {
+		$('button').prop({disabled:false});
+	};
+	
+	// errors: Map of nameOfField to errorMessage
+	var displayErrors = function(iframe, errors) {
+		if(!errors){
+			return;
+		}
+		var errorKeys = Object.keys(errors);
+		if(!errorKeys.length){
+			return;
+		}
+		var $iframeDoc = $(iframe).contents();
+		for(var i = 0; i < errorKeys.length; i++){
+			var name = errorKeys[i];
+			var message = errors[name];
+			var $inputField = $iframeDoc.find('[name="' + name +'"]');
+			var $tr = $inputField.parentsUntil('tr').parent();
+			var $errorPanel = $tr.find('.error-panel');
+			$tr.addClass('has-error');
+			$errorPanel.text(message);
+		}
+	};
+	
 	var setupFirstUser = function() {
 		setPanel(firstUserPanel, {}, enableButtonsAfterFrameLoad);
+	};
+	
+	var showConfigureInstance = function(messages) {
+		setPanel(configureInstancePanel, messages, enableButtonsAfterFrameLoad);
 	};
 
 	var showSetupCompletePanel = function(messages) {
@@ -2602,6 +2647,7 @@ var createPluginSetupWizard = function(appendTarget) {
 			$('.install-recommended').focus();
 		},
 		CREATE_ADMIN_USER: function() { setupFirstUser(); },
+		CONFIGURE_INSTANCE: function() { showConfigureInstance(); },
 		RUNNING: function() { showSetupCompletePanel(); },
 		INITIAL_SETUP_COMPLETED: function() { showSetupCompletePanel(); },
 		INITIAL_PLUGINS_INSTALLING: function() { showInstallProgress(); }
@@ -3038,49 +3084,101 @@ var createPluginSetupWizard = function(appendTarget) {
 			$c.slideDown();
 		}
 	};
-	
-	var handleStaplerSubmit = function(data) {
-		if(data.status && data.status > 200) {
-			// Nothing we can really do here
-			setPanel(errorPanel, { errorMessage: data.statusText });
-			return;
-		}
-		
-		try {
-			if(JSON.parse(data).status === 'ok') {
-				showStatePanel();
-				return;
-			}
-		} catch(e) {
-			// ignore JSON parsing issues, this may be HTML
-		}
-		// we get 200 OK
-		var $page = $(data);
-		var $errors = $page.find('.error');
-		if($errors.length > 0) {
-			var $main = $page.find('#main-panel').detach();
-			if($main.length > 0) {
-				data = data.replace(/body([^>]*)[>](.|[\r\n])+[<][/]body/,'body$1>'+$main.html()+'</body');
-			}
-			var doc = $('iframe[src]').contents()[0];
-			doc.open();
-			doc.write(data);
-			doc.close();
-		}
-		else {
+
+	var handleFirstUserResponseSuccess = function (data) {
+		if (data.status === 'ok') {
 			showStatePanel();
+		} else {
+			setPanel(errorPanel, {errorMessage: 'Error trying to create first user: ' + data.statusText});
 		}
-	};
-	
-	// call to submit the firstuser
-	var saveFirstUser = function() {
-		$('button').prop({disabled:true});
-		securityConfig.saveFirstUser($('iframe[src]').contents().find('form:not(.no-json)'), handleStaplerSubmit, handleStaplerSubmit);
 	};
 
+	var handleFirstUserResponseError = function(res) {
+		// We're expecting a full HTML page to replace the form
+		// We can only replace the _whole_ iframe due to XSS rules
+		// https://stackoverflow.com/a/22913801/1117552
+		var responseText = res.responseText;
+		var $page = $(responseText);
+		var $main = $page.find('#main-panel').detach();
+		if($main.length > 0) {
+			responseText = responseText.replace(/body([^>]*)[>](.|[\r\n])+[<][/]body/,'body$1>'+$main.html()+'</body');
+		}
+		var doc = $('iframe#setup-first-user').contents()[0];
+		doc.open();
+		doc.write(responseText);
+		doc.close();
+		$('button').prop({disabled:false});
+	};
+
+	// call to submit the first user
+	var saveFirstUser = function() {
+		$('button').prop({disabled:true});
+		var $form = $('iframe#setup-first-user').contents().find('form:not(.no-json)');
+		securityConfig.saveFirstUser($form, handleFirstUserResponseSuccess, handleFirstUserResponseError);
+	};
+
+	var firstUserSkipped = false;
 	var skipFirstUser = function() {
 		$('button').prop({disabled:true});
-		showSetupCompletePanel({message: translations.installWizard_firstUserSkippedMessage});
+		firstUserSkipped = true;
+		showConfigureInstance();
+	};
+	
+	var handleConfigureInstanceResponseSuccess = function (data) {
+		if (data.status === 'ok') {
+			if(firstUserSkipped){
+				var message = translations.installWizard_firstUserSkippedMessage;
+				showSetupCompletePanel({message: message});
+			}else{
+				showStatePanel();
+			}
+		} else {
+			var errors = data.data;
+			setPanel(configureInstancePanel, {}, function(){
+				enableButtonsImmediately();
+				displayErrors($('iframe#setup-configure-instance'), errors);
+			});
+		}
+	};
+
+	var handleConfigureInstanceResponseError = function(res) {
+		// We're expecting a full HTML page to replace the form
+		// We can only replace the _whole_ iframe due to XSS rules
+		// https://stackoverflow.com/a/22913801/1117552
+		var responseText = res.responseText;
+		var $page = $(responseText);
+		var $main = $page.find('#main-panel').detach();
+		if($main.length > 0) {
+			responseText = responseText.replace(/body([^>]*)[>](.|[\r\n])+[<][/]body/,'body$1>'+$main.html()+'</body');
+		}
+		var doc = $('iframe#setup-configure-instance').contents()[0];
+		doc.open();
+		doc.write(responseText);
+		doc.close();
+		$('button').prop({disabled:false});
+	};
+	
+	var saveConfigureInstance = function() {
+		$('button').prop({disabled:true});
+		var $form = $('iframe#setup-configure-instance').contents().find('form:not(.no-json)');
+		securityConfig.saveConfigureInstance($form, handleConfigureInstanceResponseSuccess, handleConfigureInstanceResponseError);
+	};
+	
+	var skipFirstUserAndConfigureInstance = function(){
+		firstUserSkipped = true;
+		skipConfigureInstance();
+	};
+
+	var skipConfigureInstance = function() {
+		$('button').prop({disabled:true});
+		
+		var message = '';
+		if(firstUserSkipped){
+			message += translations.installWizard_firstUserSkippedMessage;
+		}
+		message += translations.installWizard_configureInstanceSkippedMessage;
+		
+		showSetupCompletePanel({message: message});
 	};
 	
 	// call to setup the proxy
@@ -3188,11 +3286,13 @@ var createPluginSetupWizard = function(appendTarget) {
 		'.plugin-select-recommended': function() { selectedPluginNames = pluginManager.recommendedPluginNames(); refreshPluginSelectionPanel(); },
 		'.plugin-show-selected': toggleSelectedSearch,
 		'.select-category': selectCategory,
-		'.close': skipFirstUser,
+		'.close': skipFirstUserAndConfigureInstance,
 		'.resume-installation': resumeInstallation,
 		'.install-done-restart': restartJenkins,
 		'.save-first-user:not([disabled])': saveFirstUser,
 		'.skip-first-user': skipFirstUser,
+		'.save-configure-instance:not([disabled])': saveConfigureInstance,
+		'.skip-configure-instance': skipConfigureInstance,
 		'.show-proxy-config': setupProxy,
 		'.save-proxy-config': saveProxyConfig,
 		'.skip-plugin-installs': function() { installPlugins([]); },
@@ -3350,7 +3450,26 @@ var createPluginSetupWizard = function(appendTarget) {
 // export wizard creation method
 exports.init = createPluginSetupWizard;
 
-},{"./api/pluginManager":16,"./api/securityConfig":17,"./templates/errorPanel.hbs":20,"./templates/firstUserPanel.hbs":21,"./templates/incompleteInstallationPanel.hbs":22,"./templates/loadingPanel.hbs":23,"./templates/offlinePanel.hbs":24,"./templates/pluginSelectList.hbs":25,"./templates/pluginSelectionPanel.hbs":26,"./templates/pluginSetupWizard.hbs":27,"./templates/progressPanel.hbs":28,"./templates/proxyConfigPanel.hbs":29,"./templates/setupCompletePanel.hbs":30,"./templates/successPanel.hbs":31,"./templates/welcomePanel.hbs":32,"./util/jenkins":33,"bootstrap-detached":2,"jenkins-js-modules":9}],20:[function(require,module,exports){
+},{"./api/pluginManager":16,"./api/securityConfig":17,"./templates/configureInstance.hbs":20,"./templates/errorPanel.hbs":21,"./templates/firstUserPanel.hbs":22,"./templates/incompleteInstallationPanel.hbs":23,"./templates/loadingPanel.hbs":24,"./templates/offlinePanel.hbs":25,"./templates/pluginSelectList.hbs":26,"./templates/pluginSelectionPanel.hbs":27,"./templates/pluginSetupWizard.hbs":28,"./templates/progressPanel.hbs":29,"./templates/proxyConfigPanel.hbs":30,"./templates/setupCompletePanel.hbs":31,"./templates/successPanel.hbs":32,"./templates/welcomePanel.hbs":33,"./util/jenkins":34,"bootstrap-detached":2,"jenkins-js-modules":9}],20:[function(require,module,exports){
+// hbsfy compiled Handlebars template
+var HandlebarsCompiler = require('jenkins-handlebars-rt/runtimes/handlebars3_rt');
+module.exports = HandlebarsCompiler.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1, helper, alias1=this.lambda, alias2=this.escapeExpression, alias3=helpers.helperMissing, alias4="function";
+
+  return "<div class=\"modal-header\">\n	<h4 class=\"modal-title\">"
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.translations : depth0)) != null ? stack1.installWizard_addFirstUser_title : stack1), depth0))
+    + "</h4>\n</div>\n<div class=\"modal-body\">\n	<div class=\"jumbotron welcome-panel security-panel\">\n		"
+    + ((stack1 = ((helper = (helper = helpers.message || (depth0 != null ? depth0.message : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(depth0,{"name":"message","hash":{},"data":data}) : helper))) != null ? stack1 : "")
+    + "\n\n		<iframe src=\""
+    + alias2(((helper = (helper = helpers.baseUrl || (depth0 != null ? depth0.baseUrl : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(depth0,{"name":"baseUrl","hash":{},"data":data}) : helper)))
+    + "/setupWizard/setupWizardConfigureInstance\" id=\"setup-configure-instance\"></iframe>\n	</div>\n</div>\n<div class=\"modal-footer\">\n    <button type=\"button\" class=\"btn btn-link skip-configure-instance\" disabled>\n        "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.translations : depth0)) != null ? stack1.installWizard_skipConfigureInstance : stack1), depth0))
+    + "\n    </button>\n	<button type=\"button\" class=\"btn btn-primary save-configure-instance\" disabled>\n		"
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.translations : depth0)) != null ? stack1.installWizard_saveConfigureInstance : stack1), depth0))
+    + "\n	</button>\n</div>\n";
+},"useData":true});
+
+},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],21:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('jenkins-handlebars-rt/runtimes/handlebars3_rt');
 module.exports = HandlebarsCompiler.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
@@ -3365,7 +3484,7 @@ module.exports = HandlebarsCompiler.template({"compiler":[6,">= 2.0.0-beta.1"],"
     + "\n	</button>\n</div>\n";
 },"useData":true});
 
-},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],21:[function(require,module,exports){
+},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],22:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('jenkins-handlebars-rt/runtimes/handlebars3_rt');
 module.exports = HandlebarsCompiler.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
@@ -3375,14 +3494,14 @@ module.exports = HandlebarsCompiler.template({"compiler":[6,">= 2.0.0-beta.1"],"
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.translations : depth0)) != null ? stack1.installWizard_addFirstUser_title : stack1), depth0))
     + "</h4>\n</div>\n<div class=\"modal-body\">\n	<div class=\"jumbotron welcome-panel security-panel\">\n		<iframe src=\""
     + alias2(((helper = (helper = helpers.baseUrl || (depth0 != null ? depth0.baseUrl : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"baseUrl","hash":{},"data":data}) : helper)))
-    + "/setupWizard/setupWizardFirstUser\"></iframe>\n	</div>\n</div>\n<div class=\"modal-footer\">\n    <button type=\"button\" class=\"btn btn-link skip-first-user\" disabled>\n        "
+    + "/setupWizard/setupWizardFirstUser\" id=\"setup-first-user\"></iframe>\n	</div>\n</div>\n<div class=\"modal-footer\">\n    <button type=\"button\" class=\"btn btn-link skip-first-user\" disabled>\n        "
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.translations : depth0)) != null ? stack1.installWizard_skipFirstUser : stack1), depth0))
     + "\n    </button>\n	<button type=\"button\" class=\"btn btn-primary save-first-user\" disabled>\n		"
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.translations : depth0)) != null ? stack1.installWizard_saveFirstUser : stack1), depth0))
     + "\n	</button>\n</div>\n";
 },"useData":true});
 
-},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],22:[function(require,module,exports){
+},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],23:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('jenkins-handlebars-rt/runtimes/handlebars3_rt');
 module.exports = HandlebarsCompiler.template({"1":function(depth0,helpers,partials,data) {
@@ -3413,14 +3532,14 @@ module.exports = HandlebarsCompiler.template({"1":function(depth0,helpers,partia
     + "\n	</button>\n</div>";
 },"useData":true});
 
-},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],23:[function(require,module,exports){
+},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],24:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('jenkins-handlebars-rt/runtimes/handlebars3_rt');
 module.exports = HandlebarsCompiler.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     return "<div class=\"loader\"></div>\n";
 },"useData":true});
 
-},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],24:[function(require,module,exports){
+},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],25:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('jenkins-handlebars-rt/runtimes/handlebars3_rt');
 module.exports = HandlebarsCompiler.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
@@ -3439,7 +3558,7 @@ module.exports = HandlebarsCompiler.template({"compiler":[6,">= 2.0.0-beta.1"],"
     + "</button>\n        </p>\n    </div>\n</div>\n";
 },"useData":true});
 
-},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],25:[function(require,module,exports){
+},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],26:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('jenkins-handlebars-rt/runtimes/handlebars3_rt');
 module.exports = HandlebarsCompiler.template({"1":function(depth0,helpers,partials,data,blockParams,depths) {
@@ -3528,7 +3647,7 @@ module.exports = HandlebarsCompiler.template({"1":function(depth0,helpers,partia
   return ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.categorizedPlugins : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0, blockParams, depths),"inverse":this.noop,"data":data})) != null ? stack1 : "");
 },"useData":true,"useDepths":true});
 
-},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],26:[function(require,module,exports){
+},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],27:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('jenkins-handlebars-rt/runtimes/handlebars3_rt');
 module.exports = HandlebarsCompiler.template({"1":function(depth0,helpers,partials,data) {
@@ -3572,14 +3691,14 @@ module.exports = HandlebarsCompiler.template({"1":function(depth0,helpers,partia
     + "\n  </button>\n</div>\n";
 },"usePartial":true,"useData":true});
 
-},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],27:[function(require,module,exports){
+},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],28:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('jenkins-handlebars-rt/runtimes/handlebars3_rt');
 module.exports = HandlebarsCompiler.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     return "<div class=\"plugin-setup-wizard bootstrap-3\">\n	<div class=\"modal fade in\" style=\"display: block;\">\n		<div class=\"modal-dialog\">\n			<div class=\"modal-content\"></div>\n		</div>\n	</div>\n</div>";
 },"useData":true});
 
-},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],28:[function(require,module,exports){
+},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],29:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('jenkins-handlebars-rt/runtimes/handlebars3_rt');
 module.exports = HandlebarsCompiler.template({"1":function(depth0,helpers,partials,data) {
@@ -3610,7 +3729,7 @@ module.exports = HandlebarsCompiler.template({"1":function(depth0,helpers,partia
     + "</div>\n	</div>\n</div>\n";
 },"useData":true});
 
-},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],29:[function(require,module,exports){
+},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],30:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('jenkins-handlebars-rt/runtimes/handlebars3_rt');
 module.exports = HandlebarsCompiler.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
@@ -3627,7 +3746,7 @@ module.exports = HandlebarsCompiler.template({"compiler":[6,">= 2.0.0-beta.1"],"
     + "\n    </button>\n</div>\n";
 },"useData":true});
 
-},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],30:[function(require,module,exports){
+},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],31:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('jenkins-handlebars-rt/runtimes/handlebars3_rt');
 module.exports = HandlebarsCompiler.template({"1":function(depth0,helpers,partials,data) {
@@ -3682,7 +3801,7 @@ module.exports = HandlebarsCompiler.template({"1":function(depth0,helpers,partia
     + "	</div>\n</div>\n";
 },"useData":true});
 
-},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],31:[function(require,module,exports){
+},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],32:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('jenkins-handlebars-rt/runtimes/handlebars3_rt');
 module.exports = HandlebarsCompiler.template({"1":function(depth0,helpers,partials,data) {
@@ -3733,7 +3852,7 @@ module.exports = HandlebarsCompiler.template({"1":function(depth0,helpers,partia
     + "</div>\n";
 },"useData":true});
 
-},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],32:[function(require,module,exports){
+},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],33:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('jenkins-handlebars-rt/runtimes/handlebars3_rt');
 module.exports = HandlebarsCompiler.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
@@ -3756,7 +3875,7 @@ module.exports = HandlebarsCompiler.template({"compiler":[6,">= 2.0.0-beta.1"],"
     + "\n				</sub>\n				<i class=\"icon icon-plug\"></i>\n			</a>\n		</p>\n	</div>\n\n</div>\n";
 },"useData":true});
 
-},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],33:[function(require,module,exports){
+},{"jenkins-handlebars-rt/runtimes/handlebars3_rt":8}],34:[function(require,module,exports){
 /**
  * Jenkins JS Modules common utility functions
  */

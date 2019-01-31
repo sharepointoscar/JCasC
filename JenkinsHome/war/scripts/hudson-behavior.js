@@ -350,7 +350,14 @@ function findNext(src,filter) {
 
 function findFormItem(src,name,directionF) {
     var name2 = "_."+name; // handles <textbox field="..." /> notation silently
-    return directionF(src,function(e){ return (e.tagName=="INPUT" || e.tagName=="TEXTAREA" || e.tagName=="SELECT") && (e.name==name || e.name==name2); });
+    return directionF(src,function(e){ 
+        if (e.tagName == "INPUT" && e.type=="radio" && e.checked==true) {
+            var r = 0;
+            while (e.name.substring(r,r+8)=='removeme') //radio buttons have must be unique in repeatable blocks so name is prefixed
+                r = e.name.indexOf('_',r+8)+1;
+            return name == e.name.substring(r);
+        }
+        return (e.tagName=="INPUT" || e.tagName=="TEXTAREA" || e.tagName=="SELECT") && (e.name==name || e.name==name2); });
 }
 
 /**
@@ -688,8 +695,17 @@ var jenkinsRules = {
 
 // validate form values to be an integer
     "INPUT.number" : function(e) { registerRegexpValidator(e,/^(\d+|)$/,"Not an integer"); },
+    "INPUT.number-required" : function(e) { registerRegexpValidator(e,/^\-?(\d+)$/,"Not an integer"); },
+
+    "INPUT.non-negative-number-required" : function(e) {
+        registerRegexpValidator(e,/^\d+$/,"Not a non-negative number");
+    },
+
     "INPUT.positive-number" : function(e) {
         registerRegexpValidator(e,/^(\d*[1-9]\d*|)$/,"Not a positive integer");
+    },
+    "INPUT.positive-number-required" : function(e) {
+        registerRegexpValidator(e,/^[1-9]\d*$/,"Not a positive integer");
     },
 
     "INPUT.auto-complete": function(e) {// form field with auto-completion support 
@@ -712,6 +728,7 @@ var jenkinsRules = {
         };
         ac.prehighlightClassName = "yui-ac-prehighlight";
         ac.animSpeed = 0;
+        ac.formatResult = ac.formatEscapedResult;
         ac.useShadow = true;
         ac.autoSnapContainer = true;
         ac.delimChar = e.getAttribute("autoCompleteDelimChar");
@@ -1828,7 +1845,6 @@ function updateBuildHistory(ajaxUrl,nBuild) {
                     var wrap = blockWrap(buildDetails, buildControls);
                     indentMultiline(wrap);
                     Element.addClassName(wrap, "build-details-controls");
-                    $(displayName).setStyle({width: '100%'});
                     detailsOverflowParams = getElementOverflowParams(buildDetails); // recalculate
                     expandLeftWithRight(detailsOverflowParams, controlsOverflowParams);
                     setBuildControlWidths();
@@ -2356,6 +2372,7 @@ function createSearchBox(searchURL) {
     ac.typeAhead = false;
     ac.autoHighlight = false;
     ac.formatResult = ac.formatEscapedResult;
+    ac.maxResultsDisplayed = 25;
 
     var box   = $("search-box");
     var sizer = $("search-box-sizer");
@@ -2452,7 +2469,7 @@ function shortenName(name) {
 
 //
 // structured form submission handling
-//   see http://wiki.jenkins-ci.org/display/JENKINS/Structured+Form+Submission
+//   see https://jenkins.io/redirect/developer/structured-form-submission
 function buildFormTree(form) {
     try {
         // I initially tried to use an associative array with DOM elements as keys
@@ -2571,7 +2588,12 @@ function buildFormTree(form) {
                     addProperty(p, e.name.substring(r), e.value);
                 }
                 break;
-
+            case "password":
+                p = findParent(e);
+                addProperty(p, e.name, e.value);
+                // must be kept in sync with RedactSecretJsonForTraceSanitizer.REDACT_KEY
+                addProperty(p, "$redact", shortenName(e.name));
+                break;
             default:
                 p = findParent(e);
                 addProperty(p, e.name, e.value);

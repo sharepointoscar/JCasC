@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: root
+Build-Jdk: 1.8.0_181
+Extension-Name: jx-resources
+Specification-Title: A plugin which uses Kubernetes Resources for stor
+ age of pipeline state
+Implementation-Title: jx-resources
+Implementation-Version: 1.0.24
+Group-Id: org.jenkins-ci.plugins
+Short-Name: jx-resources
+Long-Name: JX Resources Plugin
+Url: https://wiki.jenkins-ci.org/display/JENKINS/JX+Resources+Plugin
+Plugin-Version: 1.0.24
+Hudson-Version: 2.73.3
+Jenkins-Version: 2.73.3
+Plugin-Dependencies: blueocean-rest:1.4.0,pipeline-rest-api:2.9,workfl
+ ow-api:2.22,workflow-cps:2.41,workflow-job:2.15,workflow-multibranch:
+ 2.16,branch-api:2.0.10,cloudbees-folder:6.0.4,credentials:2.1.14,git-
+ client:2.5.0,git:3.6.4,scm-api:2.2.5
+Plugin-Developers: Jenkins X Development Team:geeks:
+

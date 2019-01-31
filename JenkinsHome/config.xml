@@ -1,39 +1,23 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.1' encoding='UTF-8'?>
 <hudson>
-  <disabledAdministrativeMonitors>
-    <string>hudson.diagnosis.ReverseProxySetupMonitor</string>
-    <string>jenkins.diagnostics.SecurityIsOffMonitor</string>
-    <string>jenkins.model.DownloadSettings$Warning</string>
-    <string>jenkins.CLI</string>
-  </disabledAdministrativeMonitors>
-  <version>2.46.1</version>
-  <numExecutors>4</numExecutors>
+  <disabledAdministrativeMonitors/>
+  <version>2.150.1</version>
+  <installStateName>RUNNING</installStateName>
+  <numExecutors>2</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
   <authorizationStrategy class="hudson.security.FullControlOnceLoggedInAuthorizationStrategy">
-    <denyAnonymousReadAccess>false</denyAnonymousReadAccess>
+    <denyAnonymousReadAccess>true</denyAnonymousReadAccess>
   </authorizationStrategy>
-  <securityRealm class="org.jenkinsci.plugins.GithubSecurityRealm">
-    <githubWebUri>https://github.com</githubWebUri>
-    <githubApiUri>https://api.github.com</githubApiUri>
-    <clientID>71eb404a7a654ce91966</clientID>
-    <clientSecret>{AQAAABAAAAAw9qmguqybATMM4MlZqpNZVC5YhfpGr+995RAyNV8wa/T7HpyDkVCqZbgT/zY/viJnOYNbE8qHmdBX2D/BK3uB+w==}</clientSecret>
-    <oauthScopes>read:org,user:email</oauthScopes>
+  <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
+    <disableSignup>true</disableSignup>
+    <enableCaptcha>false</enableCaptcha>
   </securityRealm>
   <disableRememberMe>false</disableRememberMe>
   <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
-  <workspaceDir>${JENKINS_HOME}/workspace/${ITEM_FULLNAME}</workspaceDir>
+  <workspaceDir>${JENKINS_HOME}/workspace/${ITEM_FULL_NAME}</workspaceDir>
   <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
-  <markupFormatter class="hudson.markup.RawHtmlMarkupFormatter" plugin="antisamy-markup-formatter@1.5">
-    <disableSyntaxHighlighting>false</disableSyntaxHighlighting>
-  </markupFormatter>
-  <jdks>
-    <jdk>
-      <name>ava-8-openjdk-amd64</name>
-      <home>/usr/lib/jvm/java-8-openjdk-amd64</home>
-      <properties/>
-    </jdk>
-  </jdks>
+  <jdks/>
   <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
   <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
   <clouds/>
@@ -47,51 +31,13 @@
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
     </hudson.model.AllView>
-    <listView>
-      <owner class="hudson" reference="../../.."/>
-      <name>Test NodeJS Apps</name>
-      <description>These are all of our NodeJS apps that are being tested.</description>
-      <filterExecutors>false</filterExecutors>
-      <filterQueue>false</filterQueue>
-      <properties class="hudson.model.View$PropertyList"/>
-      <jobNames>
-        <comparator class="hudson.util.CaseInsensitiveComparator"/>
-        <string>LiteratureNodeJSApp</string>
-      </jobNames>
-      <jobFilters/>
-      <columns>
-        <hudson.views.StatusColumn/>
-        <hudson.views.WeatherColumn/>
-        <hudson.views.JobColumn/>
-        <hudson.views.LastSuccessColumn/>
-        <hudson.views.LastFailureColumn/>
-        <hudson.views.LastDurationColumn/>
-        <hudson.views.BuildButtonColumn/>
-      </columns>
-      <recurse>false</recurse>
-    </listView>
-    <com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView plugin="build-monitor-plugin@1.12+build.201704111018">
-      <owner class="hudson" reference="../../.."/>
-      <name>Packer Builds</name>
-      <filterExecutors>false</filterExecutors>
-      <filterQueue>false</filterQueue>
-      <properties class="hudson.model.View$PropertyList"/>
-      <jobNames>
-        <comparator class="hudson.util.CaseInsensitiveComparator"/>
-      </jobNames>
-      <jobFilters/>
-      <columns/>
-      <recurse>false</recurse>
-      <title>Packer Builds</title>
-      <config>
-        <displayCommitters>true</displayCommitters>
-        <order class="com.smartcodeltd.jenkinsci.plugins.buildmonitor.order.ByName"/>
-      </config>
-    </com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView>
   </views>
   <primaryView>all</primaryView>
   <slaveAgentPort>50000</slaveAgentPort>
   <label></label>
+  <crumbIssuer class="hudson.security.csrf.DefaultCrumbIssuer">
+    <excludeClientIPFromCrumb>false</excludeClientIPFromCrumb>
+  </crumbIssuer>
   <nodeProperties/>
   <globalNodeProperties>
     <hudson.slaves.EnvironmentVariablesNodeProperty>
@@ -99,7 +45,7 @@
         <unserializable-parents/>
         <tree-map>
           <default>
-            <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../../../../views/com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView/jobNames/comparator"/>
+            <comparator class="hudson.util.CaseInsensitiveComparator"/>
           </default>
           <int>0</int>
         </tree-map>

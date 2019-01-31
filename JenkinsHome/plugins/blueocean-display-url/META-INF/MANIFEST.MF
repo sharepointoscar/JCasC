@@ -1,22 +1,22 @@
 Manifest-Version: 1.0
 Archiver-Version: Plexus Archiver
 Created-By: Apache Maven
-Built-By: jdumay
-Build-Jdk: 1.8.0_60
+Built-By: ivan
+Build-Jdk: 1.8.0_101
 Extension-Name: blueocean-display-url
 Specification-Title: Provides an implementation of the display url plu
  gin for BlueOcean URLs
 Implementation-Title: blueocean-display-url
-Implementation-Version: 1.5.1
+Implementation-Version: 2.2.0
 Group-Id: org.jenkins-ci.plugins
 Short-Name: blueocean-display-url
-Long-Name: BlueOcean Display URL plugin
+Long-Name: Display URL for Blue Ocean
 Url: https://wiki.jenkins-ci.org/display/JENKINS/BlueOcean+Display+URL
  +Plugin
-Plugin-Version: 1.5.1
+Plugin-Version: 2.2.0
 Hudson-Version: 2.7.1
 Jenkins-Version: 2.7.1
-Plugin-Dependencies: display-url-api:1.1.1,workflow-job:2.6,workflow-m
- ultibranch:2.8
+Plugin-Dependencies: workflow-job:2.6,workflow-multibranch:2.8,scm-api
+ :2.1.1,display-url-api:2.2.0,blueocean-rest:1.1.5
 Plugin-Developers: Ivan Meredith:imeredith:ivan@ivan.net.nz
 

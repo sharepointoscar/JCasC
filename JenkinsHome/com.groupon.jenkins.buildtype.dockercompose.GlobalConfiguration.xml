@@ -1,4 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<com.groupon.jenkins.buildtype.dockercompose.GlobalConfiguration plugin="DotCi@2.39.9">
-  <cloneUrlTemplate>https://&lt;DOMAIN&gt;/&lt;ORG&gt;/&lt;REPO&gt;.git</cloneUrlTemplate>
-</com.groupon.jenkins.buildtype.dockercompose.GlobalConfiguration>

@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>2.17</version>
+    <version>3.28</version>
   </parent>
 
   <artifactId>ws-cleanup</artifactId>
+  <version>0.37</version>
   <packaging>hpi</packaging>
-  <name>Jenkins Workspace Cleanup Plugin</name>
-  <version>0.32</version>
-  <url>http://wiki.jenkins-ci.org/display/JENKINS/Workspace+Cleanup+Plugin</url>
 
-  <properties>
-    <jenkins.version>1.609</jenkins.version>
-    <java.level>6</java.level>
-    <workflow.version>1.4.3</workflow.version>
-  </properties>
+  <name>Jenkins Workspace Cleanup Plugin</name>
+  <url>http://wiki.jenkins-ci.org/display/JENKINS/Workspace+Cleanup+Plugin</url>
+  <licenses>
+    <license>
+      <name>The MIT License</name>
+      <url>https://opensource.org/licenses/MIT</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
 
   <developers>
     <developer>
@@ -30,8 +33,17 @@
     <connection>scm:git:git://github.com/jenkinsci/ws-cleanup-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/ws-cleanup-plugin.git</developerConnection>
     <url>https://github.com/jenkinsci/ws-cleanup-plugin</url>
-    <tag>ws-cleanup-0.32</tag>
+    <tag>ws-cleanup-0.37</tag>
   </scm>
+
+  <properties>
+    <jenkins.version>1.642.1</jenkins.version>
+    <java.level>8</java.level>
+    <workflow-job.version>2.4</workflow-job.version>
+    <workflow-cps.version>2.10</workflow-cps.version>
+    <workflow-basic-steps.version>2.1</workflow-basic-steps.version>
+    <workflow-durable-task-step.version>2.4</workflow-durable-task-step.version>
+  </properties>
 
   <dependencies>
     <dependency>
@@ -46,57 +58,52 @@
     </dependency>
 
     <dependency>
+      <groupId>org.jenkins-ci.plugins</groupId>
+      <artifactId>structs</artifactId>
+      <version>1.5</version>
+    </dependency>
+    <dependency>
       <groupId>org.hamcrest</groupId>
       <artifactId>hamcrest-core</artifactId>
-      <version>1.2.1</version>
+      <version>1.3</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins.workflow</groupId>
       <artifactId>workflow-job</artifactId>
-      <version>${workflow.version}</version>
+      <version>${workflow-job.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins.workflow</groupId>
       <artifactId>workflow-cps</artifactId>
-      <version>${workflow.version}</version>
+      <version>${workflow-cps.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins.workflow</groupId>
       <artifactId>workflow-basic-steps</artifactId>
-      <version>${workflow.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.powermock</groupId>
-      <artifactId>powermock-api-mockito</artifactId>
-      <version>1.6.2</version>
+      <version>${workflow-basic-steps.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.powermock</groupId>
-      <artifactId>powermock-module-junit4</artifactId>
-      <version>1.6.2</version>
-      <scope>test</scope>
+      <groupId>org.jenkins-ci.plugins.workflow</groupId>
+      <artifactId>workflow-durable-task-step</artifactId>
+      <version>${workflow-durable-task-step.version}</version>
+    </dependency>
+
+    <!-- Upper bound -->
+    <dependency>
+      <groupId>org.jenkins-ci.plugins</groupId>
+      <artifactId>script-security</artifactId>
+      <version>1.18.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jenkins-ci</groupId>
+      <artifactId>annotation-indexer</artifactId>
+      <version>1.12</version>
     </dependency>
   </dependencies>
-
-  <build>
-    <plugins>
-      <plugin>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <executions>
-          <execution>
-              <id>default-test</id>
-              <configuration>
-                <argLine>-XX:MaxPermSize=256m</argLine>
-              </configuration>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
 
   <repositories>
     <repository>
@@ -104,7 +111,6 @@
       <url>http://repo.jenkins-ci.org/public/</url>
     </repository>
   </repositories>
-
   <pluginRepositories>
     <pluginRepository>
       <id>repo.jenkins-ci.org</id>

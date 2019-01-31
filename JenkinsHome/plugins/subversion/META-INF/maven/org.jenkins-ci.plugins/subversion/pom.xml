@@ -28,46 +28,121 @@ THE SOFTWARE.
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>2.23</version>
+    <version>3.6</version>
     <relativePath />
   </parent>
 
   <artifactId>subversion</artifactId>
-  <version>2.7.2</version>
+  <version>2.12.1</version>
   <packaging>hpi</packaging>
 
   <name>Jenkins Subversion Plug-in</name>
-  <url>http://wiki.jenkins-ci.org/display/JENKINS/Subversion+Plugin</url>
+  <url>https://wiki.jenkins.io/display/JENKINS/Subversion+Plugin</url>
 
   <licenses>
     <license>
       <name>MIT license</name>
-      <url>http://opensource.org/licenses/MIT</url>
+      <url>https://opensource.org/licenses/MIT</url>
       <comments>All source code is under the MIT license.</comments>
     </license>
   </licenses>
 
   <developers>
     <developer>
-      <name>Many</name>
-      <id>kohsuke abayer dodok1 dty huybrechts mindless pgweiss stephenconnolly rseguy kutzi etc</id>
+      <id>kohsuke</id>
+      <name>Kohsuke Kawaguchi</name>
+      <roles>
+        <role>Maintainer (retired)</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>stephenconnolly</id>
+      <name>Stephen Connolly</name>
+      <roles>
+        <role>Maintainer (retired)</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>oleg_nenashev</id>
+      <name>Oleg Nenashev</name>
+      <roles>
+        <role>Maintainer (retired)</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>abayer</id>
+      <name>Andrew Bayer</name>
+      <roles>
+        <role>Maintainer (retired)</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>dodok1</id>
+      <name>dodok1</name>
+      <roles>
+        <role>Maintainer (retired)</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>dty</id>
+      <name>dty</name>
+      <roles>
+        <role>Maintainer (retired)</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>huybrechts</id>
+      <name>Tom Huybrechts</name>
+      <roles>
+        <role>Maintainer (retired)</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>pgweiss</id>
+      <name>pgweiss</name>
+      <roles>
+        <role>Maintainer (retired)</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>rseguy</id>
+      <name>rseguy</name>
+      <roles>
+        <role>Maintainer (retired)</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>kutzi</id>
+      <name>kutzi</name>
+      <roles>
+        <role>Maintainer (retired)</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>ifernandezcalvo</id>
+      <name>Ivan Fernandez Calvo</name>
+      <roles>
+        <role>Maintainer (retired)</role>
+      </roles>
     </developer>
   </developers>
-
+  
   <scm>
     <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
     <url>http://github.com/jenkinsci/${project.artifactId}-plugin</url>
-    <tag>subversion-2.7.2</tag>
+    <tag>subversion-2.12.1</tag>
   </scm>
 
   <properties>
-    <jenkins.version>1.609.3</jenkins.version>
-    <java.level>6</java.level>
+    <jenkins.version>2.73.3</jenkins.version>
+    <java.level>8</java.level>
     <no-test-jar>false</no-test-jar>
-    <workflow.version>1.14.2</workflow.version>
-    <findbugs.failOnError>false</findbugs.failOnError>
-    <scm-api-plugin.version>2.0.8</scm-api-plugin.version>
+    <!-- TODO if both workflow-* versions are the same we would remove one of the properties -->
+    <workflow-scm-step.version>2.6</workflow-scm-step.version>
+    <workflow-aggregator.version>2.5</workflow-aggregator.version>
+    <findbugs.failOnError>false</findbugs.failOnError> <!-- TODO still have 27 left -->
+    <scm-api-plugin.version>2.2.6</scm-api-plugin.version>
   </properties>
 
   <repositories>
@@ -87,12 +162,18 @@ THE SOFTWARE.
     <dependency>
       <groupId>org.tmatesoft.svnkit</groupId>
       <artifactId>svnkit</artifactId>
-      <version>1.8.14</version>
+      <version>1.9.3</version>
+      <exclusions>
+        <exclusion>
+          <groupId>com.trilead</groupId>
+          <artifactId>trilead-ssh2</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.tmatesoft.svnkit</groupId>
       <artifactId>svnkit-cli</artifactId>
-      <version>1.8.14</version>
+      <version>1.9.3</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -103,12 +184,17 @@ THE SOFTWARE.
     <dependency>
       <groupId>org.jenkins-ci.plugins</groupId>
       <artifactId>credentials</artifactId>
-      <version>2.1.4</version>
+      <version>2.1.16</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jenkins-ci.plugins</groupId>
+      <artifactId>structs</artifactId>
+      <version>1.9</version>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins</groupId>
       <artifactId>ssh-credentials</artifactId>
-      <version>1.6.1</version>
+      <version>1.12</version>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins</groupId>
@@ -118,7 +204,7 @@ THE SOFTWARE.
     <dependency>
       <groupId>org.jenkins-ci.plugins.workflow</groupId>
       <artifactId>workflow-scm-step</artifactId>
-      <version>${workflow.version}</version>
+      <version>${workflow-scm-step.version}</version>
       <exclusions>
         <exclusion>
           <groupId>org.apache.httpcomponents</groupId>
@@ -128,16 +214,20 @@ THE SOFTWARE.
     </dependency>
 
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-core</artifactId>
       <version>1.9.5</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.objenesis</groupId>
+          <artifactId>objenesis</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.hamcrest</groupId>
+          <artifactId>hamcrest-core</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.powermock</groupId>
@@ -150,6 +240,12 @@ THE SOFTWARE.
       <artifactId>powermock-api-mockito</artifactId>
       <version>1.5</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.mockito</groupId>
+          <artifactId>mockito-all</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins</groupId>
@@ -173,8 +269,29 @@ THE SOFTWARE.
     <dependency>
       <groupId>org.jenkins-ci.plugins.workflow</groupId>
       <artifactId>workflow-aggregator</artifactId>
-      <version>${workflow.version}</version>
-      <classifier>tests</classifier>
+      <version>${workflow-aggregator.version}</version>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.jenkins-ci.plugins.workflow</groupId>
+          <artifactId>workflow-step-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.jenkins-ci.plugins.workflow</groupId>
+          <artifactId>workflow-scm-step</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.jenkins-ci.plugins</groupId>
+      <artifactId>matrix-auth</artifactId>
+      <version>1.7</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency> <!-- TODO pending matrix-auth 2.x, thus Jenkins 2.60.x -->
+      <groupId>org.jenkins-ci.plugins.icon-shim</groupId>
+      <artifactId>icon-shim</artifactId>
+      <version>2.0.3</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -184,13 +301,6 @@ THE SOFTWARE.
       <plugin>
         <groupId>org.jenkins-ci.tools</groupId>
         <artifactId>maven-hpi-plugin</artifactId>
-        <version>${hpi-plugin.version}</version>
-        <configuration>
-          <maskClasses>com.trilead.ssh2.</maskClasses>
-          <systemProperties>
-            <hudson.bundled.plugins>${basedir}/work/plugins/subversion.hpl</hudson.bundled.plugins>
-          </systemProperties>
-        </configuration>
       </plugin>
     </plugins>
   </build>

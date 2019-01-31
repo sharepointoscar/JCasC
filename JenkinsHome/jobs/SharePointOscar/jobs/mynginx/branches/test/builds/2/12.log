@@ -1,4 +1,0 @@
-[harePointOscar_mynginx_test-L2AOXB7AQMZKX4BK2UX7YGCJKT3U5ZIRXC4RUHPQO3NWMTY4TICQ] Running shell script
-+ docker-machine env default
-Host does not exist: "default"
-+ eval

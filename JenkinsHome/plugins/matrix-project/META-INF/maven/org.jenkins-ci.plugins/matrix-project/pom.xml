@@ -3,17 +3,19 @@
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>1.609</version>
+        <version>2.36</version>
+        <relativePath />
     </parent>
     <artifactId>matrix-project</artifactId>
-    <version>1.9</version>
+    <version>1.13</version>
     <packaging>hpi</packaging>
     <name>Matrix Project Plugin</name>
     <description>Multi-configuration (matrix) project type.</description>
     <url>https://wiki.jenkins-ci.org/display/JENKINS/Matrix+Project+Plugin</url>
     <properties>
-      <findbugs-maven-plugin.version>3.0.1</findbugs-maven-plugin.version>
-      <findbugs.failOnError>true</findbugs.failOnError>
+      <jenkins.version>1.609</jenkins.version>
+      <java.level>6</java.level>
+      <hpi-plugin.version>2.2</hpi-plugin.version> <!-- https://github.com/jenkinsci/maven-hpi-plugin/pull/63 -->
     </properties>
     <licenses>
         <license>
@@ -21,11 +23,17 @@
             <url>http://opensource.org/licenses/MIT</url>
         </license>
     </licenses>
+    <developers>
+        <developer>
+            <id>olivergondza</id>
+            <name>Oliver Gondza</name>
+        </developer>
+    </developers>
     <scm>
         <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
         <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
         <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
-      <tag>matrix-project-1.9</tag>
+      <tag>matrix-project-1.13</tag>
   </scm>
     <repositories>
         <repository>
@@ -43,8 +51,33 @@
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>junit</artifactId>
-            <version>1.2</version>
+            <version>1.20</version>
         </dependency>
+        <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>script-security</artifactId>
+            <version>1.13</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jenkins-ci.main</groupId>
+            <artifactId>jenkins-test-harness-tools</artifactId>
+            <version>2.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>matrix-auth</artifactId>
+            <version>1.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jenkins-ci.modules</groupId>
+            <artifactId>sshd</artifactId>
+            <version>2.0</version>
+            <scope>test</scope>
+        </dependency>
+
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
@@ -54,6 +87,11 @@
                 <exclusion>
                     <groupId>org.hamcrest</groupId>
                     <artifactId>hamcrest-core</artifactId>
+                </exclusion>
+                <!-- prevents upper bounds conflict between org.mockito:mockito-core:1.9.5 and org.powermock:powermock-module-junit4:1.6.1 (lib versions, 1.0 and 2.1) -->
+                <exclusion>
+                    <groupId>org.objenesis</groupId>
+                    <artifactId>objenesis</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -82,15 +120,17 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>org.jenkins-ci.plugins</groupId>
-            <artifactId>script-security</artifactId>
-            <version>1.13</version>
-        </dependency>
-        <dependency>
           <groupId>com.google.code.findbugs</groupId>
           <artifactId>annotations</artifactId>
           <version>3.0.0</version>
           <scope>provided</scope>
+        </dependency>
+        <!-- Fix test error due to fail to transform class AbstractProject when using javassist-3.18.1-GA -->
+        <dependency>
+            <groupId>org.javassist</groupId>
+            <artifactId>javassist</artifactId>
+            <version>3.19.0-GA</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
     <build>
@@ -115,24 +155,6 @@
                 <configuration>
                     <argLine>-XX:MaxPermSize=128m</argLine>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>findbugs-maven-plugin</artifactId>
-                <version>${findbugs-maven-plugin.version}</version>
-                <configuration>
-                    <xmlOutput>true</xmlOutput>
-                    <failOnError>${findbugs.failOnError}</failOnError>
-                </configuration>
-                <executions>
-                  <execution>
-                    <id>run-findbugs</id>
-                    <phase>verify</phase>
-                    <goals>
-                      <goal>check</goal>
-                    </goals>
-                  </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>

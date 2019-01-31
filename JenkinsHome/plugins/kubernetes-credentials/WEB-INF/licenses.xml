@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<l:dependencies xmlns:l='licenses' groupId='org.jenkinsci.plugins' artifactId='kubernetes-credentials' version='0.4.0'><l:dependency name='Kubernetes Credentials Plugin' groupId='org.jenkinsci.plugins' artifactId='kubernetes-credentials' version='0.4.0' url=''><l:description>Common classes for Kubernetes credentials</l:description><l:license name='Apache License 2.0' url='https://www.apache.org/licenses/LICENSE-2.0'/></l:dependency></l:dependencies>

@@ -9,7 +9,7 @@
   </parent>
 
   <artifactId>pam-auth</artifactId>
-  <version>1.3</version>
+  <version>1.4</version>
   <packaging>hpi</packaging>
 
   <name>PAM Authentication plugin</name>
@@ -31,7 +31,7 @@
   <scm>
     <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
-    <tag>pam-auth-1.3</tag>
+    <tag>pam-auth-1.4</tag>
   </scm>
 
   <repositories>
@@ -51,7 +51,7 @@
     <dependency>
       <groupId>org.kohsuke</groupId>
       <artifactId>libpam4j</artifactId>
-      <version>1.6</version>
+      <version>1.11</version>
     </dependency>
   </dependencies>
 

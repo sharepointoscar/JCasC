@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<l:dependencies xmlns:l='licenses' groupId='com.cloudbees.jenkins.plugins' artifactId='custom-tools-plugin' version='0.5'><l:dependency name='Jenkins Custom Tools Plugin' groupId='com.cloudbees.jenkins.plugins' artifactId='custom-tools-plugin' version='0.5' url='https://wiki.jenkins-ci.org/display/JENKINS/Custom+Tools+Plugin'><l:description>The Jenkins Plugins Parent POM Project</l:description><l:license name='Apache 2' url='http://www.apache.org/licenses/LICENSE-2.0.txt'/></l:dependency></l:dependencies>

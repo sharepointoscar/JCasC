@@ -7,12 +7,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: sharepointoscar/jenkins:beta
+    image: sharepointoscar/jenkins:v2
     container_name: SIR_JENKINS
     restart: always
     ports:
       - 8080:8080
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /usr/bin/docker:/usr/bin/docker
+      #- /usr/bin/docker:/usr/bin/docker
       - ./JenkinsHome:/var/jenkins_home

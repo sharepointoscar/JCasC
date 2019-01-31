@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<l:dependencies xmlns:l='licenses' groupId='org.jenkins-ci.plugins' artifactId='chef-identity' version='1.0.0'><l:dependency name='Chef Identity Plugin' groupId='org.jenkins-ci.plugins' artifactId='chef-identity' version='1.0.0' url='http://wiki.jenkins-ci.org/display/JENKINS/chef-identity+plugin'><l:description>Allows management of Chef credentials so jobs can execute jobs against a Chef server using those credentials</l:description><l:license name='MIT License' url='http://opensource.org/licenses/MIT'/></l:dependency></l:dependencies>

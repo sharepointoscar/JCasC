@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: egutierrez
+Build-Jdk: 1.8.0_111
+Extension-Name: support-core
+Specification-Title: This plugin provides a common set of classes to a
+ ssist in generating support bundles.
+Implementation-Title: support-core
+Implementation-Version: 2.52
+Plugin-Class: com.cloudbees.jenkins.support.SupportPlugin
+Group-Id: org.jenkins-ci.plugins
+Short-Name: support-core
+Long-Name: Support Core Plugin
+Url: https://wiki.jenkins.io/display/JENKINS/Support+Core+Plugin
+Plugin-Version: 2.52
+Hudson-Version: 2.107
+Jenkins-Version: 2.107
+Plugin-Dependencies: async-http-client:1.7.8;resolution:=optional,cred
+ entials:2.1.10,metrics:3.0.0
+Plugin-Developers: Stephen Connolly:stephenconnolly:,Steven Christou:c
+ hrist66:
+

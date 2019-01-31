@@ -1,7 +1,0 @@
-Started by user [8mha:////4NeM5VrPhZ2mvEMQnI4UXVZiEouTpYegkYpYKMCB3A4HAAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZR/dLi1CL94ozEotSC/My8kvzi5MQiAAJwQiPKAAAA[0mOscar Medina
-Building in workspace /var/jenkins_home/workspace/TEST MVN
-Unpacking https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.5.0/apache-maven-3.5.0-bin.zip to /var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/Maven_3.5.0 on Jenkins
-Parsing POMs
-ERROR: No such file /var/jenkins_home/workspace/TEST MVN/pom.xml
-Perhaps you need to specify the correct POM file path in the project configuration?
-[8mha:////4LDTSb3pg1jjb6mfB19lOxpjRRA07WmMEg02POkUE/8JAAAAVx+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0mV3NWzufebKBsTA0NFEYMUmgZnCA1SyAABjCCFBQC2xNaiYAAAAA==[0mFinished: FAILURE

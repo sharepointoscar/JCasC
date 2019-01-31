@@ -28,12 +28,12 @@ THE SOFTWARE.
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>2.21</version>
+        <version>3.2</version>
         <relativePath />
     </parent>
     <groupId>org.jenkins-ci.plugins.workflow</groupId>
     <artifactId>workflow-multibranch</artifactId>
-    <version>2.14</version>
+    <version>2.20</version>
     <packaging>hpi</packaging>
     <name>Pipeline: Multibranch</name>
     <url>https://wiki.jenkins-ci.org/display/JENKINS/Pipeline+Multibranch+Plugin</url>
@@ -41,43 +41,38 @@ THE SOFTWARE.
     <licenses>
         <license>
             <name>MIT License</name>
-            <url>http://opensource.org/licenses/MIT</url>
+            <url>https://opensource.org/licenses/MIT</url>
         </license>
     </licenses>
     <scm>
         <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
         <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
         <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
-      <tag>workflow-multibranch-2.14</tag>
+      <tag>workflow-multibranch-2.20</tag>
   </scm>
     <repositories>
         <repository>
             <id>repo.jenkins-ci.org</id>
-            <url>http://repo.jenkins-ci.org/public/</url>
+            <url>https://repo.jenkins-ci.org/public/</url>
         </repository>
     </repositories>
     <pluginRepositories>
         <pluginRepository>
             <id>repo.jenkins-ci.org</id>
-            <url>http://repo.jenkins-ci.org/public/</url>
+            <url>https://repo.jenkins-ci.org/public/</url>
         </pluginRepository>
     </pluginRepositories>
     <properties>
-        <jenkins.version>1.642.3</jenkins.version>
-        <scm-api.version>2.0.2</scm-api.version>
+        <java.level>8</java.level>
+        <jenkins.version>2.62</jenkins.version>
+        <scm-api.version>2.2.6</scm-api.version>
         <no-test-jar>false</no-test-jar>
-        <workflow-step-api.version>2.7</workflow-step-api.version>
+        <workflow-step-api.version>2.13</workflow-step-api.version>
+        <workflow-scm-step-plugin.version>2.4</workflow-scm-step-plugin.version>
+        <workflow-support.version>2.17</workflow-support.version>
+        <workflow-cps.version>2.53</workflow-cps.version>
+        <git-plugin.version>3.9.1</git-plugin.version>
     </properties>
-    <dependencyManagement>
-        <!-- TODO figure out why the version is being forced down to 2.5 without this -->
-        <dependencies>
-            <dependency>
-                <groupId>org.jenkins-ci.plugins.workflow</groupId>
-                <artifactId>workflow-step-api</artifactId>
-                <version>${workflow-step-api.version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
     <dependencies>
         <dependency>
             <groupId>org.jenkins-ci.plugins.workflow</groupId>
@@ -87,12 +82,22 @@ THE SOFTWARE.
         <dependency>
             <groupId>org.jenkins-ci.plugins.workflow</groupId>
             <artifactId>workflow-job</artifactId>
-            <version>2.10</version>
+            <version>2.21</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jenkins-ci.plugins.workflow</groupId>
+            <artifactId>workflow-support</artifactId>
+            <version>${workflow-support.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>structs</artifactId>
+            <version>1.14</version>
         </dependency>
         <dependency>
             <groupId>org.jenkins-ci.plugins.workflow</groupId>
             <artifactId>workflow-cps</artifactId>
-            <version>2.19</version>
+            <version>${workflow-cps.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
@@ -102,27 +107,33 @@ THE SOFTWARE.
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>branch-api</artifactId>
-            <version>2.0.7</version>
+            <version>2.0.18</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.jenkins-ci</groupId>
+                    <artifactId>annotation-indexer</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>cloudbees-folder</artifactId>
-            <version>5.17</version>
+            <version>6.1.2</version>
         </dependency>
         <dependency>
             <groupId>org.jenkins-ci.plugins.workflow</groupId>
             <artifactId>workflow-api</artifactId>
-            <version>2.3</version>
+            <version>2.27</version>
         </dependency>
         <dependency>
             <groupId>org.jenkins-ci.plugins.workflow</groupId>
             <artifactId>workflow-scm-step</artifactId>
-            <version>2.2</version>
+            <version>${workflow-scm-step-plugin.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>script-security</artifactId>
-            <version>1.23</version>
+            <version>1.42</version>
         </dependency>
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
@@ -165,33 +176,37 @@ THE SOFTWARE.
         <dependency>
             <groupId>org.jenkins-ci.plugins.workflow</groupId>
             <artifactId>workflow-support</artifactId>
-            <version>2.10</version>
+            <version>${workflow-support.version}</version>
             <classifier>tests</classifier>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.jenkins-ci.plugins.workflow</groupId>
             <artifactId>workflow-cps</artifactId>
-            <version>2.19</version>
+            <version>${workflow-cps.version}</version>
             <classifier>tests</classifier>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.jenkins-ci.plugins.workflow</groupId>
             <artifactId>workflow-scm-step</artifactId>
-            <version>2.2</version>
+            <version>${workflow-scm-step-plugin.version}</version>
             <classifier>tests</classifier>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>git</artifactId>
-            <version>3.0.4</version>
+            <version>${git-plugin.version}</version>
             <scope>test</scope>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.httpcomponents</groupId>
                     <artifactId>httpclient</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.jenkins-ci</groupId>
+                    <artifactId>annotation-indexer</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -204,13 +219,17 @@ THE SOFTWARE.
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>git</artifactId>
-            <version>3.0.4</version>
+            <version>${git-plugin.version}</version>
             <classifier>tests</classifier>
             <scope>test</scope>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.httpcomponents</groupId>
                     <artifactId>httpclient</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.jenkins-ci</groupId>
+                    <artifactId>annotation-indexer</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -230,26 +249,50 @@ THE SOFTWARE.
         <dependency>
             <groupId>org.jenkins-ci.plugins.workflow</groupId>
             <artifactId>workflow-job</artifactId>
-            <version>2.10</version>
+            <version>2.20</version>
             <classifier>tests</classifier>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>matrix-auth</artifactId>
+            <version>2.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.jenkins-ci.modules</groupId>
             <artifactId>sshd</artifactId>
-            <version>1.6</version>
+            <version>2.3</version>
             <scope>test</scope><!-- from git-server via workflow-cps-global-lib and otherwise unavailable during tests -->
         </dependency>
         <dependency>
-            <groupId>org.jenkins-ci.plugins</groupId>
-            <artifactId>matrix-auth</artifactId>
+            <groupId>org.jenkins-ci.modules</groupId>
+            <artifactId>instance-identity</artifactId>
+            <version>2.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jenkins-ci.modules</groupId>
+            <artifactId>ssh-cli-auth</artifactId>
             <version>1.4</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>credentials</artifactId>
-            <version>2.1.8</version>
+            <version>2.1.14</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>mailer</artifactId>
+            <version>1.18</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>junit</artifactId>
+            <version>1.6</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

@@ -27,7 +27,7 @@
   <parent>
     <groupId>org.jenkinsci.plugins</groupId>
     <artifactId>pipeline-model-parent</artifactId>
-    <version>1.1.2</version>
+    <version>1.3.3</version>
   </parent>
 
   <artifactId>pipeline-stage-tags-metadata</artifactId>
@@ -36,4 +36,10 @@
   <description>Library plugin for Pipeline stage tag metadata</description>
   <url>https://wiki.jenkins-ci.org/display/JENKINS/Pipeline+Model+Definition+Plugin</url>
 
+  <dependencies>
+    <dependency>
+      <groupId>org.jenkins-ci.plugins.workflow</groupId>
+      <artifactId>workflow-api</artifactId>
+    </dependency>
+  </dependencies>
 </project>

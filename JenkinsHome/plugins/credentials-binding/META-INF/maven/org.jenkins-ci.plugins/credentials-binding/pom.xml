@@ -5,25 +5,29 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>2.17</version>
+    <version>3.2</version>
     <relativePath />
   </parent>
 
   <artifactId>credentials-binding</artifactId>
-  <version>1.11</version>
+  <version>1.17</version>
   <packaging>hpi</packaging>
 
   <name>Credentials Binding Plugin</name>
   <description>Allows credentials to be bound to environment variables for use from miscellaneous build steps.
   </description>
-  <url>http://wiki.jenkins-ci.org/display/JENKINS/Credentials+Binding+Plugin</url>
+  <url>https://wiki.jenkins.io/display/JENKINS/Credentials+Binding+Plugin</url>
   <properties>
-    <jenkins.version>1.642.4</jenkins.version>
-  </properties>  
+    <jenkins.version>2.7.3</jenkins.version>
+    <java.level>7</java.level>
+    <workflow-cps-plugin.version>2.32</workflow-cps-plugin.version>
+    <workflow-step-api-plugin.version>2.10</workflow-step-api-plugin.version>
+    <workflow-support-plugin.version>2.14</workflow-support-plugin.version>
+  </properties>
   <licenses>
     <license>
       <name>MIT</name>
-      <url>http://opensource.org/licenses/MIT</url>
+      <url>https://opensource.org/licenses/MIT</url>
     </license>
   </licenses>
 
@@ -31,7 +35,7 @@
     <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
     <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
-    <tag>credentials-binding-1.11</tag>
+    <tag>credentials-binding-1.17</tag>
   </scm>
 
   <repositories>
@@ -61,23 +65,23 @@
     <dependency>
       <groupId>org.jenkins-ci.plugins.workflow</groupId>
       <artifactId>workflow-step-api</artifactId>
-      <version>2.9</version>
+      <version>${workflow-step-api-plugin.version}</version>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins</groupId>
       <artifactId>structs</artifactId>
-      <version>1.5</version>
+      <version>1.7</version>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins.workflow</groupId>
       <artifactId>workflow-api</artifactId>
-      <version>2.5</version>
+      <version>2.16</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins.workflow</groupId>
       <artifactId>workflow-cps</artifactId>
-      <version>2.21</version>
+      <version>${workflow-cps-plugin.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -93,6 +97,12 @@
       <scope>test</scope>
     </dependency>
     <dependency>
+      <groupId>org.jenkins-ci.plugins</groupId>
+      <artifactId>durable-task</artifactId>
+      <version>1.13</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>org.jenkins-ci.plugins.workflow</groupId>
       <artifactId>workflow-basic-steps</artifactId>
       <version>2.2</version>
@@ -100,29 +110,39 @@
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins.workflow</groupId>
-      <artifactId>workflow-cps</artifactId>
-      <version>2.21</version>
-      <classifier>tests</classifier>
+      <artifactId>workflow-scm-step</artifactId>
+      <version>2.4</version>
       <scope>test</scope>
     </dependency>
     <dependency>
+      <groupId>org.jenkins-ci.plugins</groupId>
+      <artifactId>ssh-credentials</artifactId>
+      <version>1.11</version>
+    </dependency>
+    <dependency>
       <groupId>org.jenkins-ci.plugins.workflow</groupId>
-      <artifactId>workflow-scm-step</artifactId>
-      <version>2.3</version>
+      <artifactId>workflow-cps</artifactId>
+      <version>${workflow-cps-plugin.version}</version>
       <classifier>tests</classifier>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins.workflow</groupId>
       <artifactId>workflow-step-api</artifactId>
-      <version>2.4</version>
+      <version>${workflow-step-api-plugin.version}</version>
       <classifier>tests</classifier>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins.workflow</groupId>
       <artifactId>workflow-support</artifactId>
-      <version>2.10</version>
+      <version>${workflow-support-plugin.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jenkins-ci.plugins.workflow</groupId>
+      <artifactId>workflow-support</artifactId>
+      <version>${workflow-support-plugin.version}</version>
       <classifier>tests</classifier>
       <scope>test</scope>
     </dependency>
@@ -133,16 +153,15 @@
       <scope>test</scope>
     </dependency>
     <dependency>
+      <groupId>org.jenkins-ci.plugins</groupId>
+      <artifactId>scm-api</artifactId>
+      <version>2.0.8</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>org.xmlunit</groupId>
       <artifactId>xmlunit-matchers</artifactId>
       <version>2.2.0</version>
-      <scope>test</scope>
-    </dependency>
-    <!-- For some reason this is otherwise missing and causes many verbose errors: -->
-    <dependency>
-      <groupId>org.jenkins-ci.modules</groupId>
-      <artifactId>sshd</artifactId>
-      <version>1.6</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

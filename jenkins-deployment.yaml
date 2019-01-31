@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: jenkins
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jenkins
+    spec:
+      containers:
+      - name: sir-jenkins
+        image: sharepointoscar/jenkins:v2
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+          - name: task-pv-volume
+            mountPath: /var/jenkins_home
+      volumes:
+        - name: task-pv-volume
+          persistentVolumeClaim:
+              claimName: task-pv-claim

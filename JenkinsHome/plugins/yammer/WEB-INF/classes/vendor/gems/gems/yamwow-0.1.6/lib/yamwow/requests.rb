@@ -1,1 +1,0 @@
-Dir[File.expand_path(File.dirname(__FILE__) + '/requests/**/*_request.rb')].each { |f| require f }

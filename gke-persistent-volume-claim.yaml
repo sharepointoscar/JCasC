@@ -1,11 +1,11 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: task-pv-claim
+  name: jenkinshome-pv-claim
 spec:
-  storageClassName: manual
   accessModes:
     - ReadWriteOnce
+  storageClassName: ssd-sc  # specify the storage class created below
   resources:
     requests:
-      storage: 3Gi
+      storage: 30Gi

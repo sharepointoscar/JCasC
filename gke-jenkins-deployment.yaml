@@ -9,15 +9,21 @@ spec:
       labels:
         app: jenkins
     spec:
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 2000
       containers:
       - name: sir-jenkins
-        image: sharepointoscar/jenkins:v2
+        image: sharepointoscar/jenkins:v3
+        env:
+        - name: JAVA_OPTS
+          value: -Djenkins.install.runSetupWizard=false
         ports:
         - containerPort: 8080
         volumeMounts:
-          - name: task-pv-volume
+          - name: jenkinshome-pv-volume
             mountPath: /var/jenkins_home
       volumes:
-        - name: task-pv-volume
+        - name: jenkinshome-pv-volume
           persistentVolumeClaim:
-              claimName: task-pv-claim
+              claimName: jenkinshome-pv-claim

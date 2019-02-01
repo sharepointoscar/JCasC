@@ -1,6 +1,7 @@
 
 
 ## Deploy Jenkins using Jenkins Configuration as Code [JCaC]
+### Deploy it to GKE or Minikube, specs included.
 
 <img src="images/logo.svg" width="192">
 
@@ -8,16 +9,22 @@
 
 
 # Overview
-Deploying Jenkins is easy these days.  However, configuring and saving the configuration has not been easy, especially since there is a lot of manual config via the UI.
+Deploying Jenkins is easy these days.  However, configuring and saving the configuration has not been easy, especially since there is a lot of manual config via the UI. This is far more onerous when dealing with multiple instances of Jenkins as many environments have.
 
-Jenkins Configuration as Code is the next big thing.  This repository helps you get started.
+Jenkins Configuration as Code is the next big thing.  This repository helps you get started quickly.
 
 ## What you can do with this Repository
 
 * Deploy Jenkins using JCasC via a Docker Container locally
 * Deploy Jenkins using JCasC to a K8s Cluster in GKE or Minikube
 
-# References
+## The Jenkins.yaml
+There are two key configurations I decided to incorporate as a starting point, to demonstrate how that is done:
+
+* Branding Jenkins using the Simple Theme Plugin and specifying a Theme -  because who likes the default UI???
+* Configuring Jenkins to use OAuth against GitHub - Most companies do not use the Jenkins db for users, that is just not possible in the Enterpise.
+
+# Reference
 There is a vibrant and active community.  
 
 View the [wiki](https://wiki.jenkins.io/display/JENKINS/configuration+as+code+plugin) page. See [presentation slides](https://docs.google.com/presentation/d/1VsvDuffinmxOjg0a7irhgJSRWpCzLg_Yskf7Fw7FpBg/edit?usp=sharing) from Jenkins World 2018.
@@ -27,12 +34,29 @@ Join the Jenkins Configuration as Code (JCasC) office hours meeting scheduled fo
 
 
 # Assumptions
-* You have Docker working locally
-* You have kubectl and Kubernetes working locally or a cluster in GKE
+* You have `Docker` working locally
+* You have `kubectl` and `Minikube` working locally or a cluster in GKE and you're authenticated via the `gcloud` CLI.
 
 # Build the Jenkins Image & Push to Registry
+Most of the `YAML` files and the `docker-compose` use an image.  This image needs to be built and pushed to your registry.
+
+First, build the image, execute this command in the root of this repo as follows:
+```bash
+docker build -t sharepointoscar/jenkins:v1 .
+```
+
+On success, push the image to your registry.  I use Docker Hub.
+
+```bash
+docker push sharepointoscar/jenkins:v1
+```
+Once you are done, you will then edit the proper files, depending on where you plan to deploy Jenkins, and reference said image and version (version is important, as you want to ensure you use the latest).
 
 # Deploying Jenkins using JCasC Using Docker Container Locally
+
+Perhaps, this is one of the easiest and fastest method.
+
+* Ensure you've modified the jenkins.yaml
 
 # Deploying Jenkins JCasC To GKE 
 

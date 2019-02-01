@@ -28,6 +28,7 @@ FROM jenkinsxio/jenkinsx:latest
 
 #drop back to the regular jenkins user - good practice
 #USER jenkins
+COPY jenkins.yaml /var/jenkins_home/jenkins.yaml
 
 COPY plugins.txt /usr/share/jenkins/my-plugins.txt
 RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/my-plugins.txt

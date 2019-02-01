@@ -1,48 +1,42 @@
 
 
-## A Dockerfile to spin up a Jenkins Docker Containers for a Jenkins Master Agent Configuration
-Concept from Adrian Mouat's [article](http://container-solutions.com/running-docker-in-jenkins-in-docker)
+## Deploy Jenkins using Jenkins Configuration as Code [JCaC]
 
-![alt text](http://www.focusedsupport.com/blog/content/images/2015/06/docker_jenkins_page-2.png "Cute Docker Whale In Action")
+<img src="images/logo.svg" width="192">
 
-***
+
+
 
 # Overview
-Like many other nerds out there, I wanted to enhance my CI/CD configuration and have the ability to build/push Docker images to Docker Hub on successful app build and testing.  In order to do that, Jenkins needs the ability to execute Docker CLI commands.  
+Deploying Jenkins is easy these days.  However, configuring and saving the configuration has not been easy, especially since there is a lot of manual config via the UI.
 
-## My Setup
-I am running Docker for Mac on my Macbook Pro, I've chosen to install it using the homebrew vs. downloading the dmg.  This approach gets me the Docker for Mac, here is a blurb
-from Docker describing it:
+Jenkins Configuration as Code is the next big thing.  This repository helps you get started.
 
->Docker for Mac is a Mac native application, that you install in /Applications. At installation time, it creates symlinks in /usr/local/bin for docker and docker-compose, to the version of the commands inside the Mac application bundle, in /Applications/Docker.app/Contents/Resources/bin.
+## What you can do with this Repository
 
-Prior to installing **Docker for Mac**, I was running Docker Toolbox, which does not use the native [HyperKit](https://github.com/docker/HyperKit/) but rather Virtual Box.  My environment looked like this:
+* Deploy Jenkins using JCasC via a Docker Container locally
+* Deploy Jenkins using JCasC to a K8s Cluster in GKE or Minikube
 
-![Docker Toolbox](https://docs.docker.com/docker-for-mac/images/toolbox-install.png)
-[image credit: Docker, Inc.]
-### So what is Docker for Mac?
-Docker for Mac is a native App which has docker compose, docker and docker-image built-in.  It also does not require VirtualBox as it uses Hyperkit, and you don't manage the box as this is handled by the app itself.
+# References
+There is a vibrant and active community.  
 
->At installation time, Docker for Mac provisions an HyperKit VM based on Alpine Linux, running Docker Engine. It exposes the docker API on a socket in /var/run/docker.sock. Since this is the default location where docker will look if no environment variables are set, you can start using docker and docker-compose without setting any environment variables.
+View the [wiki](https://wiki.jenkins.io/display/JENKINS/configuration+as+code+plugin) page. See [presentation slides](https://docs.google.com/presentation/d/1VsvDuffinmxOjg0a7irhgJSRWpCzLg_Yskf7Fw7FpBg/edit?usp=sharing) from Jenkins World 2018.
 
-This is what I end up with.
-
-![Docker for Mac diagram](https://docs.docker.com/docker-for-mac/images/docker-for-mac-install.png)
-[image credit: Docker, Inc.]
-
-You can run both Docker Toolbox and Docker for Mac, but it is damn confusing and a pain to track which environment you are using, so your setup would look like this.
-
-![Docker for Mac and Docker Toolbox coexistence](https://docs.docker.com/docker-for-mac/images/docker-for-mac-and-toolbox.png)
-[image credit: Docker, Inc.]
-
-## Setup Jenkins to execute Docker CLI Commands
-Now that you have an idea of the setup required, let's dive into setting up Jenkins to allow for executing Docker CLI commands.
+Join the Jenkins Configuration as Code (JCasC) office hours meeting scheduled for every second Wednesday. Use the Hangout on Air link from our [Gitter](https://gitter.im/jenkinsci/configuration-as-code-plugin) chat channel. As an alternative, use the link from the [invitation](https://calendar.google.com/event?action=TEMPLATE&tmeid=MmdwdTE1cTFvaGw1NGUycGxqdWUwcXExaWFfMjAxODA3MjVUMDcwMDAwWiBld2VAcHJhcW1hLm5ldA&tmsrc=ewe%40praqma.net&scp=ALL). See previous [meeting minutes](https://docs.google.com/document/d/1Hm07Q1egWL6VVAqNgu27bcMnqNZhYJmXKRvknVw4Y84/edit?usp=sharing).
 
 
-  #### Using Docker Compose and Dockerfile
-  We could use CLI commands, but why go through that if we can create a nice configuration to repeatedly build this image?
 
-##### The docker-compose.yaml file.
+# Assumptions
+* You have Docker working locally
+* You have kubectl and Kubernetes working locally or a cluster in GKE
+
+# Build the Jenkins Image & Push to Registry
+
+# Deploying Jenkins using JCasC Using Docker Container Locally
+
+# Deploying Jenkins JCasC To GKE 
+
+## The docker-compose.yaml file.
 In this file, we specify the configuration of our Jenkins image when it needs to be spun up.
 
 ``` yaml

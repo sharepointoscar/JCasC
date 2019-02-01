@@ -7,7 +7,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: sharepointoscar/jenkins:v2
+    image: sharepointoscar/jenkins:v4
     container_name: SIR_JENKINS
     restart: always
     ports:

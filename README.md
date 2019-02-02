@@ -1,20 +1,33 @@
 
 
-## Deploy Jenkins using Jenkins Configuration as Code [JCaC]
+# Deploy Jenkins X CI/CD to your K8s cluster using a custom Docker image that uses Jenkins Configuration as Code (JCasC) 
 ### Deploy it to GKE or Minikube, specs included.
 
 <img src="images/logo.svg" width="192">
 
 
+# About Jenkins X
+[Jenkins-x.io](https://jenkins-x.io/) is a great place to learn about this wonderful CI/CD project that is aiming to be native for `Kubernetes`.  And rightfully so, it is loaded with features that get you up and running quickly on any cloud you are working on.
 
+<!-- [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/kPes3rvT1UM/0.jpg)](https://www.youtube.com/watch?v=kPes3rvT1UM) -->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kPes3rvT1UM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Overview
-Deploying Jenkins is easy these days.  However, configuring and saving the configuration has not been easy, especially since there is a lot of manual config via the UI. This is far more onerous when dealing with multiple instances of Jenkins as many environments have.
+The goal of this article is to help you deploy a `Jenkins X` to your `K8s` cluster using a custom `Docker` image that uses `JCasC`. 
+
+Deploying Jenkins is easy these days.  However, configuring and saving the configuration has not been easy, especially since there is a lot of manual config via the UI. This is far more onerous when dealing with multiple instances of Jenkins which many environments actually have.
 
 Jenkins Configuration as Code is the next big thing.  This repository helps you get started quickly.
 
-## What you can do with this Repository
+## About JCasC
+There is a vibrant and active community for `JCasC`.
 
+View the [wiki](https://wiki.jenkins.io/display/JENKINS/configuration+as+code+plugin) page. See [presentation slides](https://docs.google.com/presentation/d/1VsvDuffinmxOjg0a7irhgJSRWpCzLg_Yskf7Fw7FpBg/edit?usp=sharing) from Jenkins World 2018.
+
+Join the Jenkins Configuration as Code (JCasC) office hours meeting scheduled for every second Wednesday. Use the Hangout on Air link from our [Gitter](https://gitter.im/jenkinsci/configuration-as-code-plugin) chat channel. As an alternative, use the link from the [invitation](https://calendar.google.com/event?action=TEMPLATE&tmeid=MmdwdTE1cTFvaGw1NGUycGxqdWUwcXExaWFfMjAxODA3MjVUMDcwMDAwWiBld2VAcHJhcW1hLm5ldA&tmsrc=ewe%40praqma.net&scp=ALL). See previous [meeting minutes](https://docs.google.com/document/d/1Hm07Q1egWL6VVAqNgu27bcMnqNZhYJmXKRvknVw4Y84/edit?usp=sharing).
+
+## What you can do with this Repository
 * Deploy Jenkins using JCasC via a Docker Container locally
 * Deploy Jenkins using JCasC to a K8s Cluster in GKE or Minikube
 
@@ -23,13 +36,6 @@ There are two key configurations I decided to incorporate as a starting point, t
 
 * Branding Jenkins using the Simple Theme Plugin and specifying a Theme -  because who likes the default UI???
 * Configuring Jenkins to use OAuth against GitHub - Most companies do not use the Jenkins db for users, that is just not possible in the Enterpise.
-
-# Reference
-There is a vibrant and active community.  
-
-View the [wiki](https://wiki.jenkins.io/display/JENKINS/configuration+as+code+plugin) page. See [presentation slides](https://docs.google.com/presentation/d/1VsvDuffinmxOjg0a7irhgJSRWpCzLg_Yskf7Fw7FpBg/edit?usp=sharing) from Jenkins World 2018.
-
-Join the Jenkins Configuration as Code (JCasC) office hours meeting scheduled for every second Wednesday. Use the Hangout on Air link from our [Gitter](https://gitter.im/jenkinsci/configuration-as-code-plugin) chat channel. As an alternative, use the link from the [invitation](https://calendar.google.com/event?action=TEMPLATE&tmeid=MmdwdTE1cTFvaGw1NGUycGxqdWUwcXExaWFfMjAxODA3MjVUMDcwMDAwWiBld2VAcHJhcW1hLm5ldA&tmsrc=ewe%40praqma.net&scp=ALL). See previous [meeting minutes](https://docs.google.com/document/d/1Hm07Q1egWL6VVAqNgu27bcMnqNZhYJmXKRvknVw4Y84/edit?usp=sharing).
 
 
 

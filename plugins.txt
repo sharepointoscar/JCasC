@@ -1,5 +1,0 @@
-simple-theme-plugin:0.5.1
-github-oauth
-configuration-as-code
-configuration-as-code-support
-

@@ -1,5 +1,5 @@
-FROM jenkinsxio/jenkinsx:latest
-
+#FROM jenkinsxio/jenkinsx:latest
+FROM praqma/jenkins4casc:1.3-latest
 # perform tasks as root
 # installs python, curl, docker-compose, sudo, docker-machine, Packer
 #USER root
@@ -28,7 +28,12 @@ FROM jenkinsxio/jenkinsx:latest
 
 #drop back to the regular jenkins user - good practice
 #USER jenkins
-COPY jenkins.yaml /var/jenkins_home/jenkins.yaml
+#COPY jenkins.yaml /var/jenkins_home/jenkins.yaml
+
+
+##### JENKINS SETUP. For alpha releases use the experimental update center
+#ENV JENKINS_HOME /var/jenkins_home
 
 COPY plugins.txt /usr/share/jenkins/my-plugins.txt
+ARG JAVA_OPTS
 RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/my-plugins.txt

@@ -8,7 +8,7 @@ jenkins:
   securityRealm:
     github:
       clientID: "71eb404a7a654ce91966"
-      clientSecret: "{AQAAABAAAAAwP8gRbPzK1y0Z3FMJ475ycubK0LZD+YQhkP3aj7D5ZfePrpwRRHW8ZzDhuWWdhjjewdUymQcFge1CqSeemT+hhA==}"
+      clientSecret: "e08f070aba21354a211a0bfd9067c89e5d78bc54"
       githubApiUri: "https://api.github.com"
       githubWebUri: "https://github.com"
       oauthScopes: "read:org,user:email"
@@ -64,7 +64,7 @@ unclassified:
   simple-theme-plugin:
     elements:
     - cssUrl:
-        url: "https://cdn.rawgit.com/afonsof/jenkins-material-theme/gh-pages/dist/material-red.css"
+        url: "https://cdn.rawgit.com/afonsof/jenkins-material-theme/gh-pages/dist/material-lime.css"
   location:
     url: https://jenkins.praqma.cloud
     adminAddress: support@praqma.net
@@ -135,7 +135,7 @@ unclassified:
                 remote: "https://github.com/Praqma/shared-pipeline.git"
 plugins:
   required:
-    credentials: 2.1.17
+    credentials: 2.1.18
     simple-theme-plugin: 0.5.1
 #    git: 3.9.0
 #    ssh-slaves: 1.26

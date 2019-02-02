@@ -9,9 +9,8 @@
 # About Jenkins X
 [Jenkins-x.io](https://jenkins-x.io/) is a great place to learn about this wonderful CI/CD project that is aiming to be native for `Kubernetes`.  And rightfully so, it is loaded with features that get you up and running quickly on any cloud you are working on.
 
-<!-- [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/kPes3rvT1UM/0.jpg)](https://www.youtube.com/watch?v=kPes3rvT1UM) -->
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/kPes3rvT1UM/0.jpg)](https://www.youtube.com/watch?v=kPes3rvT1UM) 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kPes3rvT1UM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Overview
 The goal of this article is to help you deploy a `Jenkins X` to your `K8s` cluster using a custom `Docker` image that uses `JCasC`. 

@@ -40,16 +40,19 @@ Join the Jenkins Configuration as Code (JCasC) office hours meeting scheduled fo
 # Build the Jenkins Image & Push to Registry
 Most of the `YAML` files and the `docker-compose` use an image.  This image needs to be built and pushed to your registry.
 
+## Using Docker CLI
 First, build the image, execute this command in the root of this repo as follows:
 ```bash
-docker build -t sharepointoscar/jenkins:v1 .
+docker build -t sharepointoscar/JCasC:v1 .
 ```
 
 On success, push the image to your registry.  I use Docker Hub.
 
 ```bash
-docker push sharepointoscar/jenkins:v1
+docker push sharepointoscar/JCasC:v1
 ```
+## Using Docker Compose
+
 Once you are done, you will then edit the proper files, depending on where you plan to deploy Jenkins, and reference said image and version (version is important, as you want to ensure you use the latest).
 
 # Deploying Jenkins using JCasC Using Docker Container Locally

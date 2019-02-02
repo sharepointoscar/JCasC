@@ -64,7 +64,7 @@ unclassified:
   simple-theme-plugin:
     elements:
     - cssUrl:
-        url: "https://cdn.rawgit.com/afonsof/jenkins-material-theme/gh-pages/dist/material-lime.css"
+        url: "https://cdn.rawgit.com/afonsof/jenkins-material-theme/gh-pages/dist/material-blue.css"
   location:
     url: https://jenkins.praqma.cloud
     adminAddress: support@praqma.net

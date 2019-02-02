@@ -7,9 +7,7 @@
 
 
 # About Jenkins X
-[Jenkins-x.io](https://jenkins-x.io/) is a great place to learn about this wonderful CI/CD project that is aiming to be native for `Kubernetes`.  And rightfully so, it is loaded with features that get you up and running quickly on any cloud you are working on.
-
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/kPes3rvT1UM/0.jpg)](https://www.youtube.com/watch?v=kPes3rvT1UM) 
+[Jenkins-x.io](https://jenkins-x.io/) is a great place to learn about this wonderful project that is positioning itself to be next generation CI/CD platform for `Kubernetes`.  And rightfully so, it is loaded with features that get you up and running quickly on any cloud you are working on.
 
 
 # Overview
@@ -26,11 +24,11 @@ View the [wiki](https://wiki.jenkins.io/display/JENKINS/configuration+as+code+pl
 
 Join the Jenkins Configuration as Code (JCasC) office hours meeting scheduled for every second Wednesday. Use the Hangout on Air link from our [Gitter](https://gitter.im/jenkinsci/configuration-as-code-plugin) chat channel. As an alternative, use the link from the [invitation](https://calendar.google.com/event?action=TEMPLATE&tmeid=MmdwdTE1cTFvaGw1NGUycGxqdWUwcXExaWFfMjAxODA3MjVUMDcwMDAwWiBld2VAcHJhcW1hLm5ldA&tmsrc=ewe%40praqma.net&scp=ALL). See previous [meeting minutes](https://docs.google.com/document/d/1Hm07Q1egWL6VVAqNgu27bcMnqNZhYJmXKRvknVw4Y84/edit?usp=sharing).
 
-## What you can do with this Repository
+# What you can do with this Repository
 * Deploy Jenkins using JCasC via a Docker Container locally
 * Deploy Jenkins using JCasC to a K8s Cluster in GKE or Minikube
 
-## The Jenkins.yaml
+# The Jenkins.yaml
 There are two key configurations I decided to incorporate as a starting point, to demonstrate how that is done:
 
 * Branding Jenkins using the Simple Theme Plugin and specifying a Theme -  because who likes the default UI???

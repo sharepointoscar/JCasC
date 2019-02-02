@@ -18,9 +18,9 @@ services:
     #  - CASC_JENKINS_CONFIG=https://raw.githubusercontent.com/SharePointOscar/JenkinsDocker/JCasC/jenkins.yaml  #Use a github repo. Be aware that the raw content is cached, so it can take a couple of mintues to take effect
 secrets: #Be careful with newlines in your secrets, make sure to remove them before running docker-compose up.
   github:
-    file: /Users/sharepointoscar/git-repos/JenkinsDocker/secrets/github
+    file: /Users/sharepointoscar/git-repos/JCasC/secrets/github
   adminpw:
-    file: /Users/sharepointoscar/git-repos/JenkinsDocker/secrets/adminpw
+    file: /Users/sharepointoscar/git-repos/JCasC/secrets/adminpw
   agent_private_key: #This should point to the private key you want your jenkins master to use when connecting to slaves. So in AWS for example this would be your .pem file
     file: ~/.ssh/github_rsa
 volumes:

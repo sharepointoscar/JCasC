@@ -1,5 +1,5 @@
-FROM jenkinsxio/jenkinsx:latest
-#FROM praqma/jenkins4casc:1.3-latest
+#FROM jenkinsxio/jenkinsx:latest
+FROM praqma/jenkins4casc:1.3-latest
 
 COPY plugins.txt /usr/share/jenkins/my-plugins.txt
 

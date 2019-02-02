@@ -2,7 +2,7 @@
 #  deprecation: warn
 
 jenkins:
-  systemMessage: "Welcome to the demo setup for Jenkins Configuration as Code plugin. For more information look in the official repo with our demo setup: https://github.com/Praqma/praqma-jenkins-casc"
+  systemMessage: "Playing with Jenkins Configuration as Code - JCasC!"
   agentProtocols:
     - "JNLP4-connect"
   securityRealm:

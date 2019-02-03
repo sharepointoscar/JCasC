@@ -14,7 +14,7 @@ spec:
         fsGroup: 2000
       containers:
       - name: sir-jenkins
-        image: sharepointoscar/jenkins:v3
+        image: sharepointoscar/jcasc:v2
         env:
         - name: JAVA_OPTS
           value: -Djenkins.install.runSetupWizard=false

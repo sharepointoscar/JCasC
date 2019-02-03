@@ -7,8 +7,8 @@ jenkins:
     - "JNLP4-connect"
   securityRealm:
     github:
-      clientID: "71eb404a7a654ce91966"
-      clientSecret: "e08f070aba21354a211a0bfd9067c89e5d78bc54"
+      clientID: ${GITHUB_CLIENT_ID}
+      clientSecret: ${GITHUB_CLIENT_SECRET}
       githubApiUri: "https://api.github.com"
       githubWebUri: "https://github.com"
       oauthScopes: "read:org,user:email"
@@ -41,12 +41,6 @@ credentials:
 
 jobs:
   - url: https://raw.githubusercontent.com/Praqma/job-dsl-collection/master/configuration-as-code-dsl/pipeline.dsl #casc
-  - url: https://raw.githubusercontent.com/Praqma/memory-map-plugin/master/jenkins-pipeline/pipeline.groovy #memory map
-  - url: https://raw.githubusercontent.com/Praqma/codesonar-plugin/master/jenkins-pipeline/pipeline.groovy #codesonar
-  - url: https://raw.githubusercontent.com/Praqma/pretested-integration-plugin/master/jenkins-pipeline/pipeline.groovy #pretested integration
-  - url: https://raw.githubusercontent.com/Praqma/ClearCaseUCMPlugin/master/jenkins-pipeline/pipeline.groovy #ccucm
-  - url: https://raw.githubusercontent.com/Praqma/Praqmatic-Automated-Changelog/master/jenkins-pipeline/pipeline.groovy #pac
-  - url: https://raw.githubusercontent.com/Praqma/PlusBump/rebirth/jenkins-pipeline/pipeline.groovy #plusbump
 #  - url: https://raw.githubusercontent.com/Praqma/job-dsl-collection/master/web-pipeline-dsl/web_pipeline_dsl.groovy #websites
 #  - file: ./jobdsl/rut.groovy #rut (private repo...better keep it here)
 
@@ -64,7 +58,7 @@ unclassified:
   simple-theme-plugin:
     elements:
     - cssUrl:
-        url: "https://cdn.rawgit.com/afonsof/jenkins-material-theme/gh-pages/dist/material-blue.css"
+        url: "https://cdn.rawgit.com/afonsof/jenkins-material-theme/gh-pages/dist/material-yellow.css"
   location:
     url: https://jenkins.praqma.cloud
     adminAddress: support@praqma.net
@@ -135,7 +129,6 @@ unclassified:
                 remote: "https://github.com/Praqma/shared-pipeline.git"
 plugins:
   required:
-    credentials: 2.1.18
     simple-theme-plugin: 0.5.1
 #    git: 3.9.0
 #    ssh-slaves: 1.26

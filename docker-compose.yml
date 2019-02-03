@@ -2,8 +2,9 @@ version: '3.3'
 
 services:
   jenkins: 
-    build: #TODO: Once plugin installation is handled through c-as-c this can be removed and replaced with 'image'.
-      context: ./master
+    #build: #TODO: Once plugin installation is handled through c-as-c this can be removed and replaced with 'image'.
+      #context: ./master
+    image: sharepointocar/jcasc:v2
     ports: 
       - 8080:8080
       - 50000:50000
@@ -14,8 +15,10 @@ services:
       - github  #Github username with password as an example. Purpose here is to have a user with write-access for special cases. Like the git-publisher.
       - adminpw  #Initial adminstrator user password. Added for debugging purposes. Should be removed prior to go-live. 
       - agent_private_key #ssh private key for connecting ssh slaves
-    #environment:
-    #  - CASC_JENKINS_CONFIG=https://raw.githubusercontent.com/SharePointOscar/JenkinsDocker/JCasC/jenkins.yaml  #Use a github repo. Be aware that the raw content is cached, so it can take a couple of mintues to take effect
+    environment:
+      - GITHUB_CLIENT_ID=${GITHUB_CLIENT_ID}
+      - GITHUB_CLIENT_SECRET=${GITHUB_CLIENT_SECRET}
+    #  - CASC_JENKINS_CONFIG=/var/jenkins_home/jenkins.yaml #Use a github repo. Be aware that the raw content is cached, so it can take a couple of mintues to take effect
 secrets: #Be careful with newlines in your secrets, make sure to remove them before running docker-compose up.
   github:
     file: /Users/sharepointoscar/git-repos/JCasC/secrets/github

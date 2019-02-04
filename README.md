@@ -48,7 +48,7 @@ Most of the `YAML` files including the `docker-compose` use an image.  This imag
 ## Building Image Using Docker CLI
 First, build the image, execute this command in the root of this repo as follows:
 ```bash
-docker build -t sharepointoscar/jcasc:v2 ./master
+docker build -t sharepointoscar/jcasc:v4 ./master
 ```
 Let's take a look at what images are now available to us.
 
@@ -97,59 +97,59 @@ docker-compose up
 
 Note that you can use `docker-compose config` to view the configuration including the secret values.
 
-# Deploying Jenkins JCasC To GKE 
+# Deploying Jenkins JCasC To Minikube 
+Minikube is our local K8s cluster, which allows us to develop specs locally and test them.
 
-## The docker-compose.yaml file.
-In this file, we specify the configuration of our Jenkins image when it needs to be spun up.
+## Minikube with RBAC
 
-``` yaml
-version: "3"
-services:
-  jenkins:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: sharepointoscar/jenkins:latest
-    container_name: EL_JENKINS_LOCO
-    restart: always
-    ports:
-      - 8080:8080
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - /usr/bin/docker:/usr/bin/docker
-      - ./JenkinsHome:/var/jenkins_home
+Start minikube with RBAC enabled
+
+```bash
+# start minikube with extra config to enable RBAC
+minikube start --vm-driver=hyperkit --cpus=4 --memory=8000 --extra-config=apiserver.authorization-mode=RBAC
+
+# create rolebinding
+kubectl create clusterrolebinding add-on-cluster-admin --clusterrole=cluster-admin --serviceaccount=kube-system:default
+
+# system:serviceaccount:jcasc:default
+kubectl create clusterrolebinding jcasc-cluster-admin --clusterrole=cluster-admin --user=system:serviceaccount:jcasc:default
+```
+All of our deployment artifacts reside within the `minikube` folder of the repo.
+
+Let's create all of our artifacts with one command:
+
+```bash
+>$ kubectl apply -Rf ./minikube
+namespace "jcasc" created
+deployment "jenkins" created
+service "jenkins" created
+persistentvolumeclaim "jenkinshome-pv-claim" created
+
 ```
 
-A few things to note:
+## Creating Secrets and ConfigMap
+The Jenkins deployment will not work until its dependencies are created.  It depends on a few secrets and configmap.  So let's create that now.
 
-  - Use the Dockerfile at build time, as it contains specific tasks we want to run.  In my case, I want to have a list of Jenkins plugins to quickly install at build time and install additional software.
-  - Specify the image the service Jenkins will use
-  - Volumes
-    - *JENKINS_HOME* - I override this to use the JenkinsHome folder in this git repo to save configuration changes, this means every time I spin up Jenkins, it will have all my plugins and UI configuration I previously setup.
-    - *Docker Socket* - This is the socket the docker client uses to communicate with the daemon within the Jenkins container
-    - *Docker executable* (/usr/bin/docker) - The docker binary.
+### Create ConfigMap
+We need to make the `jenkins.yaml` file available to our container.  For this, we use a configmap and mount a volue accessing it.
+```shell
+# creating the jcasc-configmap
+kubectl create configmap jcasc-configmap --from-file=./jenkins.yaml --namespace jcasc
 
-
-NOTE: One thing to note, is that my configuration had ` /usr/local/bin/docker` as I am using Docker for Mac and so when I tried executing
-` docker-compose up` it gave me an error message.  
-
-What I did, was to create a symlink by executing this command `sudo ln /usr/local/bin/docker /usr/bin/docker` see more details on this [Github](https://github.com/marcelbirkner/docker-ci-tool-stack/issues/24) thread and the image spins up with no problems.
-
-
-To bring up or build Jenkins image, all you do is execute this command to have it running in the background.
-` docker-compose up -d`
-## Build and run the Jenkins image manually using Docker CLI
-If you need to use the CLI, this is how you would build and run the Jenkins image.  We use the -rm=true flag to remove intermediate containers.
-``` bash
-   docker build -t=sharepointoscar/jenkins --rm .
 ```
+**NOTE:** There are more appropriate ways to deploy and manage secrets, this is is a not the best way, and I recommend looking into `HashiCorp Vault` or using a cloud native service.
 
-#### Create Docker Container
-This command ensures that the host machine docker installation is accessible to the container we are about to run.
+### Create Secrets
 
-``` bash
-  docker run -d -v /var/run/docker.sock:/var/run/docker.sock \
-        -v /usr/bin/docker:/usr/bin/docker -v $PWD/JenkinsHome:/var/jenkins_home -p 8080:8080 sharepointoscar/jenkins
+```shell
+
+# these are your github credentials
+kubectl create secret generic github --from-literal=github_user=SharePointOscar --from-literal=github_pass='Graphics01!!!!!' --namespace jcasc
+
+# change password a desired
+kubectl create secret generic adminpw --from-literal=adminpw=password1 --namespace jcasc
+
+# point ot an existing ssh key in your system
+kubectl create secret generic agent-private-key --from-file=/Users/sharepointoscar/.ssh/github_rsa --namespace jcasc
+
 ```
-
-**NOTE**: This is a quick way for getting Jenkins to build containers.  I will be working on what I feel is a best practice - using Jenkins master and slaves to perform tests and build my images as described  on [Building Continuous Integration Pipeline with Docker](https://www.docker.com/sites/default/files/UseCase/RA_CI%20with%20Docker_08.25.2015.pdf)

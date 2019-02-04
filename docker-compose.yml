@@ -4,7 +4,7 @@ services:
   jenkins: 
     #build: #TODO: Once plugin installation is handled through c-as-c this can be removed and replaced with 'image'.
       #context: ./master
-    image: sharepointocar/jcasc:v2
+    image: sharepointoscar/jcasc:v3
     ports: 
       - 8080:8080
       - 50000:50000

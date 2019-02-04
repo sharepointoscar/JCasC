@@ -5,10 +5,11 @@ jenkins:
   systemMessage: "Playing with Jenkins Configuration as Code - JCasC!"
   agentProtocols:
     - "JNLP4-connect"
+    - "Ping"
   securityRealm:
     github:
-      clientID: ${GITHUB_CLIENT_ID}
-      clientSecret: ${GITHUB_CLIENT_SECRET}
+      clientID: "71eb404a7a654ce91966"
+      clientSecret: "e08f070aba21354a211a0bfd9067c89e5d78bc54"
       githubApiUri: "https://api.github.com"
       githubWebUri: "https://github.com"
       oauthScopes: "read:org,user:email"
@@ -19,7 +20,17 @@ jenkins:
         - "Job/Read:anonymous"
         - "View/Read:anonymous"
         - "Overall/Administer:authenticated"
-  crumbIssuer: "standard"
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
+  disableRememberMe: false
+  mode: NORMAL
+  numExecutors: 2
+  primaryView:
+    all:
+      name: "all"
+  quietPeriod: 5
+  scmCheckoutRetryCount: 0
 credentials:
   system:
     domainCredentials:
@@ -58,7 +69,7 @@ unclassified:
   simple-theme-plugin:
     elements:
     - cssUrl:
-        url: "https://cdn.rawgit.com/afonsof/jenkins-material-theme/gh-pages/dist/material-yellow.css"
+        url: "https://cdn.rawgit.com/afonsof/jenkins-material-theme/gh-pages/dist/material-green.css"
   location:
     url: https://jenkins.praqma.cloud
     adminAddress: support@praqma.net
@@ -129,6 +140,7 @@ unclassified:
                 remote: "https://github.com/Praqma/shared-pipeline.git"
 plugins:
   required:
+#    credentials: 2.1.17
     simple-theme-plugin: 0.5.1
 #    git: 3.9.0
 #    ssh-slaves: 1.26

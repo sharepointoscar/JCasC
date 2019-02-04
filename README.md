@@ -1,18 +1,11 @@
 
 
-# Deploy Jenkins X CI/CD to your K8s cluster using a custom Docker image that uses Jenkins Configuration as Code (JCasC) 
-### Deploy it to GKE or Minikube, specs included.
+# Deploy Jenkins to your K8s cluster using a custom Docker image that uses Jenkins Configuration as Code (JCasC) 
 
 <img src="images/logo.svg" width="192">
 
 
-# About Jenkins X
-[Jenkins-x.io](https://jenkins-x.io/) is a great place to learn about this wonderful project that is positioning itself to be next generation CI/CD platform for `Kubernetes`.  And rightfully so, it is loaded with features that get you up and running quickly on any cloud you are working on.
-
-
 # Overview
-The goal of this article is to help you deploy a `Jenkins X` to your `K8s` cluster using a custom `Docker` image that uses `JCasC`. 
-
 Deploying Jenkins is easy these days.  However, configuring and saving the configuration has not been easy, especially since there is a lot of manual config via the UI. This is far more onerous when dealing with multiple instances of Jenkins which many environments actually have.
 
 Jenkins Configuration as Code is the next big thing.  This repository helps you get started quickly.
@@ -26,9 +19,10 @@ Join the Jenkins Configuration as Code (JCasC) office hours meeting scheduled fo
 
 # What you can do with this Repository
 
-* Deploy Jenkins using JCasC on your laptop running Docker
-* Deploy Jenkins using JCasC to Minikube
-* Deploy Jenkins using JCasC to GKE
+* Deploy Jenkins using JCasC on your laptop running Docker (just for testing, not ideal)
+
+* Deploy Jenkins using JCasC to K8s
+
 
 # The Jenkins Configurations
 There are two key configurations I decided to incorporate as a starting point, to demonstrate how that is done:
@@ -77,8 +71,8 @@ For the purpose of quickly safe-guarding the Github **ClientID** and **ClientSec
 Here is a snippet, replace the placeholder text with real values. You typically get this from creating an app in GitHub.
 
 ```env
-GITHUB_CLIENT_ID=<CLIENTID>
-GITHUB_CLIENT_SECRET=<CLIENTSECRET>
+clientID=<CLIENTID>
+clientSecret=<CLIENTSECRET>
 ```
 
 # Deploy Jenkins using JCasC on your laptop running Docker
@@ -114,31 +108,63 @@ persistentvolumeclaim "jenkinshome-pv-claim" created
 ```
 
 ## Creating Secrets and ConfigMap
-The Jenkins deployment will not work until its dependencies are created.  It depends on a few secrets and configmap.  So let's create that now.
+The Jenkins deployment will not work until its dependencies are created.  It depends on the `github-auth` secret and configmap which contains the `jenkins.yaml` configuration needed.  So let's create that now.
 
 ### Create ConfigMap
-We need to make the `jenkins.yaml` file available to our container.  For this, we use a configmap and mount a volue accessing it.
+We need to make the `jenkins.yaml` file available to our container.  
+
 ```shell
 # creating the jcasc-configmap
 kubectl create configmap jcasc-configmap --from-file=./jenkins.yaml --namespace jcasc
 
 ```
-**NOTE:** There are more appropriate ways to deploy and manage secrets, this is is a not the best way, and I recommend looking into `HashiCorp Vault` or using a cloud native service.
+**NOTE:** There are more appropriate ways to deploy and manage secrets, this is is a not the best way, and I recommend looking into `HashiCorp Vault` or using a cloud native key/secret management service.
 
 ### Create Secrets
 
 ```shell
 
-# these are your github credentials
-kubectl create secret generic github --from-literal=github_user=SharePointOscar --from-literal=github_pass='Graphics01!!!!!' --namespace jcasc
+# these are your github  app auth credentials, so that Jenkins uses this for authentication
+# this secret is used by the jenkins.yaml file.  Our deployment mounts secrets as volumes including this one. see minikube/jenkins-deployment.yaml
 
-# these are your github  app auth credentials
-kubectl create secret generic github-auth --from-literal=clientID='71eb404a7a654ce91966' --from-literal=clientSecret='e08f070aba21354a211a0bfd9067c89e5d78bc54' --namespace jcasc
+# Quick and dirty
+kubectl create secret generic github-auth --from-literal=clientID='<YOUR-CLIENT-ID>' --from-literal=clientSecret='<YOUR-CLIENT-SECRET>' --namespace jcasc
 
-# change password a desired
-kubectl create secret generic adminpw --from-literal=adminpw=password1 --namespace jcasc
-
-# point ot an existing ssh key in your system
-kubectl create secret generic agent-private-key --from-file=/Users/sharepointoscar/.ssh/github_rsa --namespace jcasc
-
+# Or if you have a .env file, you can create it as such (I am using this approach for now)
+kubectl create secret generic github-auth --from-env-file=.env --namespace jcasc
 ```
+### Access your Jenkins Instance
+Since we deployed to `minikube`, we use its ip address and port assigned via the service we deployed.
+
+In my case it is
+```bash
+>$ minikube ip
+192.168.64.12
+
+>$ kubectl get services -n jcasc
+NAME      TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)                        AGE
+jenkins   NodePort   10.111.157.32   <none>        80:30537/TCP,50000:31965/TCP   16h
+```
+
+By combining the minikube ip plus the ui port, like so `http://192.168.64.12:30537` I am able to access Jenkins.
+
+## Changing Configuration and Reloading it
+
+It is possible to make changes to a configuration, but most of the time you want to version it.  Assuming you do that, and need to reload the latest configuration, here is how you can reload it.
+
+In my case, I go to the `http://192.168.64.12:30537/configuration-as-code/` page  and click on the `Reload existing configuration` button.  You hould then see your changes take effect in a few seconds.
+
+In my case, I changed the theme to another url in the `jenkins.yaml` and it showed me the new one!
+
+Simply but very powerful way of configuring Jenkins!~
+
+# Conclusion
+
+Jenkins Configuration as Code is maturing rapidly and we can expect rapid adoption of this technique in the near future.  We can then version our Jenkins Configuration and incorporate it into our CI/CD pipelines.
+
+Thanks to the folks behind this, who have done all of this work thus far.
+
+* Ewelina Wilkosz/Praqma - https://twitter.com/ewelinawilkosz?lang=en
+* Nicolas De Loof/CloudBees - https://twitter.com/ndeloof
+
+My next task will be to try and incorporate this `JCasC` Image and spinning up a `Jenkins X` instance, more soon.

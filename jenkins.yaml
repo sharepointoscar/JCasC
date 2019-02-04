@@ -8,8 +8,8 @@ jenkins:
     - "Ping"
   securityRealm:
     github:
-      clientID: "71eb404a7a654ce91966"
-      clientSecret: "e08f070aba21354a211a0bfd9067c89e5d78bc54"
+      clientID: "${clientID}"
+      clientSecret: "${clientSecret}"
       githubApiUri: "https://api.github.com"
       githubWebUri: "https://github.com"
       oauthScopes: "read:org,user:email"
@@ -31,29 +31,9 @@ jenkins:
       name: "all"
   quietPeriod: 5
   scmCheckoutRetryCount: 0
-credentials:
-  system:
-    domainCredentials:
-      - credentials:
-          - usernamePassword:
-              scope:    SYSTEM
-              id:       github-user
-              username: ${github_user}
-              password: ${github_pass}
-          - basicSSHUserPrivateKey:
-              scope: SYSTEM
-              id: agent-private-key
-              username: agentuser
-              passphrase:  ""
-              description: "ssh private key used to connect ssh slaves"
-              privateKeySource:
-                directEntry: # The key 'agent_private_key' resolved from a docker secret defined in docker-compose.yml
-                  privateKey: ${agent_private_key}
 
 jobs:
   - url: https://raw.githubusercontent.com/Praqma/job-dsl-collection/master/configuration-as-code-dsl/pipeline.dsl #casc
-#  - url: https://raw.githubusercontent.com/Praqma/job-dsl-collection/master/web-pipeline-dsl/web_pipeline_dsl.groovy #websites
-#  - file: ./jobdsl/rut.groovy #rut (private repo...better keep it here)
 
 tool:
   git:
@@ -69,7 +49,7 @@ unclassified:
   simple-theme-plugin:
     elements:
     - cssUrl:
-        url: "https://tobix.github.io/jenkins-neo2-theme/dist/neo-light.css"
+        url: "https://cdn.rawgit.com/afonsof/jenkins-material-theme/gh-pages/dist/material-purple.css"
   location:
     url: https://jenkins.praqma.cloud
     adminAddress: support@praqma.net

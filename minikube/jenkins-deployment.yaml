@@ -21,16 +21,6 @@ spec:
           env:
             - name: JAVA_OPTS
               value: -Djenkins.install.runSetupWizard=false
-            - name: github-client-id
-              valueFrom:
-                secretKeyRef:
-                  name: github-auth
-                  key: clientID
-            - name: github-client-secret
-              valueFrom:
-                secretKeyRef:
-                  name: github-auth
-                  key: clientSecret
           ports:
             - name: http-port
               containerPort: 8080
@@ -42,53 +32,31 @@ spec:
             - name: jcasc-config
               mountPath: /var/jenkins_home/jenkins.yaml
               subPath: jenkins.yaml
-            - name: github-secret-user
-              mountPath: /run/secrets/github_user
-              subPath: github_user
-            - name: github-secret-pass
-              mountPath: /run/secrets/github_pass
-              subPath: github_pass
-            - name: adminpw-secret
-              mountPath: /run/secrets/adminpw
-              subPath: adminpw
-            - name: agent-private-key-secret
-              mountPath: /run/secrets/agent_private_key
-              subPath: agent_private_key
+            - name: github-auth-clientid
+              mountPath: /run/secrets/clientID
+              subPath: clientID
+            - name: github-auth-clientsecret
+              mountPath: /run/secrets/clientSecret
+              subPath: clientSecret
       volumes:
-      - name: github-secret-user
+      - name: github-auth-clientid
         secret:
-          secretName: github
+          secretName: github-auth
           items:
-            - key: github_user
-              path: github_user
-
+            - key: clientID
+              path: clientID
+      - name: github-auth-clientsecret
+        secret:
+          secretName: github-auth
+          items:
+            - key: clientSecret
+              path: clientSecret
       - name: jcasc-config
         configMap:
           name: jcasc-configmap
           items:
             - key: jenkins.yaml
               path: jenkins.yaml
-
       - name: jenkins-home
         persistentVolumeClaim:
           claimName: jenkinshome-pv-claim
-
-      - name: github-secret-pass
-        secret:
-          secretName: github
-          items:
-            - key: github_pass
-              path: github_pass
-
-      - name: adminpw-secret
-        secret:
-          secretName: adminpw
-          items:
-            - key: adminpw
-              path: adminpw
-      - name: agent-private-key-secret
-        secret:
-          secretName: agent-private-key
-          items:
-            - key: github_rsa
-              path: agent_private_key

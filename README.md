@@ -95,28 +95,14 @@ Now let's run the following command on the root of our repository.
 docker-compose up
 ```
 
-Note that you can use `docker-compose config` to view the configuration including the secret values.
+Note that you can use `docker-compose config` to view the configuration including the secret values to ensure they are picked up from the .env file.
 
 # Deploying Jenkins JCasC To Minikube 
 Minikube is our local K8s cluster, which allows us to develop specs locally and test them.
 
-## Minikube with RBAC
-
-Start minikube with RBAC enabled
-
-```bash
-# start minikube with extra config to enable RBAC
-minikube start --vm-driver=hyperkit --cpus=4 --memory=8000 --extra-config=apiserver.authorization-mode=RBAC
-
-# create rolebinding
-kubectl create clusterrolebinding add-on-cluster-admin --clusterrole=cluster-admin --serviceaccount=kube-system:default
-
-# system:serviceaccount:jcasc:default
-kubectl create clusterrolebinding jcasc-cluster-admin --clusterrole=cluster-admin --user=system:serviceaccount:jcasc:default
-```
 All of our deployment artifacts reside within the `minikube` folder of the repo.
 
-Let's create all of our artifacts with one command:
+Let's create all of our artifacts with one command. 
 
 ```bash
 >$ kubectl apply -Rf ./minikube
@@ -145,6 +131,9 @@ kubectl create configmap jcasc-configmap --from-file=./jenkins.yaml --namespace 
 
 # these are your github credentials
 kubectl create secret generic github --from-literal=github_user=SharePointOscar --from-literal=github_pass='Graphics01!!!!!' --namespace jcasc
+
+# these are your github  app auth credentials
+kubectl create secret generic github-auth --from-literal=clientID='71eb404a7a654ce91966' --from-literal=clientSecret='e08f070aba21354a211a0bfd9067c89e5d78bc54' --namespace jcasc
 
 # change password a desired
 kubectl create secret generic adminpw --from-literal=adminpw=password1 --namespace jcasc

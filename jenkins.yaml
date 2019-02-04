@@ -2,7 +2,7 @@
 #  deprecation: warn
 
 jenkins:
-  systemMessage: "Playing with Jenkins Configuration as Code - JCasC!"
+  systemMessage: "Playing with Jenkins Configuration as Code (JCasC) Deployed to GKE and Minikube. "
   agentProtocols:
     - "JNLP4-connect"
     - "Ping"
@@ -69,7 +69,7 @@ unclassified:
   simple-theme-plugin:
     elements:
     - cssUrl:
-        url: "https://cdn.rawgit.com/afonsof/jenkins-material-theme/gh-pages/dist/material-green.css"
+        url: "https://tobix.github.io/jenkins-neo2-theme/dist/neo-light.css"
   location:
     url: https://jenkins.praqma.cloud
     adminAddress: support@praqma.net
@@ -140,7 +140,6 @@ unclassified:
                 remote: "https://github.com/Praqma/shared-pipeline.git"
 plugins:
   required:
-#    credentials: 2.1.17
     simple-theme-plugin: 0.5.1
 #    git: 3.9.0
 #    ssh-slaves: 1.26

@@ -42,7 +42,7 @@ Most of the `YAML` files including the `docker-compose` use an image.  This imag
 ## Building Image Using Docker CLI
 First, build the image, execute this command in the root of this repo as follows:
 ```bash
-docker build -t sharepointoscar/jcasc:v4 ./master
+docker build -t sharepointoscar/jcasc:v5 ./master
 ```
 Let's take a look at what images are now available to us.
 
@@ -50,15 +50,15 @@ Let's take a look at what images are now available to us.
 docker images
 
 REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
-sharepointoscar/jcasc   v2                  29b4ca22c9d8        25 seconds ago      755MB
-jenkinsxio/jenkinsx     latest              8816714cda1f        3 days ago          588MB
+sharepointoscar/jcasc   v5                  f2458564a1b7        21 hours ago        755MB
+jenkinsxio/jenkinsx     latest              8816714cda1f        5 days ago          588MB
 praqma/jenkins4casc     1.3-latest          b05ed588ccfb        2 months ago        704MB
 walkerlee/nsenter       latest              b3e591c9273c        16 months ago       582kB
 ```
 Ok it looks like our image built succesfully, lets push the image to the registry. I use Docker Hub.
 
 ```bash
-docker push sharepointoscar/jcasc:v2
+docker push sharepointoscar/jcasc:v5
 ```
 
 Once you are done, you will then edit the proper files such as the `docker-compose.yaml`, depending on where you plan to deploy Jenkins, and reference said image and version.

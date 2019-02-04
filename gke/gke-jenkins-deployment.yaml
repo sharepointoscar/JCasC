@@ -1,0 +1,29 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: jenkins
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jenkins
+    spec:
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 2000
+      containers:
+      - name: sir-jenkins
+        image: sharepointoscar/jcasc:v5
+        env:
+        - name: JAVA_OPTS
+          value: -Djenkins.install.runSetupWizard=false
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+          - name: jenkinshome-pv-volume
+            mountPath: /var/jenkins_home
+      volumes:
+        - name: jenkinshome-pv-volume
+          persistentVolumeClaim:
+              claimName: jenkinshome-pv-claim

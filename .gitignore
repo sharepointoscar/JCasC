@@ -1,0 +1,4 @@
+.DS_Store
+
+# lets not commit our github secrets
+.env

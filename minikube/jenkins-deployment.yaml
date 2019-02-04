@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins
+  namespace: jcasc
+  labels:
+    app: jenkins
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jenkins
+  template:
+    metadata:
+      labels:
+        app: jenkins
+    spec:
+      containers:
+        - name: jenkins
+          image: sharepointoscar/jcasc:v5
+          env:
+            - name: JAVA_OPTS
+              value: -Djenkins.install.runSetupWizard=false
+          ports:
+            - name: http-port
+              containerPort: 8080
+            - name: jnlp-port
+              containerPort: 50000
+          volumeMounts:
+            - name: jenkins-home
+              mountPath: /var/jenkins_home
+            - name: jcasc-config
+              mountPath: /var/jenkins_home/jenkins.yaml
+              subPath: jenkins.yaml
+            - name: github-auth-clientid
+              mountPath: /run/secrets/clientID
+              subPath: clientID
+            - name: github-auth-clientsecret
+              mountPath: /run/secrets/clientSecret
+              subPath: clientSecret
+      volumes:
+      - name: github-auth-clientid
+        secret:
+          secretName: github-auth
+          items:
+            - key: clientID
+              path: clientID
+      - name: github-auth-clientsecret
+        secret:
+          secretName: github-auth
+          items:
+            - key: clientSecret
+              path: clientSecret
+      - name: jcasc-config
+        configMap:
+          name: jcasc-configmap
+          items:
+            - key: jenkins.yaml
+              path: jenkins.yaml
+      - name: jenkins-home
+        persistentVolumeClaim:
+          claimName: jenkinshome-pv-claim

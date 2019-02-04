@@ -1,0 +1,12 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: jenkinshome-pv-claim
+  namespace: jcasc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: standard  # specify the storage class created below
+  resources:
+    requests:
+      storage: 30Gi

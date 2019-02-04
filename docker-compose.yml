@@ -1,0 +1,19 @@
+version: '3.3'
+
+services:
+  jenkins: 
+    #build: #TODO: Once plugin installation is handled through c-as-c this can be removed and replaced with 'image'.
+      #context: ./master
+    image: sharepointoscar/jcasc:v5
+    ports: 
+      - 8080:8080
+      - 50000:50000
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - ./jenkins.yaml:/var/jenkins_home/jenkins.yaml
+    environment:
+      - github_client_id=${clientID} # comes from the .env-k8s file in root of repo
+      - github_client_secret=${clientSecret} # comes from the .env-k8s file in root of repo
+    #  - CASC_JENKINS_CONFIG=/var/jenkins_home/jenkins.yaml #Use a github repo. Be aware that the raw content is cached, so it can take a couple of mintues to take effect
+volumes:
+  jenkins_home:

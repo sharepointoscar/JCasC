@@ -2,6 +2,7 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: ssd-sc 
+  namespace: jcasc
 provisioner: kubernetes.io/gce-pd
 reclaimPolicy: Retain # Retain storage even if we delete PVC
 parameters:

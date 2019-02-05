@@ -1,25 +1,27 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: jenkins
+  name: jenkins-x
+  namespace: jcasc
 spec:
   type: LoadBalancer
   ports:
     - port: 80
       targetPort: 8080
   selector:
-    app: jenkins
+    app: jenkins-x
 
 ---
 
 apiVersion: v1
 kind: Service
 metadata:
-  name: jenkins-jnlp
+  name: jenkins-x-jnlp
+  namespace: jcasc
 spec:
   type: ClusterIP
   ports:
     - port: 50000
       targetPort: 50000
   selector:
-    app: jenkins
+    app: jenkins-x

@@ -1,13 +1,14 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: jenkins
+  name: jenkins-x
+  namespace: jcasc
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: jenkins
+        app: jenkins-x
     spec:
       securityContext:
         runAsUser: 1000
@@ -23,7 +24,34 @@ spec:
         volumeMounts:
           - name: jenkinshome-pv-volume
             mountPath: /var/jenkins_home
+          - name: jcasc-config
+            mountPath: /var/jenkins_home/jenkins.yaml
+            subPath: jenkins.yaml
+          - name: github-auth-clientid
+            mountPath: /run/secrets/clientID
+            subPath: clientID
+          - name: github-auth-clientsecret
+            mountPath: /run/secrets/clientSecret
+            subPath: clientSecret
       volumes:
+        - name: github-auth-clientid
+          secret:
+            secretName: github-auth
+            items:
+              - key: clientID
+                path: clientID
+        - name: github-auth-clientsecret
+          secret:
+            secretName: github-auth
+            items:
+              - key: clientSecret
+                path: clientSecret
+        - name: jcasc-config
+          configMap:
+            name: jcasc-configmap
+            items:
+              - key: jenkins.yaml
+                path: jenkins.yaml
         - name: jenkinshome-pv-volume
           persistentVolumeClaim:
               claimName: jenkinshome-pv-claim

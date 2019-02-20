@@ -121,6 +121,7 @@ unclassified:
 plugins:
   required:
     simple-theme-plugin: 0.5.1
+    configuration-as-code-support
 #    git: 3.9.0
 #    ssh-slaves: 1.26
 #    warnings: 4.66
